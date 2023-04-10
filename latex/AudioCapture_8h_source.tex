@@ -1,0 +1,58 @@
+\hypertarget{AudioCapture_8h_source}{}\doxysection{Audio\+Capture.\+h}
+\label{AudioCapture_8h_source}\index{/home/eosu/Sourcecode/repos/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/audiocapture/src/AudioCapture/AudioCapture.h@{/home/eosu/Sourcecode/repos/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/audiocapture/src/AudioCapture/AudioCapture.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ AUDIO\_CAPTURE\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ AUDIO\_CAPTURE\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <signal.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <climits>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <alsa/asoundlib.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <fftw3.h>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ "{}PingPongBuffer.h"{}}}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{comment}{//\ A\ wrapper\ around\ the\ asound\ library}}
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classAudioCapture}{AudioCapture}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{typedef}\ void\ (*DataAvailableCallback)(\textcolor{keyword}{const}\ std::vector<short>\&);}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classAudioCapture}{AudioCapture}}(std::string\ device\_name);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAudioCapture_adc7ce55a0c63f8723decf6fb06f68203}{register\_callback}}(DataAvailableCallback\ cb);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00044\ \ \ \ \ std::string\ \mbox{\hyperlink{classAudioCapture_a7d2b75c5c63c68d607711fdad95300ec}{prompt\_device\_selection}}();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \ \ \ \ \mbox{\hyperlink{classAudioCapture}{\string~AudioCapture}}();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ MyCallback(snd\_async\_handler\_t*\ pcm\_callback);}
+\DoxyCodeLine{00057\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ call\_callbacks(\textcolor{keyword}{const}\ std::vector<short>\&\ full\_buffer,\ \textcolor{keywordtype}{int});}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ std::ofstream\ audioFile;}
+\DoxyCodeLine{00067\ \ \ \ \ snd\_pcm\_t*\ handle;}
+\DoxyCodeLine{00068\ \ \ \ \ snd\_async\_handler\_t*\ pcm\_callback;}
+\DoxyCodeLine{00069\ \ \ \ \ std::vector<float>\ waveform;}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<DataAvailableCallback>\ callbacks;}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ quit;}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ std::vector<short>\ fftInputData;}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ std::vector<int>\ tempbuffer;}
+\DoxyCodeLine{00076\ \ \ \ \ DataAvailableCallback\ callback;}
+\DoxyCodeLine{00077\ }
+\DoxyCodeLine{00078\ \ \ \ \ \mbox{\hyperlink{classPingPongBuffer}{PingPongBuffer}}\ buffer\_;}
+\DoxyCodeLine{00079\ \};}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#endif\ \ }\textcolor{comment}{//\ AUDIO\_CAPTURE\_H}}
+
+\end{DoxyCode}

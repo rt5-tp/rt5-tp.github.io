@@ -1,0 +1,80 @@
+\hypertarget{GenrePredictor_8hpp_source}{}\doxysection{Genre\+Predictor.\+hpp}
+\label{GenrePredictor_8hpp_source}\index{/home/eosu/Sourcecode/repos/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/audiocapture/src/GenreClassification/cpp\_genre\_classifier/src/GenrePredictor.hpp@{/home/eosu/Sourcecode/repos/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/audiocapture/src/GenreClassification/cpp\_genre\_classifier/src/GenrePredictor.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <curl/curl.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}json.hpp"{}}}
+\DoxyCodeLine{00004\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00005\ \textcolor{keyword}{using\ }json\ =\ nlohmann::json;}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGenrePredictor}{GenrePredictor}}\{}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{size\_t}\ writeFunction(\textcolor{keywordtype}{void}*\ ptr,\ \textcolor{keywordtype}{size\_t}\ size,\ \textcolor{keywordtype}{size\_t}\ nmemb,\ std::string*\ data)\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ data-\/>append((\textcolor{keywordtype}{char}*)ptr,\ size\ *\ nmemb);}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ size\ *\ nmemb;}
+\DoxyCodeLine{00027\ \ \ \ \ \}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classGenrePredictor_aafb76c3ae2f5e1afea5b92666dda3c28}{GenrePredictor}}()\{}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ curl\_global\_init(CURL\_GLOBAL\_DEFAULT);}
+\DoxyCodeLine{00037\ \ \ \ \ \}}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00051\ \ \ \ \ vector<pair<string,\ float>>\ \mbox{\hyperlink{classGenrePredictor_adef5d620484ac9706df96569ecc5212e}{predict}}(\textcolor{keywordtype}{char}*buffer,\ \textcolor{keywordtype}{int}\ buffer\_size)\{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ vector<pair<string,\ float>>\ predictions;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ CURL*\ curl\ =\ curl\_easy\_init();}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!curl)\ \{}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ exception();}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ curl\_easy\_setopt(curl,\ CURLOPT\_URL,\ \textcolor{stringliteral}{"{}http://127.0.0.1:5000/predict"{}});}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ curl\_easy\_setopt(curl,\ CURLOPT\_NOPROGRESS,\ 1L);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ curl\_easy\_setopt(curl,\ CURLOPT\_MAXREDIRS,\ 50L);}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ curl\_easy\_setopt(curl,\ CURLOPT\_TCP\_KEEPALIVE,\ 1L);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ curl\_mime\ *mime;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ curl\_mimepart\ *part;}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Create\ the\ form\ */}}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ mime\ =\ curl\_mime\_init(curl);}
+\DoxyCodeLine{00067\ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \textcolor{comment}{/*\ Fill\ in\ the\ file\ upload\ field\ */}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ part\ =\ curl\_mime\_addpart(mime);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ curl\_mime\_data(part,\ buffer,\ buffer\_size);}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ curl\_mime\_name(part,\ \textcolor{stringliteral}{"{}file"{}});}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ curl\_mime\_filename(part,\ \textcolor{stringliteral}{"{}audio.wav"{}});}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ curl\_easy\_setopt(curl,\ CURLOPT\_MIMEPOST,\ mime);}
+\DoxyCodeLine{00075\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ std::string\ response\_string;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ std::string\ header\_string;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ curl\_easy\_setopt(curl,\ CURLOPT\_WRITEFUNCTION,\ writeFunction);}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ curl\_easy\_setopt(curl,\ CURLOPT\_WRITEDATA,\ \&response\_string);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ curl\_easy\_setopt(curl,\ CURLOPT\_HEADERDATA,\ \&header\_string);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ curl\_easy\_perform(curl);}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ curl\_mime\_free(mime);}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ curl\_easy\_cleanup(curl);}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(response\_string.length()\ <3)\{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ predictions;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ response\_json\ =\ json::parse(response\_string);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ element\ :\ response\_json)\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ predictions.push\_back(make\_pair(element[\textcolor{stringliteral}{"{}genre"{}}],\ element[\textcolor{stringliteral}{"{}certainty"{}}]));}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ predictions;}
+\DoxyCodeLine{00098\ \ \ \ \ \}}
+\DoxyCodeLine{00099\ }
+\DoxyCodeLine{00103\ \ \ \ \ \mbox{\hyperlink{classGenrePredictor_ad82095e69af42cad175d4c20b82cfcbc}{\string~GenrePredictor}}()\{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ curl\_global\_cleanup();}
+\DoxyCodeLine{00105\ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \};}
+
+\end{DoxyCode}

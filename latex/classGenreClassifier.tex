@@ -1,0 +1,84 @@
+\hypertarget{classGenreClassifier}{}\doxysection{Genre\+Classifier Class Reference}
+\label{classGenreClassifier}\index{GenreClassifier@{GenreClassifier}}
+
+
+Performs automatic genre classifications based on incoming audio data.  
+
+
+
+
+{\ttfamily \#include $<$Genre\+Classifier.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGenreClassifier_a12eac6b1a342f70f2cfca8c8aace100b}\label{classGenreClassifier_a12eac6b1a342f70f2cfca8c8aace100b}} 
+typedef void($\ast$ {\bfseries Genre\+Classification\+Callback}) (const std\+::vector$<$ std\+::pair$<$ std\+::string, float $>$ $>$ \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classGenreClassifier_a0b4e3c5a60fe02044c25c821c6f3272c}{register\+\_\+genre\+\_\+callback}} (Genre\+Classification\+Callback cb)
+\begin{DoxyCompactList}\small\item\em Registers a callback for passing genre predictions to. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGenreClassifier_ac7bce32378dbadbe4537e5b85a42c981}{Genre\+Classifier}} (float seconds=2.\+0)
+\begin{DoxyCompactList}\small\item\em Constructor for the class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classGenreClassifier_ab3d2f21baf7a05e81e36f3b6ed5ddd0c}{audio\+\_\+callback}} (const std\+::vector$<$ short $>$ \&data)
+\begin{DoxyCompactList}\small\item\em Callback function for predicting genre of incoming audio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGenreClassifier_aead2420f65c117b6e11b8e4f45689072}\label{classGenreClassifier_aead2420f65c117b6e11b8e4f45689072}} 
+static Genre\+Classification\+Callback {\bfseries callback}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Performs automatic genre classifications based on incoming audio data. 
+
+Uses the \mbox{\hyperlink{classAudioCapture}{Audio\+Capture}} class to get audio, then uses \mbox{\hyperlink{classGenrePredictor}{Genre\+Predictor}} class to make requests to a webserver with WAV-\/formatted audio and receive regular predictions, which are passed to callback function.
+
+!\+Warning\+: Singleton class !\+Do not attempt to instantiate multiple instances of this class 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGenreClassifier_ac7bce32378dbadbe4537e5b85a42c981}\label{classGenreClassifier_ac7bce32378dbadbe4537e5b85a42c981}} 
+\index{GenreClassifier@{GenreClassifier}!GenreClassifier@{GenreClassifier}}
+\index{GenreClassifier@{GenreClassifier}!GenreClassifier@{GenreClassifier}}
+\doxysubsubsection{\texorpdfstring{GenreClassifier()}{GenreClassifier()}}
+{\footnotesize\ttfamily Genre\+Classifier\+::\+Genre\+Classifier (\begin{DoxyParamCaption}\item[{float}]{seconds = {\ttfamily 2.0} }\end{DoxyParamCaption})}
+
+
+
+Constructor for the class. 
+
+Takes in the number of seconds of audio to classify genre by 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classGenreClassifier_ab3d2f21baf7a05e81e36f3b6ed5ddd0c}\label{classGenreClassifier_ab3d2f21baf7a05e81e36f3b6ed5ddd0c}} 
+\index{GenreClassifier@{GenreClassifier}!audio\_callback@{audio\_callback}}
+\index{audio\_callback@{audio\_callback}!GenreClassifier@{GenreClassifier}}
+\doxysubsubsection{\texorpdfstring{audio\_callback()}{audio\_callback()}}
+{\footnotesize\ttfamily void Genre\+Classifier\+::audio\+\_\+callback (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ short $>$ \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Callback function for predicting genre of incoming audio. 
+
+This function is passed to \mbox{\hyperlink{classAudioCapture}{Audio\+Capture}} class, which calls it with available audio data. It accumulates audio until it has the required length and makes a prediction on the data. Lastly, prediction results are passed onto provided callback function \textquotesingle{}callback\textquotesingle{} \mbox{\Hypertarget{classGenreClassifier_a0b4e3c5a60fe02044c25c821c6f3272c}\label{classGenreClassifier_a0b4e3c5a60fe02044c25c821c6f3272c}} 
+\index{GenreClassifier@{GenreClassifier}!register\_genre\_callback@{register\_genre\_callback}}
+\index{register\_genre\_callback@{register\_genre\_callback}!GenreClassifier@{GenreClassifier}}
+\doxysubsubsection{\texorpdfstring{register\_genre\_callback()}{register\_genre\_callback()}}
+{\footnotesize\ttfamily void Genre\+Classifier\+::register\+\_\+genre\+\_\+callback (\begin{DoxyParamCaption}\item[{Genre\+Classification\+Callback}]{cb }\end{DoxyParamCaption})}
+
+
+
+Registers a callback for passing genre predictions to. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/eosu/\+Sourcecode/repos/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/audiocapture/src/\+Genre\+Classification/Genre\+Classifier.\+h\item 
+/home/eosu/\+Sourcecode/repos/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/audiocapture/src/\+Genre\+Classification/Genre\+Classifier.\+cpp\end{DoxyCompactItemize}

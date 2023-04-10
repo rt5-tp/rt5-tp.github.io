@@ -1,0 +1,51 @@
+\hypertarget{FFTProcessor_8h_source}{}\doxysection{FFTProcessor.\+h}
+\label{FFTProcessor_8h_source}\index{/home/eosu/Sourcecode/repos/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/audiocapture/src/FFTProcessor.h@{/home/eosu/Sourcecode/repos/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/audiocapture/src/FFTProcessor.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ FFT\_PROCESSOR\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ FFT\_PROCESSOR\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <mutex>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <condition\_variable>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <fftw3.h>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{enum}\ ReductionMethod\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ AVERAGE,}
+\DoxyCodeLine{00014\ \ \ \ \ MAXIMUM}
+\DoxyCodeLine{00015\ \};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFFTProcessor}{FFTProcessor}}\ \{}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{using\ }DataAvailableCallback\ =\ void(*)(\textcolor{keyword}{const}\ std::vector<double>\ \&);}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{classFFTProcessor}{FFTProcessor}}();}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classFFTProcessor}{\string~FFTProcessor}}();}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ start();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ stop();}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ processData(\textcolor{keyword}{const}\ std::vector<short>\ \&data);}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ registerCallback(DataAvailableCallback\ cb);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ ReductionMethod\ reductionMethod\ =\ AVERAGE;}
+\DoxyCodeLine{00030\ \ \ \ \ std::vector<double>\ getReducedResolutionFFT(\textcolor{keyword}{const}\ std::vector<double>\&\ fftOutputData,\ \textcolor{keywordtype}{int}\ numSections);}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ workerThread();}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ performFFT(\textcolor{keyword}{const}\ std::vector<double>\ \&data);}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ std::thread\ fftThread;}
+\DoxyCodeLine{00037\ \ \ \ \ std::mutex\ mtx;}
+\DoxyCodeLine{00038\ \ \ \ \ std::condition\_variable\ cv;}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{bool}\ stopThread;}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{bool}\ newData;}
+\DoxyCodeLine{00041\ \ \ \ \ std::vector<double>\ inputData;}
+\DoxyCodeLine{00042\ \ \ \ \ DataAvailableCallback\ callback;}
+\DoxyCodeLine{00043\ \};}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ FFT\_PROCESSOR\_H}}
+
+\end{DoxyCode}

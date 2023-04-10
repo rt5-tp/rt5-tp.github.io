@@ -1,0 +1,129 @@
+\hypertarget{pwm_8h_source}{}\doxysection{pwm.\+h}
+\label{pwm_8h_source}\index{/home/eosu/Sourcecode/repos/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/LED-\/Library/src/ws2811/pwm.h@{/home/eosu/Sourcecode/repos/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/LED-\/Library/src/ws2811/pwm.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00002\ \textcolor{comment}{\ *\ pwm.h}}
+\DoxyCodeLine{00003\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00004\ \textcolor{comment}{\ *\ Copyright\ (c)\ 2014\ Jeremy\ Garff\ <jer\ @\ jers.net>}}
+\DoxyCodeLine{00005\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00006\ \textcolor{comment}{\ *\ All\ rights\ reserved.}}
+\DoxyCodeLine{00007\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00008\ \textcolor{comment}{\ *\ Redistribution\ and\ use\ in\ source\ and\ binary\ forms,\ with\ or\ without\ modification,\ are\ permitted}}
+\DoxyCodeLine{00009\ \textcolor{comment}{\ *\ provided\ that\ the\ following\ conditions\ are\ met:}}
+\DoxyCodeLine{00010\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00011\ \textcolor{comment}{\ *\ \ \ \ \ 1.\ \ Redistributions\ of\ source\ code\ must\ retain\ the\ above\ copyright\ notice,\ this\ list\ of}}
+\DoxyCodeLine{00012\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ conditions\ and\ the\ following\ disclaimer.}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ *\ \ \ \ \ 2.\ \ Redistributions\ in\ binary\ form\ must\ reproduce\ the\ above\ copyright\ notice,\ this\ list}}
+\DoxyCodeLine{00014\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ of\ conditions\ and\ the\ following\ disclaimer\ in\ the\ documentation\ and/or\ other\ materials}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ provided\ with\ the\ distribution.}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ *\ \ \ \ \ 3.\ \ Neither\ the\ name\ of\ the\ owner\ nor\ the\ names\ of\ its\ contributors\ may\ be\ used\ to\ endorse}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ *\ \ \ \ \ \ \ \ \ or\ promote\ products\ derived\ from\ this\ software\ without\ specific\ prior\ written\ permission.}}
+\DoxyCodeLine{00018\ \textcolor{comment}{\ *\ }}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ *\ THIS\ SOFTWARE\ IS\ PROVIDED\ BY\ THE\ COPYRIGHT\ HOLDERS\ AND\ CONTRIBUTORS\ "{}AS\ IS"{}\ AND\ ANY\ EXPRESS\ OR}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ *\ IMPLIED\ WARRANTIES,\ INCLUDING,\ BUT\ NOT\ LIMITED\ TO,\ THE\ IMPLIED\ WARRANTIES\ OF\ MERCHANTABILITY\ AND}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ *\ FITNESS\ FOR\ A\ PARTICULAR\ PURPOSE\ ARE\ DISCLAIMED.\ IN\ NO\ EVENT\ SHALL\ THE\ COPYRIGHT\ HOLDER\ BE}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ *\ LIABLE\ FOR\ ANY\ DIRECT,\ INDIRECT,\ INCIDENTAL,\ SPECIAL,\ EXEMPLARY,\ OR\ CONSEQUENTIAL\ DAMAGES}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ *\ (INCLUDING,\ BUT\ NOT\ LIMITED\ TO,\ PROCUREMENT\ OF\ SUBSTITUTE\ GOODS\ OR\ SERVICES;\ LOSS\ OF\ USE,\ DATA,}}
+\DoxyCodeLine{00024\ \textcolor{comment}{\ *\ OR\ PROFITS;\ OR\ BUSINESS\ INTERRUPTION)\ HOWEVER\ CAUSED\ AND\ ON\ ANY\ THEORY\ OF\ LIABILITY,\ WHETHER\ IN}}
+\DoxyCodeLine{00025\ \textcolor{comment}{\ *\ CONTRACT,\ STRICT\ LIABILITY,\ OR\ TORT\ (INCLUDING\ NEGLIGENCE\ OR\ OTHERWISE)\ ARISING\ IN\ ANY\ WAY\ OUT}}
+\DoxyCodeLine{00026\ \textcolor{comment}{\ *\ OF\ THE\ USE\ OF\ THIS\ SOFTWARE,\ EVEN\ IF\ ADVISED\ OF\ THE\ POSSIBILITY\ OF\ SUCH\ DAMAGE.}}
+\DoxyCodeLine{00027\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00028\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#ifndef\ \_\_PWM\_H\_\_}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ \_\_PWM\_H\_\_}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{comment}{/*}}
+\DoxyCodeLine{00036\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00037\ \textcolor{comment}{\ *\ Pin\ mappint\ of\ alternate\ pin\ configuration\ for\ PWM}}
+\DoxyCodeLine{00038\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00039\ \textcolor{comment}{\ *\ GPIO\ \ \ \ ALT\ PWM0\ \ \ ALT\ PWM1}}
+\DoxyCodeLine{00040\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00041\ \textcolor{comment}{\ *\ \ 12\ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00042\ \textcolor{comment}{\ *\ \ 13\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00043\ \textcolor{comment}{\ *\ \ 18\ \ \ \ \ \ \ \ 5}}
+\DoxyCodeLine{00044\ \textcolor{comment}{\ *\ \ 19\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 5}}
+\DoxyCodeLine{00045\ \textcolor{comment}{\ *\ \ 40\ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00046\ \textcolor{comment}{\ *\ \ 41\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00047\ \textcolor{comment}{\ *\ \ 45\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0}}
+\DoxyCodeLine{00048\ \textcolor{comment}{\ *\ \ 52\ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{00049\ \textcolor{comment}{\ *\ \ 53\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 1}}
+\DoxyCodeLine{00050\ \textcolor{comment}{\ *}}
+\DoxyCodeLine{00051\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_CHANNELS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 2}}
+\DoxyCodeLine{00055\ }
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00058\ \{}
+\DoxyCodeLine{00059\ \ \ \ \ uint32\_t\ ctl;}
+\DoxyCodeLine{00060\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_CTL\_MSEN2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 15)}}
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_CTL\_USEF2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 13)}}
+\DoxyCodeLine{00062\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_CTL\_POLA2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 12)}}
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_CTL\_SBIT2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 11)}}
+\DoxyCodeLine{00064\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_CTL\_RPTL2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 10)}}
+\DoxyCodeLine{00065\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_CTL\_MODE2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 9)}}
+\DoxyCodeLine{00066\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_CTL\_PWEN2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 8)}}
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_CTL\_MSEN1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 7)}}
+\DoxyCodeLine{00068\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_CTL\_CLRF1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 6)}}
+\DoxyCodeLine{00069\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_CTL\_USEF1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 5)}}
+\DoxyCodeLine{00070\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_CTL\_POLA1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 4)}}
+\DoxyCodeLine{00071\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_CTL\_SBIT1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 3)}}
+\DoxyCodeLine{00072\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_CTL\_RPTL1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 2)}}
+\DoxyCodeLine{00073\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_CTL\_MODE1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 1)}}
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_CTL\_PWEN1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 0)}}
+\DoxyCodeLine{00075\ \ \ \ \ uint32\_t\ sta;}
+\DoxyCodeLine{00076\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_STA\_STA4\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 12)}}
+\DoxyCodeLine{00077\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_STA\_STA3\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 11)}}
+\DoxyCodeLine{00078\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_STA\_STA2\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 10)}}
+\DoxyCodeLine{00079\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_STA\_STA1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 9)}}
+\DoxyCodeLine{00080\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_STA\_BERR\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 8)}}
+\DoxyCodeLine{00081\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_STA\_GAP04\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 7)}}
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_STA\_GAP03\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 6)}}
+\DoxyCodeLine{00083\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_STA\_GAP02\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 5)}}
+\DoxyCodeLine{00084\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_STA\_GAP01\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 4)}}
+\DoxyCodeLine{00085\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_STA\_RERR1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 3)}}
+\DoxyCodeLine{00086\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_STA\_WERR1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 2)}}
+\DoxyCodeLine{00087\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_STA\_EMPT1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 1)}}
+\DoxyCodeLine{00088\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_STA\_FULL1\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 0)}}
+\DoxyCodeLine{00089\ \ \ \ \ uint32\_t\ dmac;}
+\DoxyCodeLine{00090\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_DMAC\_ENAB\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (1\ <<\ 31)}}
+\DoxyCodeLine{00091\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_DMAC\_PANIC(val)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((val\ \&\ 0xff)\ <<\ 8)}}
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#define\ RPI\_PWM\_DMAC\_DREQ(val)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((val\ \&\ 0xff)\ <<\ 0)}}
+\DoxyCodeLine{00093\ \ \ \ \ uint32\_t\ resvd\_0x0c;}
+\DoxyCodeLine{00094\ \ \ \ \ uint32\_t\ rng1;}
+\DoxyCodeLine{00095\ \ \ \ \ uint32\_t\ dat1;}
+\DoxyCodeLine{00096\ \ \ \ \ uint32\_t\ fif1;}
+\DoxyCodeLine{00097\ \ \ \ \ uint32\_t\ resvd\_0x1c;}
+\DoxyCodeLine{00098\ \ \ \ \ uint32\_t\ rng2;}
+\DoxyCodeLine{00099\ \ \ \ \ uint32\_t\ dat2;}
+\DoxyCodeLine{00100\ \}\ \mbox{\hyperlink{struct____attribute____}{\_\_attribute\_\_}}((packed,\ \mbox{\hyperlink{struct____attribute____}{aligned}}(4)))\ pwm\_t;}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00103\ \textcolor{preprocessor}{\#define\ PWM\_OFFSET\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x0020c000)}}
+\DoxyCodeLine{00104\ \textcolor{preprocessor}{\#define\ PWM\_PERIPH\_PHYS\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (0x7e20c000)}}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00108\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{keywordtype}{int}\ pinnum;}
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{int}\ altnum;}
+\DoxyCodeLine{00111\ \}\ \mbox{\hyperlink{structpwm__pin__table__t}{pwm\_pin\_table\_t}};}
+\DoxyCodeLine{00112\ }
+\DoxyCodeLine{00113\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}}
+\DoxyCodeLine{00114\ \{}
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ count;}
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keyword}{const}\ \mbox{\hyperlink{structpwm__pin__table__t}{pwm\_pin\_table\_t}}\ *pins;}
+\DoxyCodeLine{00117\ \}\ \mbox{\hyperlink{structpwm__pin__tables__t}{pwm\_pin\_tables\_t}};}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{keywordtype}{int}\ pwm\_pin\_alt(\textcolor{keywordtype}{int}\ chan,\ \textcolor{keywordtype}{int}\ pinnum);}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ }
+\DoxyCodeLine{00123\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ \_\_PWM\_H\_\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

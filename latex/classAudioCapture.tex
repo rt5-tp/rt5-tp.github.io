@@ -1,0 +1,59 @@
+\hypertarget{classAudioCapture}{}\doxysection{Audio\+Capture Class Reference}
+\label{classAudioCapture}\index{AudioCapture@{AudioCapture}}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classAudioCapture_a367a8ff1960c7e886ced71a2191057e3}\label{classAudioCapture_a367a8ff1960c7e886ced71a2191057e3}} 
+typedef void($\ast$ {\bfseries Data\+Available\+Callback}) (const std\+::vector$<$ short $>$ \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAudioCapture_a19c04e27f31f937ae0d062b2dc28f8d7}{Audio\+Capture}} (std\+::string device\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Constructor for this class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAudioCapture_adc7ce55a0c63f8723decf6fb06f68203}{register\+\_\+callback}} (Data\+Available\+Callback cb)
+\begin{DoxyCompactList}\small\item\em Registers callback for audio data. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classAudioCapture_a7d2b75c5c63c68d607711fdad95300ec}{prompt\+\_\+device\+\_\+selection}} ()
+\begin{DoxyCompactList}\small\item\em Prompts user to select audio device. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classAudioCapture_a19c04e27f31f937ae0d062b2dc28f8d7}\label{classAudioCapture_a19c04e27f31f937ae0d062b2dc28f8d7}} 
+\index{AudioCapture@{AudioCapture}!AudioCapture@{AudioCapture}}
+\index{AudioCapture@{AudioCapture}!AudioCapture@{AudioCapture}}
+\doxysubsubsection{\texorpdfstring{AudioCapture()}{AudioCapture()}}
+{\footnotesize\ttfamily Audio\+Capture\+::\+Audio\+Capture (\begin{DoxyParamCaption}\item[{std\+::string}]{device\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Constructor for this class. 
+
+Prompts user for audio device if not provided. Gets handle for audio device and sets up necessary callbacks. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAudioCapture_a7d2b75c5c63c68d607711fdad95300ec}\label{classAudioCapture_a7d2b75c5c63c68d607711fdad95300ec}} 
+\index{AudioCapture@{AudioCapture}!prompt\_device\_selection@{prompt\_device\_selection}}
+\index{prompt\_device\_selection@{prompt\_device\_selection}!AudioCapture@{AudioCapture}}
+\doxysubsubsection{\texorpdfstring{prompt\_device\_selection()}{prompt\_device\_selection()}}
+{\footnotesize\ttfamily std\+::string Audio\+Capture\+::prompt\+\_\+device\+\_\+selection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Prompts user to select audio device. 
+
+Lists all discoverable audio devices on system and prompts user to input a number selection. \mbox{\Hypertarget{classAudioCapture_adc7ce55a0c63f8723decf6fb06f68203}\label{classAudioCapture_adc7ce55a0c63f8723decf6fb06f68203}} 
+\index{AudioCapture@{AudioCapture}!register\_callback@{register\_callback}}
+\index{register\_callback@{register\_callback}!AudioCapture@{AudioCapture}}
+\doxysubsubsection{\texorpdfstring{register\_callback()}{register\_callback()}}
+{\footnotesize\ttfamily void Audio\+Capture\+::register\+\_\+callback (\begin{DoxyParamCaption}\item[{Data\+Available\+Callback}]{cb }\end{DoxyParamCaption})}
+
+
+
+Registers callback for audio data. 
+
+Calls to this function is equivalent to subscribing to the data. Multiple subscribers can be set up by making multiple calls. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/eosu/\+Sourcecode/repos/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/audiocapture/src/\+Audio\+Capture/Audio\+Capture.\+h\item 
+/home/eosu/\+Sourcecode/repos/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/audiocapture/src/\+Audio\+Capture/Audio\+Capture.\+cpp\end{DoxyCompactItemize}

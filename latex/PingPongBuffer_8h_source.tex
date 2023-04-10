@@ -1,0 +1,45 @@
+\hypertarget{PingPongBuffer_8h_source}{}\doxysection{Ping\+Pong\+Buffer.\+h}
+\label{PingPongBuffer_8h_source}\index{/home/eosu/Sourcecode/repos/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/audiocapture/src/AudioCapture/PingPongBuffer.h@{/home/eosu/Sourcecode/repos/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/audiocapture/src/AudioCapture/PingPongBuffer.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PINGPONGBUFFER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PINGPONGBUFFER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00013\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPingPongBuffer}{PingPongBuffer}}}
+\DoxyCodeLine{00014\ \{}
+\DoxyCodeLine{00015\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{typedef}\ void\ (*FullBufferCallback)(\textcolor{keyword}{const}\ std::vector<short>\&,\ int);}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classPingPongBuffer}{PingPongBuffer}}(\textcolor{keywordtype}{int}\ capacity);}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPingPongBuffer_a3e83626083eaf81e934b21f9de0ff94d}{add\_data}}(\textcolor{keyword}{const}\ std::vector<short>\ \&data);}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00039\ \ \ \ \ std::vector<short>\ \mbox{\hyperlink{classPingPongBuffer_a5005d5f73c139e8bdaca53784d65bb0f}{get\_current\_buffer}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classPingPongBuffer_a81d7a1aa9b91bf7a9fcafb46e7f5a28b}{is\_full}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPingPongBuffer_a4f7da502016c0f826220a418793baa85}{trigger\_callback}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPingPongBuffer_a59da3ea9fc7be1c803f31245a718034f}{set\_on\_buffer\_full\_callback}}(FullBufferCallback\ callback);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{int}\ capacity\_;}
+\DoxyCodeLine{00064\ \ \ \ \ std::vector<short>\ buffer\_a\_;}
+\DoxyCodeLine{00065\ \ \ \ \ std::vector<short>\ buffer\_b\_;}
+\DoxyCodeLine{00066\ \ \ \ \ std::vector<short>\ *current\_buffer\_;}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ write\_offset\_;}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ read\_offset\_;}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{bool}\ buffer\_a\_full\_;}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{bool}\ buffer\_b\_full\_;}
+\DoxyCodeLine{00071\ \ \ \ \ FullBufferCallback\ on\_buffer\_full\_callback\_;}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ switch\_buffer();}
+\DoxyCodeLine{00080\ \};}
+\DoxyCodeLine{00081\ }
+\DoxyCodeLine{00082\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PINGPONGBUFFER\_H}}
+
+\end{DoxyCode}

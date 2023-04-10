@@ -1,0 +1,26 @@
+\hypertarget{GenreClassifier_8h_source}{}\doxysection{Genre\+Classifier.\+h}
+\label{GenreClassifier_8h_source}\index{/home/eosu/Sourcecode/repos/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/audiocapture/src/GenreClassification/GenreClassifier.h@{/home/eosu/Sourcecode/repos/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/audiocapture/src/GenreClassification/GenreClassifier.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classGenreClassifier}{GenreClassifier}}\ \{}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keyword}{static}\ std::vector<int16\_t>\ rec\_audio;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ samples\_length;}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{typedef}\ void\ (*GenreClassificationCallback)(\textcolor{keyword}{const}\ std::vector<std::pair<std::string,\ float>>\&);}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGenreClassifier_a0b4e3c5a60fe02044c25c821c6f3272c}{register\_genre\_callback}}(GenreClassificationCallback\ cb);}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keyword}{static}\ GenreClassificationCallback\ callback;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{classGenreClassifier}{GenreClassifier}}(\textcolor{keywordtype}{float}\ seconds=2.0);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGenreClassifier_ab3d2f21baf7a05e81e36f3b6ed5ddd0c}{audio\_callback}}(\textcolor{keyword}{const}\ std::vector<short>\&\ data);\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00045\ \};}
+
+\end{DoxyCode}

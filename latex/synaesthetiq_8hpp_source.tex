@@ -1,0 +1,67 @@
+\hypertarget{synaesthetiq_8hpp_source}{}\doxysection{synaesthetiq.\+hpp}
+\label{synaesthetiq_8hpp_source}\index{/home/eosu/Sourcecode/repos/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/LED-\/Library/src/SynaesthetiQ/synaesthetiq.hpp@{/home/eosu/Sourcecode/repos/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/LED-\/Library/src/SynaesthetiQ/synaesthetiq.hpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#include\ "{}../ws2811/ws2811.h"{}}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}Colour.hpp"{}}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{comment}{//\ \#define\ TARGET\_FREQ\ \ \ \ \ \ \ \ \ \ \ \ \ WS2811\_TARGET\_FREQ}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ GPIO\_PIN\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 10}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#define\ DMA\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 10}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#define\ STRIP\_TYPE\ \ \ \ \ \ \ \ \ \ \ \ \ \ WS2811\_STRIP\_RGB\ \ \ \ \ \ \ \ }\textcolor{comment}{//\ WS2812/SK6812RGB\ integrated\ chip+leds}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#define\ LED\_COUNT\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 513}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#define\ colourOff\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ 0x00000000}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structXYPos}{XYPos}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keywordtype}{int}\ x;}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{int}\ y;}
+\DoxyCodeLine{00016\ \};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{double}\ AMPS;}
+\DoxyCodeLine{00019\ \textcolor{keyword}{typedef}\ \textcolor{keywordtype}{double}\ MILLIAMPS;}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classSynaesthetiQ}{SynaesthetiQ}}\ \{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ class}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keyword}{private}:\ \ \ \ \textcolor{comment}{//\ Access\ specifier}}
+\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ \ maxMatrixCurrent\ =\ 10.0;\ \ \ \textcolor{comment}{//\ Max\ Matrix\ Current\ expressed\ as\ amps.}}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \ \ \ \ matrixPixels\ \ \ \ \ =\ 512;\ \ \ \ \textcolor{comment}{//\ The\ Number\ of\ pixels\ in\ the\ matrix.}}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ \ matrixPixelCurrentPerChannel\ =\ 19.53;}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \ \ \ \ \ \ \ maxBigLEDCurrent\ =\ 3.0;\ \ \ \ \textcolor{comment}{//\ Max\ Big\ LED\ Current\ expressed\ as\ amps.}}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \ \ \ \ bigLEDCount\ \ \ \ \ \ =\ 1;\ \ \ \ \ \ \textcolor{comment}{//\ Must\ be\ one.}}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ \ \ \ \ \ \ \ \ \ bigLEDFirst\ \ \ \ \ \ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ \ systemBrightness\ =\ 50.0;\ \ \ \ \ \textcolor{comment}{//\ System\ Brightness\ expressed\ as\ a\ percentage.\ Default\ 50\%}}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structws2811__t}{ws2811\_t}}\ ledstring;}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ ws2811\_return\_t\ ret;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ clear\_on\_exit\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classColour}{Colour}}\ bigLEDColour;\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Big\ LED\ Colour\ 0x00FF0000\ R\ 0x0000FF00\ G\ 0x000000FF\ B}}
+\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classColour}{Colour}}\ basicMatrixLimit(\mbox{\hyperlink{classColour}{Colour}}\ ColourIn);}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classColour}{Colour}}\ bigLEDLimit(\mbox{\hyperlink{classColour}{Colour}}\ colourIn);}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ limitMatrixCurrent();}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ AMPS\ calculateMatrixCurrent();\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Matrix\ Current\ in\ amps.}}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ MILLIAMPS\ calculateLEDCurrent(MILLIAMPS\ LEDMaxCurrentPerChannel,\mbox{\hyperlink{classColour}{Colour}}\ colour);\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ LED\ Current\ in\ milli\ amps}}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ applyFactorToMatrix(\textcolor{keywordtype}{double}\ factor);}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classColour}{Colour}}\ applyFactorToLED(\textcolor{keywordtype}{double}\ factor,\ \mbox{\hyperlink{classColour}{Colour}}\ colour);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ XYtoChainPos(\mbox{\hyperlink{structXYPos}{XYPos}}\ XY);}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structXYPos}{XYPos}}\ ChainPostoXY(\textcolor{keywordtype}{int}\ ChainPos);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setSystemBrightness(\textcolor{keywordtype}{double}\ Brightness)\ \{}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ systemBrightness\ =\ Brightness;}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{double}\ getSystemBrightness()\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ systemBrightness;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSynaesthetiQ}{SynaesthetiQ}}();\ }
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classSynaesthetiQ}{\string~SynaesthetiQ}}();}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setBigLEDColour(\mbox{\hyperlink{classColour}{Colour}}\ colour);}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setMatrixColour(\mbox{\hyperlink{classColour}{Colour}}\ colour);}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ setMatrixPixelColour(\textcolor{keywordtype}{int}\ x,\textcolor{keywordtype}{int}\ y,\mbox{\hyperlink{classColour}{Colour}}\ colour);}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ void\ setMatrix();\ \ \ \ \ \ \ \ \ \ \ //\ Takes\ a\ matrix\ format\ as\ input.\ Uses\ an\ assosiative\ array\ under\ the\ hood.}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ clearOutput();}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ render();}
+\DoxyCodeLine{00061\ \};}
+
+\end{DoxyCode}

@@ -1,0 +1,38 @@
+\hypertarget{classFFTProcessor}{}\doxysection{FFTProcessor Class Reference}
+\label{classFFTProcessor}\index{FFTProcessor@{FFTProcessor}}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFFTProcessor_ae56ca750498e20702f34af1e8e8acd9f}\label{classFFTProcessor_ae56ca750498e20702f34af1e8e8acd9f}} 
+using {\bfseries Data\+Available\+Callback} = void($\ast$)(const std\+::vector$<$ double $>$ \&)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFFTProcessor_a8dc43650e52d022abf6638b13c829d93}\label{classFFTProcessor_a8dc43650e52d022abf6638b13c829d93}} 
+void {\bfseries start} ()
+\item 
+\mbox{\Hypertarget{classFFTProcessor_affdb6b0b0f98fe05a656490fe3498dbe}\label{classFFTProcessor_affdb6b0b0f98fe05a656490fe3498dbe}} 
+void {\bfseries stop} ()
+\item 
+\mbox{\Hypertarget{classFFTProcessor_a1d0b5d8cdaa242d7d9ca3682668df4f4}\label{classFFTProcessor_a1d0b5d8cdaa242d7d9ca3682668df4f4}} 
+void {\bfseries process\+Data} (const std\+::vector$<$ short $>$ \&data)
+\item 
+\mbox{\Hypertarget{classFFTProcessor_a6213f0b5a470f393334fee8b7d81fa32}\label{classFFTProcessor_a6213f0b5a470f393334fee8b7d81fa32}} 
+void {\bfseries register\+Callback} (Data\+Available\+Callback cb)
+\item 
+\mbox{\Hypertarget{classFFTProcessor_ae1d0823bd36cbb2de4e9032d2bcdb31d}\label{classFFTProcessor_ae1d0823bd36cbb2de4e9032d2bcdb31d}} 
+std\+::vector$<$ double $>$ {\bfseries get\+Reduced\+Resolution\+FFT} (const std\+::vector$<$ double $>$ \&fft\+Output\+Data, int num\+Sections)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFFTProcessor_a3d47ce14bd69c38d7d72dd20d07cba9e}\label{classFFTProcessor_a3d47ce14bd69c38d7d72dd20d07cba9e}} 
+Reduction\+Method {\bfseries reduction\+Method} = AVERAGE
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/eosu/\+Sourcecode/repos/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/audiocapture/src/FFTProcessor.\+h\item 
+/home/eosu/\+Sourcecode/repos/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/audiocapture/src/FFTProcessor.\+cpp\end{DoxyCompactItemize}
