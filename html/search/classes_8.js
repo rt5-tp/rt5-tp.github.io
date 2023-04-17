@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['visualiser_0',['Visualiser',['../classVisualiser.html',1,'']]]
+  ['synaesthetiq_88',['SynaesthetiQ',['../classSynaesthetiQ.html',1,'']]]
 ];

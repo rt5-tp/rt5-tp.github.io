@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['trigger_5fcallback_0',['trigger_callback',['../classPingPongBuffer.html#a4f7da502016c0f826220a418793baa85',1,'PingPongBuffer']]]
+  ['load_120',['load',['../classAudioFile.html#a0ff16123b519a4665e9f3e7d341f0a26',1,'AudioFile']]],
+  ['loadfrommemory_121',['loadFromMemory',['../classAudioFile.html#a138cd246abfc23b57caf1519d78b1312',1,'AudioFile']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['is_5ffull_0',['is_full',['../classPingPongBuffer.html#a81d7a1aa9b91bf7a9fcafb46e7f5a28b',1,'PingPongBuffer']]]
+  ['envelopefollower_100',['EnvelopeFollower',['../classEnvelopeFollower.html#a4ba7f4c09fca3f2c42c0ff3de46c59c2',1,'EnvelopeFollower']]]
 ];

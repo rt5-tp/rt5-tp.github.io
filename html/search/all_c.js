@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['xypos_0',['XYPos',['../structXYPos.html',1,'']]]
+  ['visualiser_67',['Visualiser',['../classVisualiser.html',1,'']]]
 ];

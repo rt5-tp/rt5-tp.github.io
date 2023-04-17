@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['genreclassifier_0',['GenreClassifier',['../classGenreClassifier.html#ac7bce32378dbadbe4537e5b85a42c981',1,'GenreClassifier']]],
-  ['genrepredictor_1',['GenrePredictor',['../classGenrePredictor.html#aafb76c3ae2f5e1afea5b92666dda3c28',1,'GenrePredictor']]],
-  ['get_5fcurrent_5fbuffer_2',['get_current_buffer',['../classPingPongBuffer.html#a5005d5f73c139e8bdaca53784d65bb0f',1,'PingPongBuffer']]]
+  ['clearoutput_98',['clearOutput',['../classSynaesthetiQ.html#ac4660ef2d240ccc88370e33d3ea68caf',1,'SynaesthetiQ']]],
+  ['colour_99',['Colour',['../classColour.html#a46612b9524fcd4cee818af6a86b7a4d2',1,'Colour::Colour()'],['../classColour.html#a22d30494084f20493107129257a95e3a',1,'Colour::Colour(uint8_t redIn, uint8_t greenIn, uint8_t blueIn)'],['../classColour.html#a0c49fb778473849a19ba79c73ae9f0f7',1,'Colour::Colour(uint32_t XRGBIn)']]]
 ];

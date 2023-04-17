@@ -12,12 +12,13 @@ Classifies music into one of 10 genres using a web API call.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classGenrePredictor_aafb76c3ae2f5e1afea5b92666dda3c28}\label{classGenrePredictor_aafb76c3ae2f5e1afea5b92666dda3c28}} 
 \mbox{\hyperlink{classGenrePredictor_aafb76c3ae2f5e1afea5b92666dda3c28}{Genre\+Predictor}} ()
 \begin{DoxyCompactList}\small\item\em Constructor of class, which initialises curl for requests. \end{DoxyCompactList}\item 
-vector$<$ pair$<$ string, float $>$ $>$ \mbox{\hyperlink{classGenrePredictor_adef5d620484ac9706df96569ecc5212e}{predict}} (char $\ast$buffer, int buffer\+\_\+size)
+vector$<$ pair$<$ string, float $>$ $>$ \mbox{\hyperlink{classGenrePredictor_ac5f136c1e1ef35cbcef0ad8289e369ef}{predict}} (char $\ast$buffer, int buffer\+\_\+size)
 \begin{DoxyCompactList}\small\item\em Takes buffer of WAV audio and returns genre classifications certainties. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classGenrePredictor_ad82095e69af42cad175d4c20b82cfcbc}\label{classGenrePredictor_ad82095e69af42cad175d4c20b82cfcbc}} 
-{\bfseries $\sim$\+Genre\+Predictor} ()
+\mbox{\hyperlink{classGenrePredictor_ad82095e69af42cad175d4c20b82cfcbc}{$\sim$\+Genre\+Predictor}} ()
 \begin{DoxyCompactList}\small\item\em Destructor of class. Cleans up resources used by curl. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -28,25 +29,12 @@ Makes
 
 This function reads the available audio data into a \mbox{\hyperlink{classPingPongBuffer}{Ping\+Pong\+Buffer}}. Optionally, it renders a visualisation of the audio data. 
 
-\doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{classGenrePredictor_aafb76c3ae2f5e1afea5b92666dda3c28}\label{classGenrePredictor_aafb76c3ae2f5e1afea5b92666dda3c28}} 
-\index{GenrePredictor@{GenrePredictor}!GenrePredictor@{GenrePredictor}}
-\index{GenrePredictor@{GenrePredictor}!GenrePredictor@{GenrePredictor}}
-\doxysubsubsection{\texorpdfstring{GenrePredictor()}{GenrePredictor()}}
-{\footnotesize\ttfamily Genre\+Predictor\+::\+Genre\+Predictor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
-
-
-
-Constructor of class, which initialises curl for requests. 
-
-
-
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{classGenrePredictor_adef5d620484ac9706df96569ecc5212e}\label{classGenrePredictor_adef5d620484ac9706df96569ecc5212e}} 
+\mbox{\Hypertarget{classGenrePredictor_ac5f136c1e1ef35cbcef0ad8289e369ef}\label{classGenrePredictor_ac5f136c1e1ef35cbcef0ad8289e369ef}} 
 \index{GenrePredictor@{GenrePredictor}!predict@{predict}}
 \index{predict@{predict}!GenrePredictor@{GenrePredictor}}
 \doxysubsubsection{\texorpdfstring{predict()}{predict()}}
-{\footnotesize\ttfamily vector$<$ pair$<$ string, float $>$ $>$ Genre\+Predictor\+::predict (\begin{DoxyParamCaption}\item[{char $\ast$}]{buffer,  }\item[{int}]{buffer\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily vector$<$pair$<$string, float$>$ $>$ Genre\+Predictor\+::predict (\begin{DoxyParamCaption}\item[{char $\ast$}]{buffer,  }\item[{int}]{buffer\+\_\+size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -56,8 +44,8 @@ Returns vector of pairs of (genre, certainty), where genre is a string and certa
 
 Genres returned are\+: blues, classical, country, disco, hiphop, jazz, metal, pop, reggae, rock
 
-For decent predictions, audio should be \texorpdfstring{$>$}{>}1 second in length. 
+For decent predictions, audio should be $>$1 second in length. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/eosu/\+Sourcecode/repos/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/audiocapture/src/\+Genre\+Classification/cpp\+\_\+genre\+\_\+classifier/src/Genre\+Predictor.\+hpp\end{DoxyCompactItemize}
+/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/audiocapture/src/\+Genre\+Classification/cpp\+\_\+genre\+\_\+classifier/src/Genre\+Predictor.\+hpp\end{DoxyCompactItemize}

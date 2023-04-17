@@ -1,40 +1,57 @@
 \hypertarget{classColour}{}\doxysection{Colour Class Reference}
 \label{classColour}\index{Colour@{Colour}}
+
+
+A class to manage colours for the \mbox{\hyperlink{classSynaesthetiQ}{SynaesthetiQ}}.  
+
+
+
+
+{\ttfamily \#include $<$Colour.\+hpp$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classColour_a46612b9524fcd4cee818af6a86b7a4d2}\label{classColour_a46612b9524fcd4cee818af6a86b7a4d2}} 
+\mbox{\hyperlink{classColour_a46612b9524fcd4cee818af6a86b7a4d2}{Colour}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor, which set all values to 0. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classColour_a22d30494084f20493107129257a95e3a}\label{classColour_a22d30494084f20493107129257a95e3a}} 
-{\bfseries Colour} (uint8\+\_\+t red\+In, uint8\+\_\+t green\+In, uint8\+\_\+t blue\+In)
-\item 
+\mbox{\hyperlink{classColour_a22d30494084f20493107129257a95e3a}{Colour}} (uint8\+\_\+t red\+In, uint8\+\_\+t green\+In, uint8\+\_\+t blue\+In)
+\begin{DoxyCompactList}\small\item\em Constructor that takes in red, green, blue values separately. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classColour_a0c49fb778473849a19ba79c73ae9f0f7}\label{classColour_a0c49fb778473849a19ba79c73ae9f0f7}} 
-{\bfseries Colour} (uint32\+\_\+t XRGBIn)
-\item 
+\mbox{\hyperlink{classColour_a0c49fb778473849a19ba79c73ae9f0f7}{Colour}} (uint32\+\_\+t XRGBIn)
+\begin{DoxyCompactList}\small\item\em Constructor that takes in a 32 bit number of form XRGB, where X is an empty byte. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classColour_a69d451388d92e33e6e997b4a49fbab86}\label{classColour_a69d451388d92e33e6e997b4a49fbab86}} 
-uint32\+\_\+t {\bfseries get\+GRB} ()
-\item 
+uint32\+\_\+t \mbox{\hyperlink{classColour_a69d451388d92e33e6e997b4a49fbab86}{get\+GRB}} ()
+\begin{DoxyCompactList}\small\item\em Returns 32 bit-\/format of order Green, Red, Blue. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classColour_a248a1d9cf4106dac4292ac6fa8636f16}\label{classColour_a248a1d9cf4106dac4292ac6fa8636f16}} 
-uint32\+\_\+t {\bfseries get\+RGB} ()
-\item 
+uint32\+\_\+t \mbox{\hyperlink{classColour_a248a1d9cf4106dac4292ac6fa8636f16}{get\+RGB}} ()
+\begin{DoxyCompactList}\small\item\em Returns 32 bit-\/format of order Red, Green, Blue. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classColour_a0bf66dd3c35d509290b5b79e1e3eb851}\label{classColour_a0bf66dd3c35d509290b5b79e1e3eb851}} 
-uint8\+\_\+t {\bfseries get\+Red} ()
-\item 
+uint8\+\_\+t \mbox{\hyperlink{classColour_a0bf66dd3c35d509290b5b79e1e3eb851}{get\+Red}} ()
+\begin{DoxyCompactList}\small\item\em Returns red channel. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classColour_af2d77f94b1154325bd0c643fbd64b87c}\label{classColour_af2d77f94b1154325bd0c643fbd64b87c}} 
-uint8\+\_\+t {\bfseries get\+Green} ()
-\item 
+uint8\+\_\+t \mbox{\hyperlink{classColour_af2d77f94b1154325bd0c643fbd64b87c}{get\+Green}} ()
+\begin{DoxyCompactList}\small\item\em Returns green channel. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classColour_ae206500d684bf5ce115e34ca83565eb6}\label{classColour_ae206500d684bf5ce115e34ca83565eb6}} 
-uint8\+\_\+t {\bfseries get\+Blue} ()
-\item 
+uint8\+\_\+t \mbox{\hyperlink{classColour_ae206500d684bf5ce115e34ca83565eb6}{get\+Blue}} ()
+\begin{DoxyCompactList}\small\item\em Returns blue channel. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classColour_abb9555707b355fc477144ca7fa271443}\label{classColour_abb9555707b355fc477144ca7fa271443}} 
-void {\bfseries set\+Red} (uint8\+\_\+t red\+In)
-\item 
+void \mbox{\hyperlink{classColour_abb9555707b355fc477144ca7fa271443}{set\+Red}} (uint8\+\_\+t red\+In)
+\begin{DoxyCompactList}\small\item\em Sets red channel. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classColour_a66c9c624aabb2a2b8cca6c7b3662e63b}\label{classColour_a66c9c624aabb2a2b8cca6c7b3662e63b}} 
-void {\bfseries set\+Green} (uint8\+\_\+t green\+In)
-\item 
+void \mbox{\hyperlink{classColour_a66c9c624aabb2a2b8cca6c7b3662e63b}{set\+Green}} (uint8\+\_\+t green\+In)
+\begin{DoxyCompactList}\small\item\em Sets green channel. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classColour_a40bad573ae839ccf43fad763cadc0868}\label{classColour_a40bad573ae839ccf43fad763cadc0868}} 
-void {\bfseries set\+Blue} (uint8\+\_\+t blue\+In)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classColour_a40bad573ae839ccf43fad763cadc0868}{set\+Blue}} (uint8\+\_\+t blue\+In)
+\begin{DoxyCompactList}\small\item\em Sets blue channel. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A class to manage colours for the \mbox{\hyperlink{classSynaesthetiQ}{SynaesthetiQ}}. 
+
+Provides an abstraction on top of the ws2811 LED colour, that allows easy conversion between colour formats 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/eosu/\+Sourcecode/repos/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/\+LED-\/\+Library/src/\+Synaestheti\+Q/Colour.\+hpp\end{DoxyCompactItemize}
+/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/\+LED-\/\+Library/src/\+Synaestheti\+Q/Colour.\+hpp\end{DoxyCompactItemize}

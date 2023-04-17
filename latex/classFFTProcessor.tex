@@ -1,29 +1,49 @@
 \hypertarget{classFFTProcessor}{}\doxysection{FFTProcessor Class Reference}
 \label{classFFTProcessor}\index{FFTProcessor@{FFTProcessor}}
+
+
+A class for processing Fast Fourier Transform (FFT) on audio data.  
+
+
+
+
+{\ttfamily \#include $<$FFTProcessor.\+h$>$}
+
 \doxysubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classFFTProcessor_ae56ca750498e20702f34af1e8e8acd9f}\label{classFFTProcessor_ae56ca750498e20702f34af1e8e8acd9f}} 
+\mbox{\Hypertarget{classFFTProcessor_ab71e813c4738dcf034f0c9b61d894f44}\label{classFFTProcessor_ab71e813c4738dcf034f0c9b61d894f44}} 
 using {\bfseries Data\+Available\+Callback} = void($\ast$)(const std\+::vector$<$ double $>$ \&)
+\item 
+\mbox{\Hypertarget{classFFTProcessor_a4c87b891be90ba6c29eedf373634549b}\label{classFFTProcessor_a4c87b891be90ba6c29eedf373634549b}} 
+using {\bfseries LEDCallback} = void($\ast$)(const std\+::vector$<$ std\+::vector$<$ bool $>$ $>$ \&)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{classFFTProcessor_a24d77d4ee34a0df2a72cc1ff698f241d}\label{classFFTProcessor_a24d77d4ee34a0df2a72cc1ff698f241d}} 
+\mbox{\hyperlink{classFFTProcessor_a24d77d4ee34a0df2a72cc1ff698f241d}{FFTProcessor}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \mbox{\hyperlink{classFFTProcessor}{FFTProcessor}} class. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFFTProcessor_aa1dda95146f6ec9dedd923eaf80e7401}\label{classFFTProcessor_aa1dda95146f6ec9dedd923eaf80e7401}} 
+\mbox{\hyperlink{classFFTProcessor_aa1dda95146f6ec9dedd923eaf80e7401}{$\sim$\+FFTProcessor}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the \mbox{\hyperlink{classFFTProcessor}{FFTProcessor}} class. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classFFTProcessor_a8dc43650e52d022abf6638b13c829d93}\label{classFFTProcessor_a8dc43650e52d022abf6638b13c829d93}} 
-void {\bfseries start} ()
-\item 
+void \mbox{\hyperlink{classFFTProcessor_a8dc43650e52d022abf6638b13c829d93}{start}} ()
+\begin{DoxyCompactList}\small\item\em Starts the worker thread for FFT processing. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classFFTProcessor_affdb6b0b0f98fe05a656490fe3498dbe}\label{classFFTProcessor_affdb6b0b0f98fe05a656490fe3498dbe}} 
-void {\bfseries stop} ()
+void \mbox{\hyperlink{classFFTProcessor_affdb6b0b0f98fe05a656490fe3498dbe}{stop}} ()
+\begin{DoxyCompactList}\small\item\em Stops the worker thread for FFT processing. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFFTProcessor_a6213f0b5a470f393334fee8b7d81fa32}{register\+Callback}} (Data\+Available\+Callback cb)
+\begin{DoxyCompactList}\small\item\em Registers a callback function for FFT data availability. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFFTProcessor_a51c619247da8fddd752632485d8bd10a}{register\+LEDCallback}} (LEDCallback cb)
+\begin{DoxyCompactList}\small\item\em Registers a callback function for LED matrix data availability. \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \mbox{\hyperlink{classFFTProcessor_a409ab6fbb7d4022bca9dd3431d040b57}{get\+Reduced\+Resolution\+FFT}} (const std\+::vector$<$ double $>$ \&fft\+Output\+Data, int num\+Sections)
+\begin{DoxyCompactList}\small\item\em Returns a reduced resolution FFT data vector based on the specified method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classFFTProcessor_a1d0b5d8cdaa242d7d9ca3682668df4f4}\label{classFFTProcessor_a1d0b5d8cdaa242d7d9ca3682668df4f4}} 
-void {\bfseries process\+Data} (const std\+::vector$<$ short $>$ \&data)
-\item 
-\mbox{\Hypertarget{classFFTProcessor_a6213f0b5a470f393334fee8b7d81fa32}\label{classFFTProcessor_a6213f0b5a470f393334fee8b7d81fa32}} 
-void {\bfseries register\+Callback} (Data\+Available\+Callback cb)
-\item 
-\mbox{\Hypertarget{classFFTProcessor_ae1d0823bd36cbb2de4e9032d2bcdb31d}\label{classFFTProcessor_ae1d0823bd36cbb2de4e9032d2bcdb31d}} 
-std\+::vector$<$ double $>$ {\bfseries get\+Reduced\+Resolution\+FFT} (const std\+::vector$<$ double $>$ \&fft\+Output\+Data, int num\+Sections)
-\end{DoxyCompactItemize}
+static void \mbox{\hyperlink{classFFTProcessor_ae110ed768d5ba0e42ac636ae3cd39185}{audio\+\_\+callback}} (const std\+::vector$<$ short $>$ \&data)
+\begin{DoxyCompactList}\small\item\em Callback function to receive audio data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -32,7 +52,78 @@ Reduction\+Method {\bfseries reduction\+Method} = AVERAGE
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+A class for processing Fast Fourier Transform (FFT) on audio data. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFFTProcessor_ae110ed768d5ba0e42ac636ae3cd39185}\label{classFFTProcessor_ae110ed768d5ba0e42ac636ae3cd39185}} 
+\index{FFTProcessor@{FFTProcessor}!audio\_callback@{audio\_callback}}
+\index{audio\_callback@{audio\_callback}!FFTProcessor@{FFTProcessor}}
+\doxysubsubsection{\texorpdfstring{audio\_callback()}{audio\_callback()}}
+{\footnotesize\ttfamily void FFTProcessor\+::audio\+\_\+callback (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ short $>$ \&}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Callback function to receive audio data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & A vector containing the audio data. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFFTProcessor_a409ab6fbb7d4022bca9dd3431d040b57}\label{classFFTProcessor_a409ab6fbb7d4022bca9dd3431d040b57}} 
+\index{FFTProcessor@{FFTProcessor}!getReducedResolutionFFT@{getReducedResolutionFFT}}
+\index{getReducedResolutionFFT@{getReducedResolutionFFT}!FFTProcessor@{FFTProcessor}}
+\doxysubsubsection{\texorpdfstring{getReducedResolutionFFT()}{getReducedResolutionFFT()}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ FFTProcessor\+::get\+Reduced\+Resolution\+FFT (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{fft\+Output\+Data,  }\item[{int}]{num\+Sections }\end{DoxyParamCaption})}
+
+
+
+Returns a reduced resolution FFT data vector based on the specified method. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fft\+Output\+Data} & A vector containing the original FFT output data. \\
+\hline
+{\em num\+Sections} & The number of sections to divide the data into. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of reduced resolution FFT data. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFFTProcessor_a6213f0b5a470f393334fee8b7d81fa32}\label{classFFTProcessor_a6213f0b5a470f393334fee8b7d81fa32}} 
+\index{FFTProcessor@{FFTProcessor}!registerCallback@{registerCallback}}
+\index{registerCallback@{registerCallback}!FFTProcessor@{FFTProcessor}}
+\doxysubsubsection{\texorpdfstring{registerCallback()}{registerCallback()}}
+{\footnotesize\ttfamily void FFTProcessor\+::register\+Callback (\begin{DoxyParamCaption}\item[{Data\+Available\+Callback}]{cb }\end{DoxyParamCaption})}
+
+
+
+Registers a callback function for FFT data availability. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cb} & A function pointer to the callback to be registered. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFFTProcessor_a51c619247da8fddd752632485d8bd10a}\label{classFFTProcessor_a51c619247da8fddd752632485d8bd10a}} 
+\index{FFTProcessor@{FFTProcessor}!registerLEDCallback@{registerLEDCallback}}
+\index{registerLEDCallback@{registerLEDCallback}!FFTProcessor@{FFTProcessor}}
+\doxysubsubsection{\texorpdfstring{registerLEDCallback()}{registerLEDCallback()}}
+{\footnotesize\ttfamily void FFTProcessor\+::register\+LEDCallback (\begin{DoxyParamCaption}\item[{LEDCallback}]{cb }\end{DoxyParamCaption})}
+
+
+
+Registers a callback function for LED matrix data availability. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cb} & A function pointer to the callback to be registered. \\
+\hline
+\end{DoxyParams}
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/eosu/\+Sourcecode/repos/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/audiocapture/src/FFTProcessor.\+h\item 
-/home/eosu/\+Sourcecode/repos/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/audiocapture/src/FFTProcessor.\+cpp\end{DoxyCompactItemize}
+/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/audiocapture/src/FFTProcessor.\+h\item 
+/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/audiocapture/src/FFTProcessor.\+cpp\end{DoxyCompactItemize}

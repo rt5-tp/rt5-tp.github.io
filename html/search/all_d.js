@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['_7egenrepredictor_0',['~GenrePredictor',['../classGenrePredictor.html#ad82095e69af42cad175d4c20b82cfcbc',1,'GenrePredictor']]]
+  ['ws2811_5fchannel_5ft_68',['ws2811_channel_t',['../structws2811__channel__t.html',1,'']]],
+  ['ws2811_5ft_69',['ws2811_t',['../structws2811__t.html',1,'']]]
 ];

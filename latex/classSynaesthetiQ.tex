@@ -1,32 +1,56 @@
 \hypertarget{classSynaesthetiQ}{}\doxysection{SynaesthetiQ Class Reference}
 \label{classSynaesthetiQ}\index{SynaesthetiQ@{SynaesthetiQ}}
+
+
+A class to manage the \mbox{\hyperlink{classSynaesthetiQ}{SynaesthetiQ}} and create visualisations.  
+
+
+
+
+{\ttfamily \#include $<$synaesthetiq.\+hpp$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classSynaesthetiQ_a758e8fce40fc98900f83ad7a9b9a2648}\label{classSynaesthetiQ_a758e8fce40fc98900f83ad7a9b9a2648}} 
-void {\bfseries set\+System\+Brightness} (double Brightness)
-\item 
+void \mbox{\hyperlink{classSynaesthetiQ_a758e8fce40fc98900f83ad7a9b9a2648}{set\+System\+Brightness}} (double Brightness)
+\begin{DoxyCompactList}\small\item\em Sets brightness of the \mbox{\hyperlink{classSynaesthetiQ}{SynaesthetiQ}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classSynaesthetiQ_ade75e0ea81944c5aa612b0427617837a}\label{classSynaesthetiQ_ade75e0ea81944c5aa612b0427617837a}} 
-double {\bfseries get\+System\+Brightness} ()
-\item 
+double \mbox{\hyperlink{classSynaesthetiQ_ade75e0ea81944c5aa612b0427617837a}{get\+System\+Brightness}} ()
+\begin{DoxyCompactList}\small\item\em Gets brightness of the \mbox{\hyperlink{classSynaesthetiQ}{SynaesthetiQ}}. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classSynaesthetiQ_ae0d6be9c2706ce9b701a643b0793623a}\label{classSynaesthetiQ_ae0d6be9c2706ce9b701a643b0793623a}} 
-void {\bfseries set\+Big\+LEDColour} (\mbox{\hyperlink{classColour}{Colour}} colour)
-\item 
+void \mbox{\hyperlink{classSynaesthetiQ_ae0d6be9c2706ce9b701a643b0793623a}{set\+Big\+LEDColour}} (\mbox{\hyperlink{classColour}{Colour}} colour)
+\begin{DoxyCompactList}\small\item\em Sets the colour of the top LED. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classSynaesthetiQ_a08634bd1971f17857dd4ee39bdc1a03f}\label{classSynaesthetiQ_a08634bd1971f17857dd4ee39bdc1a03f}} 
-void {\bfseries set\+Matrix\+Colour} (\mbox{\hyperlink{classColour}{Colour}} colour)
-\item 
-\mbox{\Hypertarget{classSynaesthetiQ_acc5f189832116b91312edafed3915c79}\label{classSynaesthetiQ_acc5f189832116b91312edafed3915c79}} 
-void {\bfseries set\+Matrix\+Pixel\+Colour} (int x, int y, \mbox{\hyperlink{classColour}{Colour}} colour)
-\item 
+void \mbox{\hyperlink{classSynaesthetiQ_a08634bd1971f17857dd4ee39bdc1a03f}{set\+Matrix\+Colour}} (\mbox{\hyperlink{classColour}{Colour}} colour)
+\begin{DoxyCompactList}\small\item\em Sets the colour of the matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSynaesthetiQ_acc5f189832116b91312edafed3915c79}{set\+Matrix\+Pixel\+Colour}} (int x, int y, \mbox{\hyperlink{classColour}{Colour}} colour)
+\begin{DoxyCompactList}\small\item\em Sets the colour of an individual LED on the matrix using x, y coordinates. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classSynaesthetiQ_ac4660ef2d240ccc88370e33d3ea68caf}\label{classSynaesthetiQ_ac4660ef2d240ccc88370e33d3ea68caf}} 
-void {\bfseries clear\+Output} ()
-\item 
+void \mbox{\hyperlink{classSynaesthetiQ_ac4660ef2d240ccc88370e33d3ea68caf}{clear\+Output}} ()
+\begin{DoxyCompactList}\small\item\em Turns off all the \mbox{\hyperlink{classSynaesthetiQ}{SynaesthetiQ}} LEDs. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classSynaesthetiQ_a8273c69b060be5345798ac2c458b3d23}\label{classSynaesthetiQ_a8273c69b060be5345798ac2c458b3d23}} 
-int {\bfseries render} ()
-\end{DoxyCompactItemize}
+int \mbox{\hyperlink{classSynaesthetiQ_a8273c69b060be5345798ac2c458b3d23}{render}} ()
+\begin{DoxyCompactList}\small\item\em Updates the SynasthetiQ with the colours set, while limiting current. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+A class to manage the \mbox{\hyperlink{classSynaesthetiQ}{SynaesthetiQ}} and create visualisations. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSynaesthetiQ_acc5f189832116b91312edafed3915c79}\label{classSynaesthetiQ_acc5f189832116b91312edafed3915c79}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!setMatrixPixelColour@{setMatrixPixelColour}}
+\index{setMatrixPixelColour@{setMatrixPixelColour}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{setMatrixPixelColour()}{setMatrixPixelColour()}}
+{\footnotesize\ttfamily void Synaestheti\+Q\+::set\+Matrix\+Pixel\+Colour (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{\mbox{\hyperlink{classColour}{Colour}}}]{colour }\end{DoxyParamCaption})}
+
+
+
+Sets the colour of an individual LED on the matrix using x, y coordinates. 
+
+Coordinates range from 0$<$=x$<$32 and 0$<$=y$<$16 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/eosu/\+Sourcecode/repos/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/\+LED-\/\+Library/src/\+Synaestheti\+Q/synaesthetiq.\+hpp\item 
-/home/eosu/\+Sourcecode/repos/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/\+LED-\/\+Library/src/\+Synaestheti\+Q/synaesthetiq.\+cpp\end{DoxyCompactItemize}
+/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/\+LED-\/\+Library/src/\+Synaestheti\+Q/synaesthetiq.\+hpp\item 
+/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/\+LED-\/\+Library/src/\+Synaestheti\+Q/synaesthetiq.\+cpp\end{DoxyCompactItemize}

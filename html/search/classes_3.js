@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['fftprocessor_0',['FFTProcessor',['../classFFTProcessor.html',1,'']]]
+  ['envelopefollower_79',['EnvelopeFollower',['../classEnvelopeFollower.html',1,'']]]
 ];
