@@ -1,10 +1,13 @@
 \hypertarget{classAudioFile}{}\doxysection{Audio\+File$<$ T $>$ Class Template Reference}
 \label{classAudioFile}\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+
+
+{\ttfamily \#include $<$Audio\+File.\+h$>$}
+
 \doxysubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classAudioFile_ad1260a47791dc30cbabfe3ff2ea099b1}\label{classAudioFile_ad1260a47791dc30cbabfe3ff2ea099b1}} 
-typedef std\+::vector$<$ std\+::vector$<$ T $>$ $>$ {\bfseries Audio\+Buffer}
+typedef std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \mbox{\hyperlink{classAudioFile_ad1260a47791dc30cbabfe3ff2ea099b1}{Audio\+Buffer}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -15,7 +18,7 @@ typedef std\+::vector$<$ std\+::vector$<$ T $>$ $>$ {\bfseries Audio\+Buffer}
 \item 
 bool \mbox{\hyperlink{classAudioFile_a0ff16123b519a4665e9f3e7d341f0a26}{load}} (std\+::string file\+Path)
 \item 
-bool \mbox{\hyperlink{classAudioFile_a415239cad5b54b4fef4a210ab79911e3}{save}} (std\+::string file\+Path, \mbox{\hyperlink{AudioFile_8h_ad18559d169602e85d0ad68da6ef8593f}{Audio\+File\+Format}} format=Audio\+File\+Format\+::\+Wave)
+bool \mbox{\hyperlink{classAudioFile_a415239cad5b54b4fef4a210ab79911e3}{save}} (std\+::string file\+Path, \mbox{\hyperlink{AudioFile_8h_ad18559d169602e85d0ad68da6ef8593f}{Audio\+File\+Format}} format=\mbox{\hyperlink{AudioFile_8h_ad18559d169602e85d0ad68da6ef8593fad911b34823c7674c292556dc56148c27}{Audio\+File\+Format\+::\+Wave}})
 \item 
 bool \mbox{\hyperlink{classAudioFile_a138cd246abfc23b57caf1519d78b1312}{load\+From\+Memory}} (std\+::vector$<$ uint8\+\_\+t $>$ \&file\+Data)
 \item 
@@ -35,7 +38,7 @@ double \mbox{\hyperlink{classAudioFile_a5a6b01404675361b1c21c9c5fb5753d4}{get\+L
 \item 
 void \mbox{\hyperlink{classAudioFile_a7b88c68133a9ac92149c58499e026360}{print\+Summary}} () const
 \item 
-bool \mbox{\hyperlink{classAudioFile_afa0a0f7d576b0597c938c5a89746636e}{set\+Audio\+Buffer}} (Audio\+Buffer \&new\+Buffer)
+bool \mbox{\hyperlink{classAudioFile_afa0a0f7d576b0597c938c5a89746636e}{set\+Audio\+Buffer}} (\mbox{\hyperlink{classAudioFile_ad1260a47791dc30cbabfe3ff2ea099b1}{Audio\+Buffer}} \&new\+Buffer)
 \item 
 void \mbox{\hyperlink{classAudioFile_ac155ed12db0f3b02011a7d75b525e71a}{set\+Audio\+Buffer\+Size}} (int num\+Channels, int num\+Samples)
 \item 
@@ -52,10 +55,107 @@ void \mbox{\hyperlink{classAudioFile_a1986c0297e4e4db99435702528e9c3c4}{should\+
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-Audio\+Buffer \mbox{\hyperlink{classAudioFile_af937119db095c5af870851050dcbeabb}{samples}}
+\mbox{\hyperlink{classAudioFile_ad1260a47791dc30cbabfe3ff2ea099b1}{Audio\+Buffer}} \mbox{\hyperlink{classAudioFile_af937119db095c5af870851050dcbeabb}{samples}}
 \item 
 std\+::string \mbox{\hyperlink{classAudioFile_ab2bc14440b0a6ff1a297e28a0354d422}{i\+XMLChunk}}
 \end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{classAudioFile_a4d5f3a950f0c059380d268abf39fd67e}{Endianness}} \{ \mbox{\hyperlink{classAudioFile_a4d5f3a950f0c059380d268abf39fd67ea3c0ba6b22b526d7fd50c3026435a8c02}{Little\+Endian}}
+, \mbox{\hyperlink{classAudioFile_a4d5f3a950f0c059380d268abf39fd67ea2ce7a92ae43763828ac4acb4560c2a5b}{Big\+Endian}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{AudioFile_8h_ad18559d169602e85d0ad68da6ef8593f}{Audio\+File\+Format}} \mbox{\hyperlink{classAudioFile_a0d55bc7ae7b9eb014b93b6baabab8ba7}{determine\+Audio\+File\+Format}} (std\+::vector$<$ uint8\+\_\+t $>$ \&file\+Data)
+\item 
+bool \mbox{\hyperlink{classAudioFile_afea0b1dbe7788155f249fa3b8a0ad693}{decode\+Wave\+File}} (std\+::vector$<$ uint8\+\_\+t $>$ \&file\+Data)
+\item 
+bool \mbox{\hyperlink{classAudioFile_a1d68d689475374b830c3e41d7cd54dfa}{decode\+Aiff\+File}} (std\+::vector$<$ uint8\+\_\+t $>$ \&file\+Data)
+\item 
+bool \mbox{\hyperlink{classAudioFile_a9b1997f2466ec1674ce17bebb9a1ba2d}{save\+To\+Wave\+File}} (std\+::string file\+Path)
+\item 
+bool \mbox{\hyperlink{classAudioFile_aa6ed89cc0884105f7022c7595c1609ea}{save\+To\+Aiff\+File}} (std\+::string file\+Path)
+\item 
+void \mbox{\hyperlink{classAudioFile_a4859348770aba2ab8638a6d2d29490ad}{clear\+Audio\+Buffer}} ()
+\item 
+int32\+\_\+t \mbox{\hyperlink{classAudioFile_a5fcde4e965721804e6f60fc38936887f}{four\+Bytes\+To\+Int}} (std\+::vector$<$ uint8\+\_\+t $>$ \&source, int start\+Index, \mbox{\hyperlink{classAudioFile_a4d5f3a950f0c059380d268abf39fd67e}{Endianness}} endianness=\mbox{\hyperlink{classAudioFile_a4d5f3a950f0c059380d268abf39fd67ea3c0ba6b22b526d7fd50c3026435a8c02}{Endianness\+::\+Little\+Endian}})
+\item 
+int16\+\_\+t \mbox{\hyperlink{classAudioFile_a279bb7ae95e4b3b9db5e9c9e141b564d}{two\+Bytes\+To\+Int}} (std\+::vector$<$ uint8\+\_\+t $>$ \&source, int start\+Index, \mbox{\hyperlink{classAudioFile_a4d5f3a950f0c059380d268abf39fd67e}{Endianness}} endianness=\mbox{\hyperlink{classAudioFile_a4d5f3a950f0c059380d268abf39fd67ea3c0ba6b22b526d7fd50c3026435a8c02}{Endianness\+::\+Little\+Endian}})
+\item 
+int \mbox{\hyperlink{classAudioFile_a7446935a450d4aa8da37e5ac1fd4133b}{get\+Index\+Of\+String}} (std\+::vector$<$ uint8\+\_\+t $>$ \&source, std\+::string s)
+\item 
+int \mbox{\hyperlink{classAudioFile_af3ff3807125acd7daa14520b74d254a0}{get\+Index\+Of\+Chunk}} (std\+::vector$<$ uint8\+\_\+t $>$ \&source, const std\+::string \&chunk\+Header\+ID, int start\+Index, \mbox{\hyperlink{classAudioFile_a4d5f3a950f0c059380d268abf39fd67e}{Endianness}} endianness=\mbox{\hyperlink{classAudioFile_a4d5f3a950f0c059380d268abf39fd67ea3c0ba6b22b526d7fd50c3026435a8c02}{Endianness\+::\+Little\+Endian}})
+\item 
+T \mbox{\hyperlink{classAudioFile_a2ff18ea40f28f1758f0ca78b2185c789}{sixteen\+Bit\+Int\+To\+Sample}} (int16\+\_\+t sample)
+\item 
+int16\+\_\+t \mbox{\hyperlink{classAudioFile_aea4aa1660d2575aa3f67c27d9cc26e58}{sample\+To\+Sixteen\+Bit\+Int}} (T sample)
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classAudioFile_acf8731e5d8d3b364658295d492acc66c}{sample\+To\+Single\+Byte}} (T sample)
+\item 
+T \mbox{\hyperlink{classAudioFile_aa3dcb9a45b3d1f5b4b04ed026d9b3792}{single\+Byte\+To\+Sample}} (uint8\+\_\+t sample)
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classAudioFile_afd351555e7868d1c9cbf77d93edc09dd}{get\+Aiff\+Sample\+Rate}} (std\+::vector$<$ uint8\+\_\+t $>$ \&file\+Data, int sample\+Rate\+Start\+Index)
+\item 
+bool \mbox{\hyperlink{classAudioFile_a801f2c42d590c1fcba274c6d1f70cfbc}{ten\+Byte\+Match}} (std\+::vector$<$ uint8\+\_\+t $>$ \&v1, int start\+Index1, std\+::vector$<$ uint8\+\_\+t $>$ \&v2, int start\+Index2)
+\item 
+void \mbox{\hyperlink{classAudioFile_aa25ff369a0e2ca315c7abf3982ef1c18}{add\+Sample\+Rate\+To\+Aiff\+Data}} (std\+::vector$<$ uint8\+\_\+t $>$ \&file\+Data, uint32\+\_\+t \mbox{\hyperlink{classAudioFile_aa8517ad3c63493253ecf59bb0c9974c1}{sample\+Rate}})
+\item 
+T \mbox{\hyperlink{classAudioFile_abde65950272ed50f528839825a744a4d}{clamp}} (T v1, T min\+Value, T max\+Value)
+\item 
+void \mbox{\hyperlink{classAudioFile_a21b500e75c67e28f38554c2eb752e24b}{add\+String\+To\+File\+Data}} (std\+::vector$<$ uint8\+\_\+t $>$ \&file\+Data, std\+::string s)
+\item 
+void \mbox{\hyperlink{classAudioFile_add8628d661b806fbba0e28231da97563}{add\+Int32\+To\+File\+Data}} (std\+::vector$<$ uint8\+\_\+t $>$ \&file\+Data, int32\+\_\+t i, \mbox{\hyperlink{classAudioFile_a4d5f3a950f0c059380d268abf39fd67e}{Endianness}} endianness=\mbox{\hyperlink{classAudioFile_a4d5f3a950f0c059380d268abf39fd67ea3c0ba6b22b526d7fd50c3026435a8c02}{Endianness\+::\+Little\+Endian}})
+\item 
+void \mbox{\hyperlink{classAudioFile_aba8b98835fdc51bc9d0e04634c70603a}{add\+Int16\+To\+File\+Data}} (std\+::vector$<$ uint8\+\_\+t $>$ \&file\+Data, int16\+\_\+t i, \mbox{\hyperlink{classAudioFile_a4d5f3a950f0c059380d268abf39fd67e}{Endianness}} endianness=\mbox{\hyperlink{classAudioFile_a4d5f3a950f0c059380d268abf39fd67ea3c0ba6b22b526d7fd50c3026435a8c02}{Endianness\+::\+Little\+Endian}})
+\item 
+bool \mbox{\hyperlink{classAudioFile_a734c540c871a3843f01f908bbfc3962d}{write\+Data\+To\+File}} (std\+::vector$<$ uint8\+\_\+t $>$ \&file\+Data, std\+::string file\+Path)
+\item 
+void \mbox{\hyperlink{classAudioFile_a4d661c8234e2445560eddc8bda2f1a8d}{report\+Error}} (std\+::string error\+Message)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{AudioFile_8h_ad18559d169602e85d0ad68da6ef8593f}{Audio\+File\+Format}} \mbox{\hyperlink{classAudioFile_aeafbb547cc9b08418212c41215c57838}{audio\+File\+Format}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{classAudioFile_aa8517ad3c63493253ecf59bb0c9974c1}{sample\+Rate}}
+\item 
+int \mbox{\hyperlink{classAudioFile_a19f9bc02bc118b7c2fa3d50e7bbb49b3}{bit\+Depth}}
+\item 
+bool \mbox{\hyperlink{classAudioFile_a12bc0cf7715d0a2390fe8c0af89f408c}{log\+Errors\+To\+Console}} \{true\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classAudioFile_ad1260a47791dc30cbabfe3ff2ea099b1}\label{classAudioFile_ad1260a47791dc30cbabfe3ff2ea099b1}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!AudioBuffer@{AudioBuffer}}
+\index{AudioBuffer@{AudioBuffer}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AudioBuffer}{AudioBuffer}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+typedef std\+::vector$<$std\+::vector$<$T$>$ $>$ \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::\mbox{\hyperlink{classAudioFile_ad1260a47791dc30cbabfe3ff2ea099b1}{Audio\+Buffer}}}
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classAudioFile_a4d5f3a950f0c059380d268abf39fd67e}\label{classAudioFile_a4d5f3a950f0c059380d268abf39fd67e}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!Endianness@{Endianness}}
+\index{Endianness@{Endianness}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Endianness}{Endianness}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+enum \mbox{\hyperlink{classAudioFile_a4d5f3a950f0c059380d268abf39fd67e}{Audio\+File\+::\+Endianness}}\hspace{0.3cm}{\ttfamily [strong]}, {\ttfamily [private]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LittleEndian@{LittleEndian}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!LittleEndian@{LittleEndian}}}\mbox{\Hypertarget{classAudioFile_a4d5f3a950f0c059380d268abf39fd67ea3c0ba6b22b526d7fd50c3026435a8c02}\label{classAudioFile_a4d5f3a950f0c059380d268abf39fd67ea3c0ba6b22b526d7fd50c3026435a8c02}} 
+Little\+Endian&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BigEndian@{BigEndian}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!BigEndian@{BigEndian}}}\mbox{\Hypertarget{classAudioFile_a4d5f3a950f0c059380d268abf39fd67ea2ce7a92ae43763828ac4acb4560c2a5b}\label{classAudioFile_a4d5f3a950f0c059380d268abf39fd67ea2ce7a92ae43763828ac4acb4560c2a5b}} 
+Big\+Endian&\\
+\hline
+
+\end{DoxyEnumFields}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -73,9 +173,94 @@ Constructor \mbox{\Hypertarget{classAudioFile_ab8cdd72d83b34c6861315750e38c69a6}
 {\footnotesize\ttfamily template$<$class T $>$ \\
 \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::\mbox{\hyperlink{classAudioFile}{Audio\+File}} (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Path }\end{DoxyParamCaption})}
 
-Constructor, using a given file path to load a file 
+Constructor, using a given file path to load a file Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classAudioFile_ab8cdd72d83b34c6861315750e38c69a6_cgraph}
+\end{center}
+\end{figure}
+
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classAudioFile_aba8b98835fdc51bc9d0e04634c70603a}\label{classAudioFile_aba8b98835fdc51bc9d0e04634c70603a}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!addInt16ToFileData@{addInt16ToFileData}}
+\index{addInt16ToFileData@{addInt16ToFileData}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{addInt16ToFileData()}{addInt16ToFileData()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::add\+Int16\+To\+File\+Data (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{file\+Data,  }\item[{int16\+\_\+t}]{i,  }\item[{\mbox{\hyperlink{classAudioFile_a4d5f3a950f0c059380d268abf39fd67e}{Endianness}}}]{endianness = {\ttfamily \mbox{\hyperlink{classAudioFile_a4d5f3a950f0c059380d268abf39fd67ea3c0ba6b22b526d7fd50c3026435a8c02}{Endianness\+::\+Little\+Endian}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAudioFile_add8628d661b806fbba0e28231da97563}\label{classAudioFile_add8628d661b806fbba0e28231da97563}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!addInt32ToFileData@{addInt32ToFileData}}
+\index{addInt32ToFileData@{addInt32ToFileData}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{addInt32ToFileData()}{addInt32ToFileData()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::add\+Int32\+To\+File\+Data (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{file\+Data,  }\item[{int32\+\_\+t}]{i,  }\item[{\mbox{\hyperlink{classAudioFile_a4d5f3a950f0c059380d268abf39fd67e}{Endianness}}}]{endianness = {\ttfamily \mbox{\hyperlink{classAudioFile_a4d5f3a950f0c059380d268abf39fd67ea3c0ba6b22b526d7fd50c3026435a8c02}{Endianness\+::\+Little\+Endian}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAudioFile_aa25ff369a0e2ca315c7abf3982ef1c18}\label{classAudioFile_aa25ff369a0e2ca315c7abf3982ef1c18}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!addSampleRateToAiffData@{addSampleRateToAiffData}}
+\index{addSampleRateToAiffData@{addSampleRateToAiffData}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{addSampleRateToAiffData()}{addSampleRateToAiffData()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::add\+Sample\+Rate\+To\+Aiff\+Data (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{file\+Data,  }\item[{uint32\+\_\+t}]{sample\+Rate }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAudioFile_a21b500e75c67e28f38554c2eb752e24b}\label{classAudioFile_a21b500e75c67e28f38554c2eb752e24b}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!addStringToFileData@{addStringToFileData}}
+\index{addStringToFileData@{addStringToFileData}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{addStringToFileData()}{addStringToFileData()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::add\+String\+To\+File\+Data (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{file\+Data,  }\item[{std\+::string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAudioFile_abde65950272ed50f528839825a744a4d}\label{classAudioFile_abde65950272ed50f528839825a744a4d}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!clamp@{clamp}}
+\index{clamp@{clamp}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clamp()}{clamp()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::clamp (\begin{DoxyParamCaption}\item[{T}]{v1,  }\item[{T}]{min\+Value,  }\item[{T}]{max\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAudioFile_a4859348770aba2ab8638a6d2d29490ad}\label{classAudioFile_a4859348770aba2ab8638a6d2d29490ad}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!clearAudioBuffer@{clearAudioBuffer}}
+\index{clearAudioBuffer@{clearAudioBuffer}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clearAudioBuffer()}{clearAudioBuffer()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::clear\+Audio\+Buffer\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAudioFile_a1d68d689475374b830c3e41d7cd54dfa}\label{classAudioFile_a1d68d689475374b830c3e41d7cd54dfa}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!decodeAiffFile@{decodeAiffFile}}
+\index{decodeAiffFile@{decodeAiffFile}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{decodeAiffFile()}{decodeAiffFile()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::decode\+Aiff\+File (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{file\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAudioFile_afea0b1dbe7788155f249fa3b8a0ad693}\label{classAudioFile_afea0b1dbe7788155f249fa3b8a0ad693}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!decodeWaveFile@{decodeWaveFile}}
+\index{decodeWaveFile@{decodeWaveFile}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{decodeWaveFile()}{decodeWaveFile()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::decode\+Wave\+File (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{file\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAudioFile_a0d55bc7ae7b9eb014b93b6baabab8ba7}\label{classAudioFile_a0d55bc7ae7b9eb014b93b6baabab8ba7}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!determineAudioFileFormat@{determineAudioFileFormat}}
+\index{determineAudioFileFormat@{determineAudioFileFormat}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{determineAudioFileFormat()}{determineAudioFileFormat()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{AudioFile_8h_ad18559d169602e85d0ad68da6ef8593f}{Audio\+File\+Format}} \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::determine\+Audio\+File\+Format (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{file\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAudioFile_a5fcde4e965721804e6f60fc38936887f}\label{classAudioFile_a5fcde4e965721804e6f60fc38936887f}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!fourBytesToInt@{fourBytesToInt}}
+\index{fourBytesToInt@{fourBytesToInt}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{fourBytesToInt()}{fourBytesToInt()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int32\+\_\+t \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::four\+Bytes\+To\+Int (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{source,  }\item[{int}]{start\+Index,  }\item[{\mbox{\hyperlink{classAudioFile_a4d5f3a950f0c059380d268abf39fd67e}{Endianness}}}]{endianness = {\ttfamily \mbox{\hyperlink{classAudioFile_a4d5f3a950f0c059380d268abf39fd67ea3c0ba6b22b526d7fd50c3026435a8c02}{Endianness\+::\+Little\+Endian}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAudioFile_afd351555e7868d1c9cbf77d93edc09dd}\label{classAudioFile_afd351555e7868d1c9cbf77d93edc09dd}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!getAiffSampleRate@{getAiffSampleRate}}
+\index{getAiffSampleRate@{getAiffSampleRate}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getAiffSampleRate()}{getAiffSampleRate()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::get\+Aiff\+Sample\+Rate (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{file\+Data,  }\item[{int}]{sample\+Rate\+Start\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{classAudioFile_a5495d5cb55911de54f0714e219130b48}\label{classAudioFile_a5495d5cb55911de54f0714e219130b48}} 
 \index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!getBitDepth@{getBitDepth}}
 \index{getBitDepth@{getBitDepth}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
@@ -83,7 +268,21 @@ Constructor, using a given file path to load a file
 {\footnotesize\ttfamily template$<$class T $>$ \\
 int \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::get\+Bit\+Depth}
 
-@\+Returns the bit depth of each sample \mbox{\Hypertarget{classAudioFile_a5a6b01404675361b1c21c9c5fb5753d4}\label{classAudioFile_a5a6b01404675361b1c21c9c5fb5753d4}} 
+@\+Returns the bit depth of each sample \mbox{\Hypertarget{classAudioFile_af3ff3807125acd7daa14520b74d254a0}\label{classAudioFile_af3ff3807125acd7daa14520b74d254a0}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!getIndexOfChunk@{getIndexOfChunk}}
+\index{getIndexOfChunk@{getIndexOfChunk}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getIndexOfChunk()}{getIndexOfChunk()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::get\+Index\+Of\+Chunk (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{source,  }\item[{const std\+::string \&}]{chunk\+Header\+ID,  }\item[{int}]{start\+Index,  }\item[{\mbox{\hyperlink{classAudioFile_a4d5f3a950f0c059380d268abf39fd67e}{Endianness}}}]{endianness = {\ttfamily \mbox{\hyperlink{classAudioFile_a4d5f3a950f0c059380d268abf39fd67ea3c0ba6b22b526d7fd50c3026435a8c02}{Endianness\+::\+Little\+Endian}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAudioFile_a7446935a450d4aa8da37e5ac1fd4133b}\label{classAudioFile_a7446935a450d4aa8da37e5ac1fd4133b}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!getIndexOfString@{getIndexOfString}}
+\index{getIndexOfString@{getIndexOfString}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getIndexOfString()}{getIndexOfString()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::get\+Index\+Of\+String (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{source,  }\item[{std\+::string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAudioFile_a5a6b01404675361b1c21c9c5fb5753d4}\label{classAudioFile_a5a6b01404675361b1c21c9c5fb5753d4}} 
 \index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!getLengthInSeconds@{getLengthInSeconds}}
 \index{getLengthInSeconds@{getLengthInSeconds}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{getLengthInSeconds()}{getLengthInSeconds()}}
@@ -97,21 +296,45 @@ double \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::get\+Length\+I
 {\footnotesize\ttfamily template$<$class T $>$ \\
 int \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::get\+Num\+Channels}
 
-@\+Returns the number of audio channels in the buffer \mbox{\Hypertarget{classAudioFile_ae1b5b4b7351a79dbf810bb34ede496b9}\label{classAudioFile_ae1b5b4b7351a79dbf810bb34ede496b9}} 
+@\+Returns the number of audio channels in the buffer Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{classAudioFile_a514f860a956b4494ee8d8c806391d6b3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classAudioFile_ae1b5b4b7351a79dbf810bb34ede496b9}\label{classAudioFile_ae1b5b4b7351a79dbf810bb34ede496b9}} 
 \index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!getNumSamplesPerChannel@{getNumSamplesPerChannel}}
 \index{getNumSamplesPerChannel@{getNumSamplesPerChannel}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{getNumSamplesPerChannel()}{getNumSamplesPerChannel()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
 int \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::get\+Num\+Samples\+Per\+Channel}
 
-@\+Returns the number of samples per channel \mbox{\Hypertarget{classAudioFile_a8cd1b082af9db6bd180e4a63edcdefc9}\label{classAudioFile_a8cd1b082af9db6bd180e4a63edcdefc9}} 
+@\+Returns the number of samples per channel Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classAudioFile_ae1b5b4b7351a79dbf810bb34ede496b9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classAudioFile_a8cd1b082af9db6bd180e4a63edcdefc9}\label{classAudioFile_a8cd1b082af9db6bd180e4a63edcdefc9}} 
 \index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!getSampleRate@{getSampleRate}}
 \index{getSampleRate@{getSampleRate}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{getSampleRate()}{getSampleRate()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
 uint32\+\_\+t \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::get\+Sample\+Rate}
 
-@\+Returns the sample rate \mbox{\Hypertarget{classAudioFile_a1057326fd2c2eca7cc7937f811868cf1}\label{classAudioFile_a1057326fd2c2eca7cc7937f811868cf1}} 
+@\+Returns the sample rate Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{classAudioFile_a8cd1b082af9db6bd180e4a63edcdefc9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classAudioFile_a1057326fd2c2eca7cc7937f811868cf1}\label{classAudioFile_a1057326fd2c2eca7cc7937f811868cf1}} 
 \index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!isMono@{isMono}}
 \index{isMono@{isMono}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{isMono()}{isMono()}}
@@ -132,7 +355,15 @@ bool \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::is\+Stereo}
 {\footnotesize\ttfamily template$<$class T $>$ \\
 bool \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::load (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Path }\end{DoxyParamCaption})}
 
-Loads an audio file from a given file path. @\+Returns true if the file was successfully loaded \mbox{\Hypertarget{classAudioFile_a138cd246abfc23b57caf1519d78b1312}\label{classAudioFile_a138cd246abfc23b57caf1519d78b1312}} 
+Loads an audio file from a given file path. @\+Returns true if the file was successfully loaded Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classAudioFile_a0ff16123b519a4665e9f3e7d341f0a26_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classAudioFile_a138cd246abfc23b57caf1519d78b1312}\label{classAudioFile_a138cd246abfc23b57caf1519d78b1312}} 
 \index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!loadFromMemory@{loadFromMemory}}
 \index{loadFromMemory@{loadFromMemory}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{loadFromMemory()}{loadFromMemory()}}
@@ -146,19 +377,54 @@ Loads an audio file from data in memory \mbox{\Hypertarget{classAudioFile_a7b88c
 {\footnotesize\ttfamily template$<$class T $>$ \\
 void \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::print\+Summary}
 
-Prints a summary of the audio file to the console \mbox{\Hypertarget{classAudioFile_a415239cad5b54b4fef4a210ab79911e3}\label{classAudioFile_a415239cad5b54b4fef4a210ab79911e3}} 
+Prints a summary of the audio file to the console \mbox{\Hypertarget{classAudioFile_a4d661c8234e2445560eddc8bda2f1a8d}\label{classAudioFile_a4d661c8234e2445560eddc8bda2f1a8d}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!reportError@{reportError}}
+\index{reportError@{reportError}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reportError()}{reportError()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::report\+Error (\begin{DoxyParamCaption}\item[{std\+::string}]{error\+Message }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAudioFile_acf8731e5d8d3b364658295d492acc66c}\label{classAudioFile_acf8731e5d8d3b364658295d492acc66c}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!sampleToSingleByte@{sampleToSingleByte}}
+\index{sampleToSingleByte@{sampleToSingleByte}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sampleToSingleByte()}{sampleToSingleByte()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+uint8\+\_\+t \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::sample\+To\+Single\+Byte (\begin{DoxyParamCaption}\item[{T}]{sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAudioFile_aea4aa1660d2575aa3f67c27d9cc26e58}\label{classAudioFile_aea4aa1660d2575aa3f67c27d9cc26e58}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!sampleToSixteenBitInt@{sampleToSixteenBitInt}}
+\index{sampleToSixteenBitInt@{sampleToSixteenBitInt}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sampleToSixteenBitInt()}{sampleToSixteenBitInt()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int16\+\_\+t \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::sample\+To\+Sixteen\+Bit\+Int (\begin{DoxyParamCaption}\item[{T}]{sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAudioFile_a415239cad5b54b4fef4a210ab79911e3}\label{classAudioFile_a415239cad5b54b4fef4a210ab79911e3}} 
 \index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!save@{save}}
 \index{save@{save}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{save()}{save()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-bool \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::save (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Path,  }\item[{\mbox{\hyperlink{AudioFile_8h_ad18559d169602e85d0ad68da6ef8593f}{Audio\+File\+Format}}}]{format = {\ttfamily AudioFileFormat\+:\+:Wave} }\end{DoxyParamCaption})}
+bool \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::save (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Path,  }\item[{\mbox{\hyperlink{AudioFile_8h_ad18559d169602e85d0ad68da6ef8593f}{Audio\+File\+Format}}}]{format = {\ttfamily \mbox{\hyperlink{AudioFile_8h_ad18559d169602e85d0ad68da6ef8593fad911b34823c7674c292556dc56148c27}{Audio\+File\+Format\+::\+Wave}}} }\end{DoxyParamCaption})}
 
-Saves an audio file to a given file path. @\+Returns true if the file was successfully saved \mbox{\Hypertarget{classAudioFile_afa0a0f7d576b0597c938c5a89746636e}\label{classAudioFile_afa0a0f7d576b0597c938c5a89746636e}} 
+Saves an audio file to a given file path. @\+Returns true if the file was successfully saved \mbox{\Hypertarget{classAudioFile_aa6ed89cc0884105f7022c7595c1609ea}\label{classAudioFile_aa6ed89cc0884105f7022c7595c1609ea}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!saveToAiffFile@{saveToAiffFile}}
+\index{saveToAiffFile@{saveToAiffFile}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{saveToAiffFile()}{saveToAiffFile()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::save\+To\+Aiff\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAudioFile_a9b1997f2466ec1674ce17bebb9a1ba2d}\label{classAudioFile_a9b1997f2466ec1674ce17bebb9a1ba2d}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!saveToWaveFile@{saveToWaveFile}}
+\index{saveToWaveFile@{saveToWaveFile}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{saveToWaveFile()}{saveToWaveFile()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::save\+To\+Wave\+File (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAudioFile_afa0a0f7d576b0597c938c5a89746636e}\label{classAudioFile_afa0a0f7d576b0597c938c5a89746636e}} 
 \index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!setAudioBuffer@{setAudioBuffer}}
 \index{setAudioBuffer@{setAudioBuffer}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{setAudioBuffer()}{setAudioBuffer()}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-bool \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::set\+Audio\+Buffer (\begin{DoxyParamCaption}\item[{Audio\+Buffer \&}]{new\+Buffer }\end{DoxyParamCaption})}
+bool \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::set\+Audio\+Buffer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAudioFile_ad1260a47791dc30cbabfe3ff2ea099b1}{Audio\+Buffer}} \&}]{new\+Buffer }\end{DoxyParamCaption})}
 
 Set the audio buffer for this \mbox{\hyperlink{classAudioFile}{Audio\+File}} by copying samples from another buffer. @\+Returns true if the buffer was copied successfully. \mbox{\Hypertarget{classAudioFile_ac155ed12db0f3b02011a7d75b525e71a}\label{classAudioFile_ac155ed12db0f3b02011a7d75b525e71a}} 
 \index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!setAudioBufferSize@{setAudioBufferSize}}
@@ -202,9 +468,58 @@ Sets the sample rate for the audio file. If you use the \mbox{\hyperlink{classAu
 {\footnotesize\ttfamily template$<$class T $>$ \\
 void \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::should\+Log\+Errors\+To\+Console (\begin{DoxyParamCaption}\item[{bool}]{log\+Errors }\end{DoxyParamCaption})}
 
-Sets whether the library should log error messages to the console. By default this is true 
+Sets whether the library should log error messages to the console. By default this is true \mbox{\Hypertarget{classAudioFile_aa3dcb9a45b3d1f5b4b04ed026d9b3792}\label{classAudioFile_aa3dcb9a45b3d1f5b4b04ed026d9b3792}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!singleByteToSample@{singleByteToSample}}
+\index{singleByteToSample@{singleByteToSample}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{singleByteToSample()}{singleByteToSample()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::single\+Byte\+To\+Sample (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAudioFile_a2ff18ea40f28f1758f0ca78b2185c789}\label{classAudioFile_a2ff18ea40f28f1758f0ca78b2185c789}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!sixteenBitIntToSample@{sixteenBitIntToSample}}
+\index{sixteenBitIntToSample@{sixteenBitIntToSample}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sixteenBitIntToSample()}{sixteenBitIntToSample()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+T \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::sixteen\+Bit\+Int\+To\+Sample (\begin{DoxyParamCaption}\item[{int16\+\_\+t}]{sample }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAudioFile_a801f2c42d590c1fcba274c6d1f70cfbc}\label{classAudioFile_a801f2c42d590c1fcba274c6d1f70cfbc}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!tenByteMatch@{tenByteMatch}}
+\index{tenByteMatch@{tenByteMatch}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{tenByteMatch()}{tenByteMatch()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::ten\+Byte\+Match (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{v1,  }\item[{int}]{start\+Index1,  }\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{v2,  }\item[{int}]{start\+Index2 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAudioFile_a279bb7ae95e4b3b9db5e9c9e141b564d}\label{classAudioFile_a279bb7ae95e4b3b9db5e9c9e141b564d}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!twoBytesToInt@{twoBytesToInt}}
+\index{twoBytesToInt@{twoBytesToInt}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{twoBytesToInt()}{twoBytesToInt()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int16\+\_\+t \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::two\+Bytes\+To\+Int (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{source,  }\item[{int}]{start\+Index,  }\item[{\mbox{\hyperlink{classAudioFile_a4d5f3a950f0c059380d268abf39fd67e}{Endianness}}}]{endianness = {\ttfamily \mbox{\hyperlink{classAudioFile_a4d5f3a950f0c059380d268abf39fd67ea3c0ba6b22b526d7fd50c3026435a8c02}{Endianness\+::\+Little\+Endian}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAudioFile_a734c540c871a3843f01f908bbfc3962d}\label{classAudioFile_a734c540c871a3843f01f908bbfc3962d}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!writeDataToFile@{writeDataToFile}}
+\index{writeDataToFile@{writeDataToFile}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{writeDataToFile()}{writeDataToFile()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::write\+Data\+To\+File (\begin{DoxyParamCaption}\item[{std\+::vector$<$ uint8\+\_\+t $>$ \&}]{file\+Data,  }\item[{std\+::string}]{file\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
 
 \doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classAudioFile_aeafbb547cc9b08418212c41215c57838}\label{classAudioFile_aeafbb547cc9b08418212c41215c57838}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!audioFileFormat@{audioFileFormat}}
+\index{audioFileFormat@{audioFileFormat}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{audioFileFormat}{audioFileFormat}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{AudioFile_8h_ad18559d169602e85d0ad68da6ef8593f}{Audio\+File\+Format}} \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::audio\+File\+Format\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAudioFile_a19f9bc02bc118b7c2fa3d50e7bbb49b3}\label{classAudioFile_a19f9bc02bc118b7c2fa3d50e7bbb49b3}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!bitDepth@{bitDepth}}
+\index{bitDepth@{bitDepth}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{bitDepth}{bitDepth}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+int \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::bit\+Depth\hspace{0.3cm}{\ttfamily [private]}}
+
 \mbox{\Hypertarget{classAudioFile_ab2bc14440b0a6ff1a297e28a0354d422}\label{classAudioFile_ab2bc14440b0a6ff1a297e28a0354d422}} 
 \index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!iXMLChunk@{iXMLChunk}}
 \index{iXMLChunk@{iXMLChunk}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
@@ -212,12 +527,26 @@ Sets whether the library should log error messages to the console. By default th
 {\footnotesize\ttfamily template$<$class T $>$ \\
 std\+::string \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::i\+XMLChunk}
 
-An optional i\+XML chunk that can be added to the \mbox{\hyperlink{classAudioFile}{Audio\+File}}. \mbox{\Hypertarget{classAudioFile_af937119db095c5af870851050dcbeabb}\label{classAudioFile_af937119db095c5af870851050dcbeabb}} 
+An optional i\+XML chunk that can be added to the \mbox{\hyperlink{classAudioFile}{Audio\+File}}. \mbox{\Hypertarget{classAudioFile_a12bc0cf7715d0a2390fe8c0af89f408c}\label{classAudioFile_a12bc0cf7715d0a2390fe8c0af89f408c}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!logErrorsToConsole@{logErrorsToConsole}}
+\index{logErrorsToConsole@{logErrorsToConsole}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{logErrorsToConsole}{logErrorsToConsole}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+bool \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::log\+Errors\+To\+Console \{true\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAudioFile_aa8517ad3c63493253ecf59bb0c9974c1}\label{classAudioFile_aa8517ad3c63493253ecf59bb0c9974c1}} 
+\index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!sampleRate@{sampleRate}}
+\index{sampleRate@{sampleRate}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sampleRate}{sampleRate}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+uint32\+\_\+t \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::sample\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAudioFile_af937119db095c5af870851050dcbeabb}\label{classAudioFile_af937119db095c5af870851050dcbeabb}} 
 \index{AudioFile$<$ T $>$@{AudioFile$<$ T $>$}!samples@{samples}}
 \index{samples@{samples}!AudioFile$<$ T $>$@{AudioFile$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{samples}{samples}}
 {\footnotesize\ttfamily template$<$class T $>$ \\
-Audio\+Buffer \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::samples}
+\mbox{\hyperlink{classAudioFile_ad1260a47791dc30cbabfe3ff2ea099b1}{Audio\+Buffer}} \mbox{\hyperlink{classAudioFile}{Audio\+File}}$<$ T $>$\+::samples}
 
 A vector of vectors holding the audio samples for the \mbox{\hyperlink{classAudioFile}{Audio\+File}}. You can access the samples by channel and then by sample index, i.\+e\+: \begin{DoxyVerb} samples[channel][sampleIndex]
 \end{DoxyVerb}

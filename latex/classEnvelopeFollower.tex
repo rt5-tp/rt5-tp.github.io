@@ -1,21 +1,49 @@
 \hypertarget{classEnvelopeFollower}{}\doxysection{Envelope\+Follower Class Reference}
 \label{classEnvelopeFollower}\index{EnvelopeFollower@{EnvelopeFollower}}
+
+
+{\ttfamily \#include $<$Envelope\+Follower.\+hpp$>$}
+
+
+
+Collaboration diagram for Envelope\+Follower\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{classEnvelopeFollower__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classEnvelopeFollower_a4ba7f4c09fca3f2c42c0ff3de46c59c2}{Envelope\+Follower}} (int fs, int fc)
+\mbox{\hyperlink{classEnvelopeFollower_a4ba7f4c09fca3f2c42c0ff3de46c59c2}{Envelope\+Follower}} (int \mbox{\hyperlink{classEnvelopeFollower_ab3edc0d6a7ed3f8688861358d9df12a1}{fs}}, int \mbox{\hyperlink{classEnvelopeFollower_afbd1587f939acc1f89eaf449f9fbc3d9}{fc}})
 \begin{DoxyCompactList}\small\item\em Envelope Follower constructor. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classEnvelopeFollower_a9af86e476cf046847f8022c6949d328b}\label{classEnvelopeFollower_a9af86e476cf046847f8022c6949d328b}} 
 \mbox{\hyperlink{classEnvelopeFollower_a9af86e476cf046847f8022c6949d328b}{$\sim$\+Envelope\+Follower}} ()
 \begin{DoxyCompactList}\small\item\em Envelope Follower destructor. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classEnvelopeFollower_af6781686d216fa0ba4072e04ba6eec24}\label{classEnvelopeFollower_af6781686d216fa0ba4072e04ba6eec24}} 
-void \mbox{\hyperlink{classEnvelopeFollower_af6781686d216fa0ba4072e04ba6eec24}{register\+Callback}} (Data\+Processed cb)
+void \mbox{\hyperlink{classEnvelopeFollower_af6781686d216fa0ba4072e04ba6eec24}{register\+Callback}} (\mbox{\hyperlink{EnvelopeFollower_8hpp_a1c42b5499c368e2502e2ea503413e640}{Data\+Processed}} cb)
 \begin{DoxyCompactList}\small\item\em Callback to send ouput data to next process. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Static Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 static void \mbox{\hyperlink{classEnvelopeFollower_a4dc1594c17f508244f84cd873b9c8c96}{audio\+\_\+callback}} (const std\+::vector$<$ short $>$ \&buffer)
 \begin{DoxyCompactList}\small\item\em Carries out the envelope follower process. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{EnvelopeFollower_8hpp_a1c42b5499c368e2502e2ea503413e640}{Data\+Processed}} \mbox{\hyperlink{classEnvelopeFollower_a0f645c63b3182a57fb4e1c32fe3311b4}{callback}}
+\item 
+Iir\+::\+Butterworth\+::\+Low\+Pass$<$ 4 $>$ \mbox{\hyperlink{classEnvelopeFollower_ab6e351fd4fb650e1c81bb84245294c1e}{filter}}
+\item 
+int \mbox{\hyperlink{classEnvelopeFollower_ab3edc0d6a7ed3f8688861358d9df12a1}{fs}}
+\item 
+int \mbox{\hyperlink{classEnvelopeFollower_afbd1587f939acc1f89eaf449f9fbc3d9}{fc}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{classEnvelopeFollower}{Envelope\+Follower}} $\ast$ \mbox{\hyperlink{classEnvelopeFollower_a555a5a6b0709f9cc2773f38a8496c695}{singleton}}
+\begin{DoxyCompactList}\small\item\em The envelope follower is a singleton. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
@@ -31,7 +59,17 @@ Envelope Follower constructor.
 
 This instantiates an IIR filter, which will be used in the main process.
 
-{\itshape fs} -\/ audio sample rate (required) {\itshape fc} -\/ lowpass filter cut-\/off frequency (optional, default=10) 
+{\itshape fs} -\/ audio sample rate (required) {\itshape fc} -\/ lowpass filter cut-\/off frequency (optional, default=10) \mbox{\Hypertarget{classEnvelopeFollower_a9af86e476cf046847f8022c6949d328b}\label{classEnvelopeFollower_a9af86e476cf046847f8022c6949d328b}} 
+\index{EnvelopeFollower@{EnvelopeFollower}!````~EnvelopeFollower@{$\sim$EnvelopeFollower}}
+\index{````~EnvelopeFollower@{$\sim$EnvelopeFollower}!EnvelopeFollower@{EnvelopeFollower}}
+\doxysubsubsection{\texorpdfstring{$\sim$EnvelopeFollower()}{~EnvelopeFollower()}}
+{\footnotesize\ttfamily Envelope\+Follower\+::$\sim$\+Envelope\+Follower (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Envelope Follower destructor. 
+
+
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classEnvelopeFollower_a4dc1594c17f508244f84cd873b9c8c96}\label{classEnvelopeFollower_a4dc1594c17f508244f84cd873b9c8c96}} 
@@ -44,9 +82,72 @@ This instantiates an IIR filter, which will be used in the main process.
 
 Carries out the envelope follower process. 
 
-Triggered by data being available from audio capture. 
+Triggered by data being available from audio capture. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEnvelopeFollower_a4dc1594c17f508244f84cd873b9c8c96_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classEnvelopeFollower_af6781686d216fa0ba4072e04ba6eec24}\label{classEnvelopeFollower_af6781686d216fa0ba4072e04ba6eec24}} 
+\index{EnvelopeFollower@{EnvelopeFollower}!registerCallback@{registerCallback}}
+\index{registerCallback@{registerCallback}!EnvelopeFollower@{EnvelopeFollower}}
+\doxysubsubsection{\texorpdfstring{registerCallback()}{registerCallback()}}
+{\footnotesize\ttfamily void Envelope\+Follower\+::register\+Callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{EnvelopeFollower_8hpp_a1c42b5499c368e2502e2ea503413e640}{Data\+Processed}}}]{cb }\end{DoxyParamCaption})}
+
+
+
+Callback to send ouput data to next process. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classEnvelopeFollower_af6781686d216fa0ba4072e04ba6eec24_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classEnvelopeFollower_a0f645c63b3182a57fb4e1c32fe3311b4}\label{classEnvelopeFollower_a0f645c63b3182a57fb4e1c32fe3311b4}} 
+\index{EnvelopeFollower@{EnvelopeFollower}!callback@{callback}}
+\index{callback@{callback}!EnvelopeFollower@{EnvelopeFollower}}
+\doxysubsubsection{\texorpdfstring{callback}{callback}}
+{\footnotesize\ttfamily \mbox{\hyperlink{EnvelopeFollower_8hpp_a1c42b5499c368e2502e2ea503413e640}{Data\+Processed}} Envelope\+Follower\+::callback\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classEnvelopeFollower_afbd1587f939acc1f89eaf449f9fbc3d9}\label{classEnvelopeFollower_afbd1587f939acc1f89eaf449f9fbc3d9}} 
+\index{EnvelopeFollower@{EnvelopeFollower}!fc@{fc}}
+\index{fc@{fc}!EnvelopeFollower@{EnvelopeFollower}}
+\doxysubsubsection{\texorpdfstring{fc}{fc}}
+{\footnotesize\ttfamily int Envelope\+Follower\+::fc\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classEnvelopeFollower_ab6e351fd4fb650e1c81bb84245294c1e}\label{classEnvelopeFollower_ab6e351fd4fb650e1c81bb84245294c1e}} 
+\index{EnvelopeFollower@{EnvelopeFollower}!filter@{filter}}
+\index{filter@{filter}!EnvelopeFollower@{EnvelopeFollower}}
+\doxysubsubsection{\texorpdfstring{filter}{filter}}
+{\footnotesize\ttfamily Iir\+::\+Butterworth\+::\+Low\+Pass$<$4$>$ Envelope\+Follower\+::filter\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classEnvelopeFollower_ab3edc0d6a7ed3f8688861358d9df12a1}\label{classEnvelopeFollower_ab3edc0d6a7ed3f8688861358d9df12a1}} 
+\index{EnvelopeFollower@{EnvelopeFollower}!fs@{fs}}
+\index{fs@{fs}!EnvelopeFollower@{EnvelopeFollower}}
+\doxysubsubsection{\texorpdfstring{fs}{fs}}
+{\footnotesize\ttfamily int Envelope\+Follower\+::fs\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classEnvelopeFollower_a555a5a6b0709f9cc2773f38a8496c695}\label{classEnvelopeFollower_a555a5a6b0709f9cc2773f38a8496c695}} 
+\index{EnvelopeFollower@{EnvelopeFollower}!singleton@{singleton}}
+\index{singleton@{singleton}!EnvelopeFollower@{EnvelopeFollower}}
+\doxysubsubsection{\texorpdfstring{singleton}{singleton}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEnvelopeFollower}{Envelope\+Follower}} $\ast$ Envelope\+Follower\+::singleton\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The envelope follower is a singleton. 
+
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Envelope\+Following/src/Envelope\+Follower.\+hpp\item 
-/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Envelope\+Following/src/Envelope\+Follower.\+cpp\end{DoxyCompactItemize}
+/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Envelope\+Following/src/\mbox{\hyperlink{EnvelopeFollower_8hpp}{Envelope\+Follower.\+hpp}}\item 
+/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Envelope\+Following/src/\mbox{\hyperlink{EnvelopeFollower_8cpp}{Envelope\+Follower.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,73 @@
+\hypertarget{GenreClassifier_8cpp}{}\doxysection{/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/audiocapture/src/\+Genre\+Classification/\+Genre\+Classifier.cpp File Reference}
+\label{GenreClassifier_8cpp}\index{/home/ross/Documents/git/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/audiocapture/src/GenreClassification/GenreClassifier.cpp@{/home/ross/Documents/git/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/audiocapture/src/GenreClassification/GenreClassifier.cpp}}
+{\ttfamily \#include \char`\"{}Genre\+Classifier.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}cpp\+\_\+genre\+\_\+classifier/src/\+Genre\+Predictor.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+Include dependency graph for Genre\+Classifier.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GenreClassifier_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classRawAudioWriter}{Raw\+Audio\+Writer}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ char $>$ \mbox{\hyperlink{GenreClassifier_8cpp_aaba0f06aa71db95d2fc0419517fe65d0}{convert\+Raw\+Audio\+To\+Wav}} (std\+::vector$<$ int16\+\_\+t $>$ raw\+Audio\+Data)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGenrePredictor}{Genre\+Predictor}} \mbox{\hyperlink{GenreClassifier_8cpp_a7907fac612f950145f5016451654301b}{predictor}}
+\item 
+\mbox{\hyperlink{classRawAudioWriter}{Raw\+Audio\+Writer}} \mbox{\hyperlink{GenreClassifier_8cpp_ac02c9d50faca7b755de1e38b6c5bb8d0}{wav\+Writer}} (\char`\"{}wavy.\+wav\char`\"{})
+\item 
+static bool \mbox{\hyperlink{GenreClassifier_8cpp_a1d39aac66e12dae50a24cd7a9100ef33}{done}} = false
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{GenreClassifier_8cpp_aaba0f06aa71db95d2fc0419517fe65d0}\label{GenreClassifier_8cpp_aaba0f06aa71db95d2fc0419517fe65d0}} 
+\index{GenreClassifier.cpp@{GenreClassifier.cpp}!convertRawAudioToWav@{convertRawAudioToWav}}
+\index{convertRawAudioToWav@{convertRawAudioToWav}!GenreClassifier.cpp@{GenreClassifier.cpp}}
+\doxysubsubsection{\texorpdfstring{convertRawAudioToWav()}{convertRawAudioToWav()}}
+{\footnotesize\ttfamily std\+::vector$<$char$>$ convert\+Raw\+Audio\+To\+Wav (\begin{DoxyParamCaption}\item[{std\+::vector$<$ int16\+\_\+t $>$}]{raw\+Audio\+Data }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{GenreClassifier_8cpp_aaba0f06aa71db95d2fc0419517fe65d0_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{GenreClassifier_8cpp_a1d39aac66e12dae50a24cd7a9100ef33}\label{GenreClassifier_8cpp_a1d39aac66e12dae50a24cd7a9100ef33}} 
+\index{GenreClassifier.cpp@{GenreClassifier.cpp}!done@{done}}
+\index{done@{done}!GenreClassifier.cpp@{GenreClassifier.cpp}}
+\doxysubsubsection{\texorpdfstring{done}{done}}
+{\footnotesize\ttfamily bool done = false\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{GenreClassifier_8cpp_a7907fac612f950145f5016451654301b}\label{GenreClassifier_8cpp_a7907fac612f950145f5016451654301b}} 
+\index{GenreClassifier.cpp@{GenreClassifier.cpp}!predictor@{predictor}}
+\index{predictor@{predictor}!GenreClassifier.cpp@{GenreClassifier.cpp}}
+\doxysubsubsection{\texorpdfstring{predictor}{predictor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGenrePredictor}{Genre\+Predictor}} predictor}
+
+\mbox{\Hypertarget{GenreClassifier_8cpp_ac02c9d50faca7b755de1e38b6c5bb8d0}\label{GenreClassifier_8cpp_ac02c9d50faca7b755de1e38b6c5bb8d0}} 
+\index{GenreClassifier.cpp@{GenreClassifier.cpp}!wavWriter@{wavWriter}}
+\index{wavWriter@{wavWriter}!GenreClassifier.cpp@{GenreClassifier.cpp}}
+\doxysubsubsection{\texorpdfstring{wavWriter}{wavWriter}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classRawAudioWriter}{Raw\+Audio\+Writer}} wav\+Writer(\char`\"{}wavy.\+wav\char`\"{}) (\begin{DoxyParamCaption}\item[{\char`\"{}wavy.\+wav\char`\"{}}]{ }\end{DoxyParamCaption})}
+

@@ -1,0 +1,355 @@
+\hypertarget{ws2811_8h}{}\doxysection{/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/\+LED-\/\+Library/src/ws2811/ws2811.h File Reference}
+\label{ws2811_8h}\index{/home/ross/Documents/git/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/LED-\/Library/src/ws2811/ws2811.h@{/home/ross/Documents/git/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/LED-\/Library/src/ws2811/ws2811.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}rpihw.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pwm.\+h\char`\"{}}\newline
+Include dependency graph for ws2811.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{ws2811_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ws2811_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structws2811__channel__t}{ws2811\+\_\+channel\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structws2811__t}{ws2811\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{ws2811_8h_a80ac00eaa98beb995b1b57a40fd9e814}{WS2811\+\_\+\+TARGET\+\_\+\+FREQ}}~400000
+\item 
+\#define \mbox{\hyperlink{ws2811_8h_a7b433ef738027449f88e61c7ec8d2397}{SK6812\+\_\+\+STRIP\+\_\+\+RGBW}}~0x18100800
+\item 
+\#define \mbox{\hyperlink{ws2811_8h_af7fe927b5fa2969f416f59a148f684b7}{SK6812\+\_\+\+STRIP\+\_\+\+RBGW}}~0x18100008
+\item 
+\#define \mbox{\hyperlink{ws2811_8h_ac3753c85e445b621be5f3c28db3be854}{SK6812\+\_\+\+STRIP\+\_\+\+GRBW}}~0x18081000
+\item 
+\#define \mbox{\hyperlink{ws2811_8h_ad448e634360fff27ea02199b68f51f12}{SK6812\+\_\+\+STRIP\+\_\+\+GBRW}}~0x18080010
+\item 
+\#define \mbox{\hyperlink{ws2811_8h_a686bc8bde60e4b3752ce1bc45327fe6c}{SK6812\+\_\+\+STRIP\+\_\+\+BRGW}}~0x18001008
+\item 
+\#define \mbox{\hyperlink{ws2811_8h_ac84641fd14ed0cd59fdfd375d825668f}{SK6812\+\_\+\+STRIP\+\_\+\+BGRW}}~0x18000810
+\item 
+\#define \mbox{\hyperlink{ws2811_8h_ab9ac271852313536fd8136b9d9e205a0}{SK6812\+\_\+\+SHIFT\+\_\+\+WMASK}}~0xf0000000
+\item 
+\#define \mbox{\hyperlink{ws2811_8h_aab30655e1f5bf572261599018c861246}{WS2811\+\_\+\+STRIP\+\_\+\+RGB}}~0x00100800
+\item 
+\#define \mbox{\hyperlink{ws2811_8h_a652efdf0aec6cb1c511950a26a06295a}{WS2811\+\_\+\+STRIP\+\_\+\+RBG}}~0x00100008
+\item 
+\#define \mbox{\hyperlink{ws2811_8h_a87165b4de6e5c566103b6ab5f1ff74c3}{WS2811\+\_\+\+STRIP\+\_\+\+GRB}}~0x00081000
+\item 
+\#define \mbox{\hyperlink{ws2811_8h_a1bc05c1ee0f64f9746634eb8b152713e}{WS2811\+\_\+\+STRIP\+\_\+\+GBR}}~0x00080010
+\item 
+\#define \mbox{\hyperlink{ws2811_8h_a57645905992f848a51634e5a0a71a201}{WS2811\+\_\+\+STRIP\+\_\+\+BRG}}~0x00001008
+\item 
+\#define \mbox{\hyperlink{ws2811_8h_a0161e633d6f491150d0590d98ba06554}{WS2811\+\_\+\+STRIP\+\_\+\+BGR}}~0x00000810
+\item 
+\#define \mbox{\hyperlink{ws2811_8h_a168f9c29992b3315c78a0db931b778fa}{WS2812\+\_\+\+STRIP}}~\mbox{\hyperlink{ws2811_8h_a87165b4de6e5c566103b6ab5f1ff74c3}{WS2811\+\_\+\+STRIP\+\_\+\+GRB}}
+\item 
+\#define \mbox{\hyperlink{ws2811_8h_af86479c6edd8bbd1aac35c6cc7e24217}{SK6812\+\_\+\+STRIP}}~\mbox{\hyperlink{ws2811_8h_a87165b4de6e5c566103b6ab5f1ff74c3}{WS2811\+\_\+\+STRIP\+\_\+\+GRB}}
+\item 
+\#define \mbox{\hyperlink{ws2811_8h_a3d2b96dade78db057b8cb82e4584538b}{SK6812\+W\+\_\+\+STRIP}}~\mbox{\hyperlink{ws2811_8h_ac3753c85e445b621be5f3c28db3be854}{SK6812\+\_\+\+STRIP\+\_\+\+GRBW}}
+\item 
+\#define \mbox{\hyperlink{ws2811_8h_abca9a26a20093fbc39fa3c968d527b0c}{WS2811\+\_\+\+RETURN\+\_\+\+STATES}}(X)
+\item 
+\#define \mbox{\hyperlink{ws2811_8h_acb2dfa72bf053b20ffcacded887c8c37}{WS2811\+\_\+\+RETURN\+\_\+\+STATES\+\_\+\+ENUM}}(state,  name,  str)~name = state
+\item 
+\#define \mbox{\hyperlink{ws2811_8h_add7c0f8d4ccd98ea50652e4f3d4322ec}{WS2811\+\_\+\+RETURN\+\_\+\+STATES\+\_\+\+STRING}}(state,  name,  str)~str
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef uint32\+\_\+t \mbox{\hyperlink{ws2811_8h_a3946bfbfcd781a07a6a1876e67720646}{ws2811\+\_\+led\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{structws2811__channel__t}{ws2811\+\_\+channel\+\_\+t}} \mbox{\hyperlink{ws2811_8h_a0e7719d0fbcaf97ae5e1d2e0d991d31d}{ws2811\+\_\+channel\+\_\+t}}
+\item 
+typedef struct \mbox{\hyperlink{structws2811__t}{ws2811\+\_\+t}} \mbox{\hyperlink{ws2811_8h_a30fee8e1beb864b1745638f0e0f5dbf2}{ws2811\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{ws2811_8h_a62135fb061480c24af2b8bdd2b5f6620}{ws2811\+\_\+return\+\_\+t}} \{ \mbox{\hyperlink{ws2811_8h_a62135fb061480c24af2b8bdd2b5f6620a4187f08efc4153afe5323f478d93ac7a}{WS2811\+\_\+\+RETURN\+\_\+\+STATES}} =(WS2811\+\_\+\+RETURN\+\_\+\+STATES\+\_\+\+ENUM)
+, \mbox{\hyperlink{ws2811_8h_a62135fb061480c24af2b8bdd2b5f6620a3a9675b1184f33a0884b8e774ad8f5f9}{WS2811\+\_\+\+RETURN\+\_\+\+STATE\+\_\+\+COUNT}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{ws2811_8h_a62135fb061480c24af2b8bdd2b5f6620}{ws2811\+\_\+return\+\_\+t}} \mbox{\hyperlink{ws2811_8h_a9c9d5c549184c92e52d2203ea1ded4bb}{ws2811\+\_\+init}} (\mbox{\hyperlink{structws2811__t}{ws2811\+\_\+t}} $\ast$ws2811)
+\item 
+void \mbox{\hyperlink{ws2811_8h_ab131d1168837b6b5c54225d481b59db5}{ws2811\+\_\+fini}} (\mbox{\hyperlink{structws2811__t}{ws2811\+\_\+t}} $\ast$ws2811)
+\item 
+\mbox{\hyperlink{ws2811_8h_a62135fb061480c24af2b8bdd2b5f6620}{ws2811\+\_\+return\+\_\+t}} \mbox{\hyperlink{ws2811_8h_a023b694aa905559b6ed2b18b859d8da3}{ws2811\+\_\+render}} (\mbox{\hyperlink{structws2811__t}{ws2811\+\_\+t}} $\ast$ws2811)
+\item 
+\mbox{\hyperlink{ws2811_8h_a62135fb061480c24af2b8bdd2b5f6620}{ws2811\+\_\+return\+\_\+t}} \mbox{\hyperlink{ws2811_8h_a47d16f313cccd06562440da6aa8398ab}{ws2811\+\_\+wait}} (\mbox{\hyperlink{structws2811__t}{ws2811\+\_\+t}} $\ast$ws2811)
+\item 
+const char $\ast$ \mbox{\hyperlink{ws2811_8h_ac420154e431984410aa2c1a92c845516}{ws2811\+\_\+get\+\_\+return\+\_\+t\+\_\+str}} (const \mbox{\hyperlink{ws2811_8h_a62135fb061480c24af2b8bdd2b5f6620}{ws2811\+\_\+return\+\_\+t}} state)
+\item 
+void \mbox{\hyperlink{ws2811_8h_ab602f1ca8c94d9ed09f92f69f0e0d661}{ws2811\+\_\+set\+\_\+custom\+\_\+gamma\+\_\+factor}} (\mbox{\hyperlink{structws2811__t}{ws2811\+\_\+t}} $\ast$ws2811, double gamma\+\_\+factor)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{ws2811_8h_ab9ac271852313536fd8136b9d9e205a0}\label{ws2811_8h_ab9ac271852313536fd8136b9d9e205a0}} 
+\index{ws2811.h@{ws2811.h}!SK6812\_SHIFT\_WMASK@{SK6812\_SHIFT\_WMASK}}
+\index{SK6812\_SHIFT\_WMASK@{SK6812\_SHIFT\_WMASK}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{SK6812\_SHIFT\_WMASK}{SK6812\_SHIFT\_WMASK}}
+{\footnotesize\ttfamily \#define SK6812\+\_\+\+SHIFT\+\_\+\+WMASK~0xf0000000}
+
+\mbox{\Hypertarget{ws2811_8h_af86479c6edd8bbd1aac35c6cc7e24217}\label{ws2811_8h_af86479c6edd8bbd1aac35c6cc7e24217}} 
+\index{ws2811.h@{ws2811.h}!SK6812\_STRIP@{SK6812\_STRIP}}
+\index{SK6812\_STRIP@{SK6812\_STRIP}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{SK6812\_STRIP}{SK6812\_STRIP}}
+{\footnotesize\ttfamily \#define SK6812\+\_\+\+STRIP~\mbox{\hyperlink{ws2811_8h_a87165b4de6e5c566103b6ab5f1ff74c3}{WS2811\+\_\+\+STRIP\+\_\+\+GRB}}}
+
+\mbox{\Hypertarget{ws2811_8h_ac84641fd14ed0cd59fdfd375d825668f}\label{ws2811_8h_ac84641fd14ed0cd59fdfd375d825668f}} 
+\index{ws2811.h@{ws2811.h}!SK6812\_STRIP\_BGRW@{SK6812\_STRIP\_BGRW}}
+\index{SK6812\_STRIP\_BGRW@{SK6812\_STRIP\_BGRW}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{SK6812\_STRIP\_BGRW}{SK6812\_STRIP\_BGRW}}
+{\footnotesize\ttfamily \#define SK6812\+\_\+\+STRIP\+\_\+\+BGRW~0x18000810}
+
+\mbox{\Hypertarget{ws2811_8h_a686bc8bde60e4b3752ce1bc45327fe6c}\label{ws2811_8h_a686bc8bde60e4b3752ce1bc45327fe6c}} 
+\index{ws2811.h@{ws2811.h}!SK6812\_STRIP\_BRGW@{SK6812\_STRIP\_BRGW}}
+\index{SK6812\_STRIP\_BRGW@{SK6812\_STRIP\_BRGW}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{SK6812\_STRIP\_BRGW}{SK6812\_STRIP\_BRGW}}
+{\footnotesize\ttfamily \#define SK6812\+\_\+\+STRIP\+\_\+\+BRGW~0x18001008}
+
+\mbox{\Hypertarget{ws2811_8h_ad448e634360fff27ea02199b68f51f12}\label{ws2811_8h_ad448e634360fff27ea02199b68f51f12}} 
+\index{ws2811.h@{ws2811.h}!SK6812\_STRIP\_GBRW@{SK6812\_STRIP\_GBRW}}
+\index{SK6812\_STRIP\_GBRW@{SK6812\_STRIP\_GBRW}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{SK6812\_STRIP\_GBRW}{SK6812\_STRIP\_GBRW}}
+{\footnotesize\ttfamily \#define SK6812\+\_\+\+STRIP\+\_\+\+GBRW~0x18080010}
+
+\mbox{\Hypertarget{ws2811_8h_ac3753c85e445b621be5f3c28db3be854}\label{ws2811_8h_ac3753c85e445b621be5f3c28db3be854}} 
+\index{ws2811.h@{ws2811.h}!SK6812\_STRIP\_GRBW@{SK6812\_STRIP\_GRBW}}
+\index{SK6812\_STRIP\_GRBW@{SK6812\_STRIP\_GRBW}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{SK6812\_STRIP\_GRBW}{SK6812\_STRIP\_GRBW}}
+{\footnotesize\ttfamily \#define SK6812\+\_\+\+STRIP\+\_\+\+GRBW~0x18081000}
+
+\mbox{\Hypertarget{ws2811_8h_af7fe927b5fa2969f416f59a148f684b7}\label{ws2811_8h_af7fe927b5fa2969f416f59a148f684b7}} 
+\index{ws2811.h@{ws2811.h}!SK6812\_STRIP\_RBGW@{SK6812\_STRIP\_RBGW}}
+\index{SK6812\_STRIP\_RBGW@{SK6812\_STRIP\_RBGW}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{SK6812\_STRIP\_RBGW}{SK6812\_STRIP\_RBGW}}
+{\footnotesize\ttfamily \#define SK6812\+\_\+\+STRIP\+\_\+\+RBGW~0x18100008}
+
+\mbox{\Hypertarget{ws2811_8h_a7b433ef738027449f88e61c7ec8d2397}\label{ws2811_8h_a7b433ef738027449f88e61c7ec8d2397}} 
+\index{ws2811.h@{ws2811.h}!SK6812\_STRIP\_RGBW@{SK6812\_STRIP\_RGBW}}
+\index{SK6812\_STRIP\_RGBW@{SK6812\_STRIP\_RGBW}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{SK6812\_STRIP\_RGBW}{SK6812\_STRIP\_RGBW}}
+{\footnotesize\ttfamily \#define SK6812\+\_\+\+STRIP\+\_\+\+RGBW~0x18100800}
+
+\mbox{\Hypertarget{ws2811_8h_a3d2b96dade78db057b8cb82e4584538b}\label{ws2811_8h_a3d2b96dade78db057b8cb82e4584538b}} 
+\index{ws2811.h@{ws2811.h}!SK6812W\_STRIP@{SK6812W\_STRIP}}
+\index{SK6812W\_STRIP@{SK6812W\_STRIP}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{SK6812W\_STRIP}{SK6812W\_STRIP}}
+{\footnotesize\ttfamily \#define SK6812\+W\+\_\+\+STRIP~\mbox{\hyperlink{ws2811_8h_ac3753c85e445b621be5f3c28db3be854}{SK6812\+\_\+\+STRIP\+\_\+\+GRBW}}}
+
+\mbox{\Hypertarget{ws2811_8h_abca9a26a20093fbc39fa3c968d527b0c}\label{ws2811_8h_abca9a26a20093fbc39fa3c968d527b0c}} 
+\index{ws2811.h@{ws2811.h}!WS2811\_RETURN\_STATES@{WS2811\_RETURN\_STATES}}
+\index{WS2811\_RETURN\_STATES@{WS2811\_RETURN\_STATES}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{WS2811\_RETURN\_STATES}{WS2811\_RETURN\_STATES}}
+{\footnotesize\ttfamily \#define WS2811\+\_\+\+RETURN\+\_\+\+STATES(\begin{DoxyParamCaption}\item[{}]{X }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{            X(0, WS2811\_SUCCESS, \textcolor{stringliteral}{"{}Success"{}}),                                                \(\backslash\)}
+\DoxyCodeLine{            X(-\/1, WS2811\_ERROR\_GENERIC, \textcolor{stringliteral}{"{}Generic failure"{}}),                                 \(\backslash\)}
+\DoxyCodeLine{            X(-\/2, WS2811\_ERROR\_OUT\_OF\_MEMORY, \textcolor{stringliteral}{"{}Out of memory"{}}),                             \(\backslash\)}
+\DoxyCodeLine{            X(-\/3, WS2811\_ERROR\_HW\_NOT\_SUPPORTED, \textcolor{stringliteral}{"{}Hardware revision is not supported"{}}),     \(\backslash\)}
+\DoxyCodeLine{            X(-\/4, WS2811\_ERROR\_MEM\_LOCK, \textcolor{stringliteral}{"{}Memory lock failed"{}}),                             \(\backslash\)}
+\DoxyCodeLine{            X(-\/5, WS2811\_ERROR\_MMAP, \textcolor{stringliteral}{"{}mmap() failed"{}}),                                      \(\backslash\)}
+\DoxyCodeLine{            X(-\/6, WS2811\_ERROR\_MAP\_REGISTERS, \textcolor{stringliteral}{"{}Unable to map registers into userspace"{}}),    \(\backslash\)}
+\DoxyCodeLine{            X(-\/7, WS2811\_ERROR\_GPIO\_INIT, \textcolor{stringliteral}{"{}Unable to initialize GPIO"{}}),                     \(\backslash\)}
+\DoxyCodeLine{            X(-\/8, WS2811\_ERROR\_PWM\_SETUP, \textcolor{stringliteral}{"{}Unable to initialize PWM"{}}),                      \(\backslash\)}
+\DoxyCodeLine{            X(-\/9, WS2811\_ERROR\_MAILBOX\_DEVICE, \textcolor{stringliteral}{"{}Failed to create mailbox device"{}}),          \(\backslash\)}
+\DoxyCodeLine{            X(-\/10, WS2811\_ERROR\_DMA, \textcolor{stringliteral}{"{}DMA error"{}}),                                          \(\backslash\)}
+\DoxyCodeLine{            X(-\/11, WS2811\_ERROR\_ILLEGAL\_GPIO, \textcolor{stringliteral}{"{}Selected GPIO not possible"{}}),                \(\backslash\)}
+\DoxyCodeLine{            X(-\/12, WS2811\_ERROR\_PCM\_SETUP, \textcolor{stringliteral}{"{}Unable to initialize PCM"{}}),                     \(\backslash\)}
+\DoxyCodeLine{            X(-\/13, WS2811\_ERROR\_SPI\_SETUP, \textcolor{stringliteral}{"{}Unable to initialize SPI"{}}),                     \(\backslash\)}
+\DoxyCodeLine{            X(-\/14, WS2811\_ERROR\_SPI\_TRANSFER, \textcolor{stringliteral}{"{}SPI transfer error"{}})                         \(\backslash\)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{ws2811_8h_acb2dfa72bf053b20ffcacded887c8c37}\label{ws2811_8h_acb2dfa72bf053b20ffcacded887c8c37}} 
+\index{ws2811.h@{ws2811.h}!WS2811\_RETURN\_STATES\_ENUM@{WS2811\_RETURN\_STATES\_ENUM}}
+\index{WS2811\_RETURN\_STATES\_ENUM@{WS2811\_RETURN\_STATES\_ENUM}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{WS2811\_RETURN\_STATES\_ENUM}{WS2811\_RETURN\_STATES\_ENUM}}
+{\footnotesize\ttfamily \#define WS2811\+\_\+\+RETURN\+\_\+\+STATES\+\_\+\+ENUM(\begin{DoxyParamCaption}\item[{}]{state,  }\item[{}]{name,  }\item[{}]{str }\end{DoxyParamCaption})~name = state}
+
+\mbox{\Hypertarget{ws2811_8h_add7c0f8d4ccd98ea50652e4f3d4322ec}\label{ws2811_8h_add7c0f8d4ccd98ea50652e4f3d4322ec}} 
+\index{ws2811.h@{ws2811.h}!WS2811\_RETURN\_STATES\_STRING@{WS2811\_RETURN\_STATES\_STRING}}
+\index{WS2811\_RETURN\_STATES\_STRING@{WS2811\_RETURN\_STATES\_STRING}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{WS2811\_RETURN\_STATES\_STRING}{WS2811\_RETURN\_STATES\_STRING}}
+{\footnotesize\ttfamily \#define WS2811\+\_\+\+RETURN\+\_\+\+STATES\+\_\+\+STRING(\begin{DoxyParamCaption}\item[{}]{state,  }\item[{}]{name,  }\item[{}]{str }\end{DoxyParamCaption})~str}
+
+\mbox{\Hypertarget{ws2811_8h_a0161e633d6f491150d0590d98ba06554}\label{ws2811_8h_a0161e633d6f491150d0590d98ba06554}} 
+\index{ws2811.h@{ws2811.h}!WS2811\_STRIP\_BGR@{WS2811\_STRIP\_BGR}}
+\index{WS2811\_STRIP\_BGR@{WS2811\_STRIP\_BGR}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{WS2811\_STRIP\_BGR}{WS2811\_STRIP\_BGR}}
+{\footnotesize\ttfamily \#define WS2811\+\_\+\+STRIP\+\_\+\+BGR~0x00000810}
+
+\mbox{\Hypertarget{ws2811_8h_a57645905992f848a51634e5a0a71a201}\label{ws2811_8h_a57645905992f848a51634e5a0a71a201}} 
+\index{ws2811.h@{ws2811.h}!WS2811\_STRIP\_BRG@{WS2811\_STRIP\_BRG}}
+\index{WS2811\_STRIP\_BRG@{WS2811\_STRIP\_BRG}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{WS2811\_STRIP\_BRG}{WS2811\_STRIP\_BRG}}
+{\footnotesize\ttfamily \#define WS2811\+\_\+\+STRIP\+\_\+\+BRG~0x00001008}
+
+\mbox{\Hypertarget{ws2811_8h_a1bc05c1ee0f64f9746634eb8b152713e}\label{ws2811_8h_a1bc05c1ee0f64f9746634eb8b152713e}} 
+\index{ws2811.h@{ws2811.h}!WS2811\_STRIP\_GBR@{WS2811\_STRIP\_GBR}}
+\index{WS2811\_STRIP\_GBR@{WS2811\_STRIP\_GBR}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{WS2811\_STRIP\_GBR}{WS2811\_STRIP\_GBR}}
+{\footnotesize\ttfamily \#define WS2811\+\_\+\+STRIP\+\_\+\+GBR~0x00080010}
+
+\mbox{\Hypertarget{ws2811_8h_a87165b4de6e5c566103b6ab5f1ff74c3}\label{ws2811_8h_a87165b4de6e5c566103b6ab5f1ff74c3}} 
+\index{ws2811.h@{ws2811.h}!WS2811\_STRIP\_GRB@{WS2811\_STRIP\_GRB}}
+\index{WS2811\_STRIP\_GRB@{WS2811\_STRIP\_GRB}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{WS2811\_STRIP\_GRB}{WS2811\_STRIP\_GRB}}
+{\footnotesize\ttfamily \#define WS2811\+\_\+\+STRIP\+\_\+\+GRB~0x00081000}
+
+\mbox{\Hypertarget{ws2811_8h_a652efdf0aec6cb1c511950a26a06295a}\label{ws2811_8h_a652efdf0aec6cb1c511950a26a06295a}} 
+\index{ws2811.h@{ws2811.h}!WS2811\_STRIP\_RBG@{WS2811\_STRIP\_RBG}}
+\index{WS2811\_STRIP\_RBG@{WS2811\_STRIP\_RBG}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{WS2811\_STRIP\_RBG}{WS2811\_STRIP\_RBG}}
+{\footnotesize\ttfamily \#define WS2811\+\_\+\+STRIP\+\_\+\+RBG~0x00100008}
+
+\mbox{\Hypertarget{ws2811_8h_aab30655e1f5bf572261599018c861246}\label{ws2811_8h_aab30655e1f5bf572261599018c861246}} 
+\index{ws2811.h@{ws2811.h}!WS2811\_STRIP\_RGB@{WS2811\_STRIP\_RGB}}
+\index{WS2811\_STRIP\_RGB@{WS2811\_STRIP\_RGB}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{WS2811\_STRIP\_RGB}{WS2811\_STRIP\_RGB}}
+{\footnotesize\ttfamily \#define WS2811\+\_\+\+STRIP\+\_\+\+RGB~0x00100800}
+
+\mbox{\Hypertarget{ws2811_8h_a80ac00eaa98beb995b1b57a40fd9e814}\label{ws2811_8h_a80ac00eaa98beb995b1b57a40fd9e814}} 
+\index{ws2811.h@{ws2811.h}!WS2811\_TARGET\_FREQ@{WS2811\_TARGET\_FREQ}}
+\index{WS2811\_TARGET\_FREQ@{WS2811\_TARGET\_FREQ}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{WS2811\_TARGET\_FREQ}{WS2811\_TARGET\_FREQ}}
+{\footnotesize\ttfamily \#define WS2811\+\_\+\+TARGET\+\_\+\+FREQ~400000}
+
+\mbox{\Hypertarget{ws2811_8h_a168f9c29992b3315c78a0db931b778fa}\label{ws2811_8h_a168f9c29992b3315c78a0db931b778fa}} 
+\index{ws2811.h@{ws2811.h}!WS2812\_STRIP@{WS2812\_STRIP}}
+\index{WS2812\_STRIP@{WS2812\_STRIP}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{WS2812\_STRIP}{WS2812\_STRIP}}
+{\footnotesize\ttfamily \#define WS2812\+\_\+\+STRIP~\mbox{\hyperlink{ws2811_8h_a87165b4de6e5c566103b6ab5f1ff74c3}{WS2811\+\_\+\+STRIP\+\_\+\+GRB}}}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{ws2811_8h_a0e7719d0fbcaf97ae5e1d2e0d991d31d}\label{ws2811_8h_a0e7719d0fbcaf97ae5e1d2e0d991d31d}} 
+\index{ws2811.h@{ws2811.h}!ws2811\_channel\_t@{ws2811\_channel\_t}}
+\index{ws2811\_channel\_t@{ws2811\_channel\_t}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{ws2811\_channel\_t}{ws2811\_channel\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structws2811__channel__t}{ws2811\+\_\+channel\+\_\+t}} \mbox{\hyperlink{structws2811__channel__t}{ws2811\+\_\+channel\+\_\+t}}}
+
+\mbox{\Hypertarget{ws2811_8h_a3946bfbfcd781a07a6a1876e67720646}\label{ws2811_8h_a3946bfbfcd781a07a6a1876e67720646}} 
+\index{ws2811.h@{ws2811.h}!ws2811\_led\_t@{ws2811\_led\_t}}
+\index{ws2811\_led\_t@{ws2811\_led\_t}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{ws2811\_led\_t}{ws2811\_led\_t}}
+{\footnotesize\ttfamily typedef uint32\+\_\+t \mbox{\hyperlink{ws2811_8h_a3946bfbfcd781a07a6a1876e67720646}{ws2811\+\_\+led\+\_\+t}}}
+
+\mbox{\Hypertarget{ws2811_8h_a30fee8e1beb864b1745638f0e0f5dbf2}\label{ws2811_8h_a30fee8e1beb864b1745638f0e0f5dbf2}} 
+\index{ws2811.h@{ws2811.h}!ws2811\_t@{ws2811\_t}}
+\index{ws2811\_t@{ws2811\_t}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{ws2811\_t}{ws2811\_t}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structws2811__t}{ws2811\+\_\+t}} \mbox{\hyperlink{structws2811__t}{ws2811\+\_\+t}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{ws2811_8h_a62135fb061480c24af2b8bdd2b5f6620}\label{ws2811_8h_a62135fb061480c24af2b8bdd2b5f6620}} 
+\index{ws2811.h@{ws2811.h}!ws2811\_return\_t@{ws2811\_return\_t}}
+\index{ws2811\_return\_t@{ws2811\_return\_t}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{ws2811\_return\_t}{ws2811\_return\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{ws2811_8h_a62135fb061480c24af2b8bdd2b5f6620}{ws2811\+\_\+return\+\_\+t}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WS2811\_RETURN\_STATES@{WS2811\_RETURN\_STATES}!ws2811.h@{ws2811.h}}\index{ws2811.h@{ws2811.h}!WS2811\_RETURN\_STATES@{WS2811\_RETURN\_STATES}}}\mbox{\Hypertarget{ws2811_8h_a62135fb061480c24af2b8bdd2b5f6620a4187f08efc4153afe5323f478d93ac7a}\label{ws2811_8h_a62135fb061480c24af2b8bdd2b5f6620a4187f08efc4153afe5323f478d93ac7a}} 
+WS2811\+\_\+\+RETURN\+\_\+\+STATES&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WS2811\_RETURN\_STATE\_COUNT@{WS2811\_RETURN\_STATE\_COUNT}!ws2811.h@{ws2811.h}}\index{ws2811.h@{ws2811.h}!WS2811\_RETURN\_STATE\_COUNT@{WS2811\_RETURN\_STATE\_COUNT}}}\mbox{\Hypertarget{ws2811_8h_a62135fb061480c24af2b8bdd2b5f6620a3a9675b1184f33a0884b8e774ad8f5f9}\label{ws2811_8h_a62135fb061480c24af2b8bdd2b5f6620a3a9675b1184f33a0884b8e774ad8f5f9}} 
+WS2811\+\_\+\+RETURN\+\_\+\+STATE\+\_\+\+COUNT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ws2811_8h_ab131d1168837b6b5c54225d481b59db5}\label{ws2811_8h_ab131d1168837b6b5c54225d481b59db5}} 
+\index{ws2811.h@{ws2811.h}!ws2811\_fini@{ws2811\_fini}}
+\index{ws2811\_fini@{ws2811\_fini}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{ws2811\_fini()}{ws2811\_fini()}}
+{\footnotesize\ttfamily void ws2811\+\_\+fini (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structws2811__t}{ws2811\+\_\+t}} $\ast$}]{ws2811 }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ws2811_8h_ab131d1168837b6b5c54225d481b59db5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{ws2811_8h_ac420154e431984410aa2c1a92c845516}\label{ws2811_8h_ac420154e431984410aa2c1a92c845516}} 
+\index{ws2811.h@{ws2811.h}!ws2811\_get\_return\_t\_str@{ws2811\_get\_return\_t\_str}}
+\index{ws2811\_get\_return\_t\_str@{ws2811\_get\_return\_t\_str}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{ws2811\_get\_return\_t\_str()}{ws2811\_get\_return\_t\_str()}}
+{\footnotesize\ttfamily const char$\ast$ ws2811\+\_\+get\+\_\+return\+\_\+t\+\_\+str (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{ws2811_8h_a62135fb061480c24af2b8bdd2b5f6620}{ws2811\+\_\+return\+\_\+t}}}]{state }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ws2811_8h_ac420154e431984410aa2c1a92c845516_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{ws2811_8h_a9c9d5c549184c92e52d2203ea1ded4bb}\label{ws2811_8h_a9c9d5c549184c92e52d2203ea1ded4bb}} 
+\index{ws2811.h@{ws2811.h}!ws2811\_init@{ws2811\_init}}
+\index{ws2811\_init@{ws2811\_init}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{ws2811\_init()}{ws2811\_init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ws2811_8h_a62135fb061480c24af2b8bdd2b5f6620}{ws2811\+\_\+return\+\_\+t}} ws2811\+\_\+init (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structws2811__t}{ws2811\+\_\+t}} $\ast$}]{ws2811 }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{ws2811_8h_a9c9d5c549184c92e52d2203ea1ded4bb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{ws2811_8h_a023b694aa905559b6ed2b18b859d8da3}\label{ws2811_8h_a023b694aa905559b6ed2b18b859d8da3}} 
+\index{ws2811.h@{ws2811.h}!ws2811\_render@{ws2811\_render}}
+\index{ws2811\_render@{ws2811\_render}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{ws2811\_render()}{ws2811\_render()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ws2811_8h_a62135fb061480c24af2b8bdd2b5f6620}{ws2811\+\_\+return\+\_\+t}} ws2811\+\_\+render (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structws2811__t}{ws2811\+\_\+t}} $\ast$}]{ws2811 }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{ws2811_8h_a023b694aa905559b6ed2b18b859d8da3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{ws2811_8h_ab602f1ca8c94d9ed09f92f69f0e0d661}\label{ws2811_8h_ab602f1ca8c94d9ed09f92f69f0e0d661}} 
+\index{ws2811.h@{ws2811.h}!ws2811\_set\_custom\_gamma\_factor@{ws2811\_set\_custom\_gamma\_factor}}
+\index{ws2811\_set\_custom\_gamma\_factor@{ws2811\_set\_custom\_gamma\_factor}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{ws2811\_set\_custom\_gamma\_factor()}{ws2811\_set\_custom\_gamma\_factor()}}
+{\footnotesize\ttfamily void ws2811\+\_\+set\+\_\+custom\+\_\+gamma\+\_\+factor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structws2811__t}{ws2811\+\_\+t}} $\ast$}]{ws2811,  }\item[{double}]{gamma\+\_\+factor }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{ws2811_8h_a47d16f313cccd06562440da6aa8398ab}\label{ws2811_8h_a47d16f313cccd06562440da6aa8398ab}} 
+\index{ws2811.h@{ws2811.h}!ws2811\_wait@{ws2811\_wait}}
+\index{ws2811\_wait@{ws2811\_wait}!ws2811.h@{ws2811.h}}
+\doxysubsubsection{\texorpdfstring{ws2811\_wait()}{ws2811\_wait()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ws2811_8h_a62135fb061480c24af2b8bdd2b5f6620}{ws2811\+\_\+return\+\_\+t}} ws2811\+\_\+wait (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structws2811__t}{ws2811\+\_\+t}} $\ast$}]{ws2811 }\end{DoxyParamCaption})}
+

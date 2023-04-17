@@ -1,0 +1,342 @@
+\hypertarget{pwm_8h}{}\doxysection{/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/\+LED-\/\+Library/src/ws2811/pwm.h File Reference}
+\label{pwm_8h}\index{/home/ross/Documents/git/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/LED-\/Library/src/ws2811/pwm.h@{/home/ross/Documents/git/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/LED-\/Library/src/ws2811/pwm.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for pwm.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{pwm_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pwm_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}}
+\item 
+struct \mbox{\hyperlink{structpwm__pin__table__t}{pwm\+\_\+pin\+\_\+table\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structpwm__pin__tables__t}{pwm\+\_\+pin\+\_\+tables\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a6709e540998c7a7987f823b52b633a24}{RPI\+\_\+\+PWM\+\_\+\+CHANNELS}}~2
+\item 
+\#define \mbox{\hyperlink{pwm_8h_af2650e9b9bea0c603fac4e4d2606bc4c}{RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+MSEN2}}~(1 $<$$<$ 15)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a55789627b0bcfedac0695e6be8d590ed}{RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+USEF2}}~(1 $<$$<$ 13)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_af95c18e634099a470380a32cf39bf4d1}{RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+POLA2}}~(1 $<$$<$ 12)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a35f126822398d1519f3ced8dfb0100e9}{RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+SBIT2}}~(1 $<$$<$ 11)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_abd6786ba22abfa46c0d705301fb7b2cb}{RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+RPTL2}}~(1 $<$$<$ 10)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_af22112629ae655b55f29ebaee71d1cac}{RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+MODE2}}~(1 $<$$<$ 9)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a69e10b0f0bad5e32d2ca14fbef5adb10}{RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+PWEN2}}~(1 $<$$<$ 8)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_acd75902a4300e7b80e0522274c0b390a}{RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+MSEN1}}~(1 $<$$<$ 7)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a70a86b3a3497610db4645bcc81597ca4}{RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+CLRF1}}~(1 $<$$<$ 6)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a9f1c6438e9890a00ac93983cdedabb40}{RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+USEF1}}~(1 $<$$<$ 5)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a1386609dbb7872ea846ba16842c41f81}{RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+POLA1}}~(1 $<$$<$ 4)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a11bab2691069620136276f6150a92964}{RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+SBIT1}}~(1 $<$$<$ 3)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a2a8dcfad6b5acd30b29778e3cda16f22}{RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+RPTL1}}~(1 $<$$<$ 2)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a5ba1edaa872321bb00db6a96bca5981d}{RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+MODE1}}~(1 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_ac881ef8f132743de01f4f11dfe457065}{RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+PWEN1}}~(1 $<$$<$ 0)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_ac9489c887d8c1bb9a8fa3bf3fd27de66}{RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+STA4}}~(1 $<$$<$ 12)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_aedf1b684aafd79d8d9b0a8846b46f40d}{RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+STA3}}~(1 $<$$<$ 11)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a9a40fe016adfcab083da15feabfe62bc}{RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+STA2}}~(1 $<$$<$ 10)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a07f8c2b2034fd3cd724af6b20ea842d6}{RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+STA1}}~(1 $<$$<$ 9)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a9a304d6724a29809542de0a1fceb4743}{RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+BERR}}~(1 $<$$<$ 8)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a34587c7ac9a3a09ed0d92c5e18492cae}{RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+GAP04}}~(1 $<$$<$ 7)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a87221219f34865cb305298f9d730b795}{RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+GAP03}}~(1 $<$$<$ 6)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a93a2134189aa02495e19f829c61b95d1}{RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+GAP02}}~(1 $<$$<$ 5)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a70539002675391cb10ef78decd5d9787}{RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+GAP01}}~(1 $<$$<$ 4)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a1a0e40d57ec45385b9ba67a15d5362e3}{RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+RERR1}}~(1 $<$$<$ 3)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a5e97584d03a8a39983523cbf397d60a8}{RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+WERR1}}~(1 $<$$<$ 2)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a12de1d109e9990df6444388bc1561545}{RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+EMPT1}}~(1 $<$$<$ 1)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a1a60f93ca80715c60b019f5cfebc90f2}{RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+FULL1}}~(1 $<$$<$ 0)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_ab1a02fc2bce0d15b3c978d4eb3055a3b}{RPI\+\_\+\+PWM\+\_\+\+DMAC\+\_\+\+ENAB}}~(1 $<$$<$ 31)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a51c6633f6c7b9765135e9fcc3fab615a}{RPI\+\_\+\+PWM\+\_\+\+DMAC\+\_\+\+PANIC}}(val)~((val \& 0xff) $<$$<$ 8)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_af5a0a656192c64ec51bc076d4b3436a7}{RPI\+\_\+\+PWM\+\_\+\+DMAC\+\_\+\+DREQ}}(val)~((val \& 0xff) $<$$<$ 0)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a027ba4b2e6940f0758a75c4980608002}{PWM\+\_\+\+OFFSET}}~(0x0020c000)
+\item 
+\#define \mbox{\hyperlink{pwm_8h_a87e22115afa42de764fe03d937b3473b}{PWM\+\_\+\+PERIPH\+\_\+\+PHYS}}~(0x7e20c000)
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{struct____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} \mbox{\hyperlink{pwm_8h_ae54c0f7486052b301df5743a6657a414}{aligned}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{pwm_8h_a8cf7ff396f579a62ffe191f82335bcb3}{aligned}} (4))) pwm\+\_\+t
+\item 
+int \mbox{\hyperlink{pwm_8h_a3186f666bf44374c402a3f9d6ba7b4b3}{pwm\+\_\+pin\+\_\+alt}} (int chan, int pinnum)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{pwm_8h_a027ba4b2e6940f0758a75c4980608002}\label{pwm_8h_a027ba4b2e6940f0758a75c4980608002}} 
+\index{pwm.h@{pwm.h}!PWM\_OFFSET@{PWM\_OFFSET}}
+\index{PWM\_OFFSET@{PWM\_OFFSET}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_OFFSET}{PWM\_OFFSET}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+OFFSET~(0x0020c000)}
+
+\mbox{\Hypertarget{pwm_8h_a87e22115afa42de764fe03d937b3473b}\label{pwm_8h_a87e22115afa42de764fe03d937b3473b}} 
+\index{pwm.h@{pwm.h}!PWM\_PERIPH\_PHYS@{PWM\_PERIPH\_PHYS}}
+\index{PWM\_PERIPH\_PHYS@{PWM\_PERIPH\_PHYS}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{PWM\_PERIPH\_PHYS}{PWM\_PERIPH\_PHYS}}
+{\footnotesize\ttfamily \#define PWM\+\_\+\+PERIPH\+\_\+\+PHYS~(0x7e20c000)}
+
+\mbox{\Hypertarget{pwm_8h_a6709e540998c7a7987f823b52b633a24}\label{pwm_8h_a6709e540998c7a7987f823b52b633a24}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_CHANNELS@{RPI\_PWM\_CHANNELS}}
+\index{RPI\_PWM\_CHANNELS@{RPI\_PWM\_CHANNELS}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_CHANNELS}{RPI\_PWM\_CHANNELS}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+CHANNELS~2}
+
+\mbox{\Hypertarget{pwm_8h_a70a86b3a3497610db4645bcc81597ca4}\label{pwm_8h_a70a86b3a3497610db4645bcc81597ca4}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_CTL\_CLRF1@{RPI\_PWM\_CTL\_CLRF1}}
+\index{RPI\_PWM\_CTL\_CLRF1@{RPI\_PWM\_CTL\_CLRF1}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_CTL\_CLRF1}{RPI\_PWM\_CTL\_CLRF1}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+CLRF1~(1 $<$$<$ 6)}
+
+\mbox{\Hypertarget{pwm_8h_a5ba1edaa872321bb00db6a96bca5981d}\label{pwm_8h_a5ba1edaa872321bb00db6a96bca5981d}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_CTL\_MODE1@{RPI\_PWM\_CTL\_MODE1}}
+\index{RPI\_PWM\_CTL\_MODE1@{RPI\_PWM\_CTL\_MODE1}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_CTL\_MODE1}{RPI\_PWM\_CTL\_MODE1}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+MODE1~(1 $<$$<$ 1)}
+
+\mbox{\Hypertarget{pwm_8h_af22112629ae655b55f29ebaee71d1cac}\label{pwm_8h_af22112629ae655b55f29ebaee71d1cac}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_CTL\_MODE2@{RPI\_PWM\_CTL\_MODE2}}
+\index{RPI\_PWM\_CTL\_MODE2@{RPI\_PWM\_CTL\_MODE2}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_CTL\_MODE2}{RPI\_PWM\_CTL\_MODE2}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+MODE2~(1 $<$$<$ 9)}
+
+\mbox{\Hypertarget{pwm_8h_acd75902a4300e7b80e0522274c0b390a}\label{pwm_8h_acd75902a4300e7b80e0522274c0b390a}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_CTL\_MSEN1@{RPI\_PWM\_CTL\_MSEN1}}
+\index{RPI\_PWM\_CTL\_MSEN1@{RPI\_PWM\_CTL\_MSEN1}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_CTL\_MSEN1}{RPI\_PWM\_CTL\_MSEN1}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+MSEN1~(1 $<$$<$ 7)}
+
+\mbox{\Hypertarget{pwm_8h_af2650e9b9bea0c603fac4e4d2606bc4c}\label{pwm_8h_af2650e9b9bea0c603fac4e4d2606bc4c}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_CTL\_MSEN2@{RPI\_PWM\_CTL\_MSEN2}}
+\index{RPI\_PWM\_CTL\_MSEN2@{RPI\_PWM\_CTL\_MSEN2}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_CTL\_MSEN2}{RPI\_PWM\_CTL\_MSEN2}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+MSEN2~(1 $<$$<$ 15)}
+
+\mbox{\Hypertarget{pwm_8h_a1386609dbb7872ea846ba16842c41f81}\label{pwm_8h_a1386609dbb7872ea846ba16842c41f81}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_CTL\_POLA1@{RPI\_PWM\_CTL\_POLA1}}
+\index{RPI\_PWM\_CTL\_POLA1@{RPI\_PWM\_CTL\_POLA1}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_CTL\_POLA1}{RPI\_PWM\_CTL\_POLA1}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+POLA1~(1 $<$$<$ 4)}
+
+\mbox{\Hypertarget{pwm_8h_af95c18e634099a470380a32cf39bf4d1}\label{pwm_8h_af95c18e634099a470380a32cf39bf4d1}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_CTL\_POLA2@{RPI\_PWM\_CTL\_POLA2}}
+\index{RPI\_PWM\_CTL\_POLA2@{RPI\_PWM\_CTL\_POLA2}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_CTL\_POLA2}{RPI\_PWM\_CTL\_POLA2}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+POLA2~(1 $<$$<$ 12)}
+
+\mbox{\Hypertarget{pwm_8h_ac881ef8f132743de01f4f11dfe457065}\label{pwm_8h_ac881ef8f132743de01f4f11dfe457065}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_CTL\_PWEN1@{RPI\_PWM\_CTL\_PWEN1}}
+\index{RPI\_PWM\_CTL\_PWEN1@{RPI\_PWM\_CTL\_PWEN1}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_CTL\_PWEN1}{RPI\_PWM\_CTL\_PWEN1}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+PWEN1~(1 $<$$<$ 0)}
+
+\mbox{\Hypertarget{pwm_8h_a69e10b0f0bad5e32d2ca14fbef5adb10}\label{pwm_8h_a69e10b0f0bad5e32d2ca14fbef5adb10}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_CTL\_PWEN2@{RPI\_PWM\_CTL\_PWEN2}}
+\index{RPI\_PWM\_CTL\_PWEN2@{RPI\_PWM\_CTL\_PWEN2}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_CTL\_PWEN2}{RPI\_PWM\_CTL\_PWEN2}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+PWEN2~(1 $<$$<$ 8)}
+
+\mbox{\Hypertarget{pwm_8h_a2a8dcfad6b5acd30b29778e3cda16f22}\label{pwm_8h_a2a8dcfad6b5acd30b29778e3cda16f22}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_CTL\_RPTL1@{RPI\_PWM\_CTL\_RPTL1}}
+\index{RPI\_PWM\_CTL\_RPTL1@{RPI\_PWM\_CTL\_RPTL1}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_CTL\_RPTL1}{RPI\_PWM\_CTL\_RPTL1}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+RPTL1~(1 $<$$<$ 2)}
+
+\mbox{\Hypertarget{pwm_8h_abd6786ba22abfa46c0d705301fb7b2cb}\label{pwm_8h_abd6786ba22abfa46c0d705301fb7b2cb}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_CTL\_RPTL2@{RPI\_PWM\_CTL\_RPTL2}}
+\index{RPI\_PWM\_CTL\_RPTL2@{RPI\_PWM\_CTL\_RPTL2}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_CTL\_RPTL2}{RPI\_PWM\_CTL\_RPTL2}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+RPTL2~(1 $<$$<$ 10)}
+
+\mbox{\Hypertarget{pwm_8h_a11bab2691069620136276f6150a92964}\label{pwm_8h_a11bab2691069620136276f6150a92964}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_CTL\_SBIT1@{RPI\_PWM\_CTL\_SBIT1}}
+\index{RPI\_PWM\_CTL\_SBIT1@{RPI\_PWM\_CTL\_SBIT1}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_CTL\_SBIT1}{RPI\_PWM\_CTL\_SBIT1}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+SBIT1~(1 $<$$<$ 3)}
+
+\mbox{\Hypertarget{pwm_8h_a35f126822398d1519f3ced8dfb0100e9}\label{pwm_8h_a35f126822398d1519f3ced8dfb0100e9}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_CTL\_SBIT2@{RPI\_PWM\_CTL\_SBIT2}}
+\index{RPI\_PWM\_CTL\_SBIT2@{RPI\_PWM\_CTL\_SBIT2}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_CTL\_SBIT2}{RPI\_PWM\_CTL\_SBIT2}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+SBIT2~(1 $<$$<$ 11)}
+
+\mbox{\Hypertarget{pwm_8h_a9f1c6438e9890a00ac93983cdedabb40}\label{pwm_8h_a9f1c6438e9890a00ac93983cdedabb40}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_CTL\_USEF1@{RPI\_PWM\_CTL\_USEF1}}
+\index{RPI\_PWM\_CTL\_USEF1@{RPI\_PWM\_CTL\_USEF1}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_CTL\_USEF1}{RPI\_PWM\_CTL\_USEF1}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+USEF1~(1 $<$$<$ 5)}
+
+\mbox{\Hypertarget{pwm_8h_a55789627b0bcfedac0695e6be8d590ed}\label{pwm_8h_a55789627b0bcfedac0695e6be8d590ed}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_CTL\_USEF2@{RPI\_PWM\_CTL\_USEF2}}
+\index{RPI\_PWM\_CTL\_USEF2@{RPI\_PWM\_CTL\_USEF2}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_CTL\_USEF2}{RPI\_PWM\_CTL\_USEF2}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+CTL\+\_\+\+USEF2~(1 $<$$<$ 13)}
+
+\mbox{\Hypertarget{pwm_8h_af5a0a656192c64ec51bc076d4b3436a7}\label{pwm_8h_af5a0a656192c64ec51bc076d4b3436a7}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_DMAC\_DREQ@{RPI\_PWM\_DMAC\_DREQ}}
+\index{RPI\_PWM\_DMAC\_DREQ@{RPI\_PWM\_DMAC\_DREQ}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_DMAC\_DREQ}{RPI\_PWM\_DMAC\_DREQ}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+DMAC\+\_\+\+DREQ(\begin{DoxyParamCaption}\item[{}]{val }\end{DoxyParamCaption})~((val \& 0xff) $<$$<$ 0)}
+
+\mbox{\Hypertarget{pwm_8h_ab1a02fc2bce0d15b3c978d4eb3055a3b}\label{pwm_8h_ab1a02fc2bce0d15b3c978d4eb3055a3b}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_DMAC\_ENAB@{RPI\_PWM\_DMAC\_ENAB}}
+\index{RPI\_PWM\_DMAC\_ENAB@{RPI\_PWM\_DMAC\_ENAB}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_DMAC\_ENAB}{RPI\_PWM\_DMAC\_ENAB}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+DMAC\+\_\+\+ENAB~(1 $<$$<$ 31)}
+
+\mbox{\Hypertarget{pwm_8h_a51c6633f6c7b9765135e9fcc3fab615a}\label{pwm_8h_a51c6633f6c7b9765135e9fcc3fab615a}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_DMAC\_PANIC@{RPI\_PWM\_DMAC\_PANIC}}
+\index{RPI\_PWM\_DMAC\_PANIC@{RPI\_PWM\_DMAC\_PANIC}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_DMAC\_PANIC}{RPI\_PWM\_DMAC\_PANIC}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+DMAC\+\_\+\+PANIC(\begin{DoxyParamCaption}\item[{}]{val }\end{DoxyParamCaption})~((val \& 0xff) $<$$<$ 8)}
+
+\mbox{\Hypertarget{pwm_8h_a9a304d6724a29809542de0a1fceb4743}\label{pwm_8h_a9a304d6724a29809542de0a1fceb4743}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_STA\_BERR@{RPI\_PWM\_STA\_BERR}}
+\index{RPI\_PWM\_STA\_BERR@{RPI\_PWM\_STA\_BERR}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_STA\_BERR}{RPI\_PWM\_STA\_BERR}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+BERR~(1 $<$$<$ 8)}
+
+\mbox{\Hypertarget{pwm_8h_a12de1d109e9990df6444388bc1561545}\label{pwm_8h_a12de1d109e9990df6444388bc1561545}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_STA\_EMPT1@{RPI\_PWM\_STA\_EMPT1}}
+\index{RPI\_PWM\_STA\_EMPT1@{RPI\_PWM\_STA\_EMPT1}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_STA\_EMPT1}{RPI\_PWM\_STA\_EMPT1}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+EMPT1~(1 $<$$<$ 1)}
+
+\mbox{\Hypertarget{pwm_8h_a1a60f93ca80715c60b019f5cfebc90f2}\label{pwm_8h_a1a60f93ca80715c60b019f5cfebc90f2}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_STA\_FULL1@{RPI\_PWM\_STA\_FULL1}}
+\index{RPI\_PWM\_STA\_FULL1@{RPI\_PWM\_STA\_FULL1}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_STA\_FULL1}{RPI\_PWM\_STA\_FULL1}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+FULL1~(1 $<$$<$ 0)}
+
+\mbox{\Hypertarget{pwm_8h_a70539002675391cb10ef78decd5d9787}\label{pwm_8h_a70539002675391cb10ef78decd5d9787}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_STA\_GAP01@{RPI\_PWM\_STA\_GAP01}}
+\index{RPI\_PWM\_STA\_GAP01@{RPI\_PWM\_STA\_GAP01}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_STA\_GAP01}{RPI\_PWM\_STA\_GAP01}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+GAP01~(1 $<$$<$ 4)}
+
+\mbox{\Hypertarget{pwm_8h_a93a2134189aa02495e19f829c61b95d1}\label{pwm_8h_a93a2134189aa02495e19f829c61b95d1}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_STA\_GAP02@{RPI\_PWM\_STA\_GAP02}}
+\index{RPI\_PWM\_STA\_GAP02@{RPI\_PWM\_STA\_GAP02}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_STA\_GAP02}{RPI\_PWM\_STA\_GAP02}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+GAP02~(1 $<$$<$ 5)}
+
+\mbox{\Hypertarget{pwm_8h_a87221219f34865cb305298f9d730b795}\label{pwm_8h_a87221219f34865cb305298f9d730b795}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_STA\_GAP03@{RPI\_PWM\_STA\_GAP03}}
+\index{RPI\_PWM\_STA\_GAP03@{RPI\_PWM\_STA\_GAP03}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_STA\_GAP03}{RPI\_PWM\_STA\_GAP03}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+GAP03~(1 $<$$<$ 6)}
+
+\mbox{\Hypertarget{pwm_8h_a34587c7ac9a3a09ed0d92c5e18492cae}\label{pwm_8h_a34587c7ac9a3a09ed0d92c5e18492cae}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_STA\_GAP04@{RPI\_PWM\_STA\_GAP04}}
+\index{RPI\_PWM\_STA\_GAP04@{RPI\_PWM\_STA\_GAP04}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_STA\_GAP04}{RPI\_PWM\_STA\_GAP04}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+GAP04~(1 $<$$<$ 7)}
+
+\mbox{\Hypertarget{pwm_8h_a1a0e40d57ec45385b9ba67a15d5362e3}\label{pwm_8h_a1a0e40d57ec45385b9ba67a15d5362e3}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_STA\_RERR1@{RPI\_PWM\_STA\_RERR1}}
+\index{RPI\_PWM\_STA\_RERR1@{RPI\_PWM\_STA\_RERR1}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_STA\_RERR1}{RPI\_PWM\_STA\_RERR1}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+RERR1~(1 $<$$<$ 3)}
+
+\mbox{\Hypertarget{pwm_8h_a07f8c2b2034fd3cd724af6b20ea842d6}\label{pwm_8h_a07f8c2b2034fd3cd724af6b20ea842d6}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_STA\_STA1@{RPI\_PWM\_STA\_STA1}}
+\index{RPI\_PWM\_STA\_STA1@{RPI\_PWM\_STA\_STA1}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_STA\_STA1}{RPI\_PWM\_STA\_STA1}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+STA1~(1 $<$$<$ 9)}
+
+\mbox{\Hypertarget{pwm_8h_a9a40fe016adfcab083da15feabfe62bc}\label{pwm_8h_a9a40fe016adfcab083da15feabfe62bc}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_STA\_STA2@{RPI\_PWM\_STA\_STA2}}
+\index{RPI\_PWM\_STA\_STA2@{RPI\_PWM\_STA\_STA2}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_STA\_STA2}{RPI\_PWM\_STA\_STA2}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+STA2~(1 $<$$<$ 10)}
+
+\mbox{\Hypertarget{pwm_8h_aedf1b684aafd79d8d9b0a8846b46f40d}\label{pwm_8h_aedf1b684aafd79d8d9b0a8846b46f40d}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_STA\_STA3@{RPI\_PWM\_STA\_STA3}}
+\index{RPI\_PWM\_STA\_STA3@{RPI\_PWM\_STA\_STA3}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_STA\_STA3}{RPI\_PWM\_STA\_STA3}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+STA3~(1 $<$$<$ 11)}
+
+\mbox{\Hypertarget{pwm_8h_ac9489c887d8c1bb9a8fa3bf3fd27de66}\label{pwm_8h_ac9489c887d8c1bb9a8fa3bf3fd27de66}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_STA\_STA4@{RPI\_PWM\_STA\_STA4}}
+\index{RPI\_PWM\_STA\_STA4@{RPI\_PWM\_STA\_STA4}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_STA\_STA4}{RPI\_PWM\_STA\_STA4}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+STA4~(1 $<$$<$ 12)}
+
+\mbox{\Hypertarget{pwm_8h_a5e97584d03a8a39983523cbf397d60a8}\label{pwm_8h_a5e97584d03a8a39983523cbf397d60a8}} 
+\index{pwm.h@{pwm.h}!RPI\_PWM\_STA\_WERR1@{RPI\_PWM\_STA\_WERR1}}
+\index{RPI\_PWM\_STA\_WERR1@{RPI\_PWM\_STA\_WERR1}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{RPI\_PWM\_STA\_WERR1}{RPI\_PWM\_STA\_WERR1}}
+{\footnotesize\ttfamily \#define RPI\+\_\+\+PWM\+\_\+\+STA\+\_\+\+WERR1~(1 $<$$<$ 2)}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{pwm_8h_ae54c0f7486052b301df5743a6657a414}\label{pwm_8h_ae54c0f7486052b301df5743a6657a414}} 
+\index{pwm.h@{pwm.h}!aligned@{aligned}}
+\index{aligned@{aligned}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{aligned}{aligned}}
+{\footnotesize\ttfamily typedef  struct \mbox{\hyperlink{struct____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} \mbox{\hyperlink{pwm_8h_ae54c0f7486052b301df5743a6657a414}{aligned}}}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{pwm_8h_a8cf7ff396f579a62ffe191f82335bcb3}\label{pwm_8h_a8cf7ff396f579a62ffe191f82335bcb3}} 
+\index{pwm.h@{pwm.h}!aligned@{aligned}}
+\index{aligned@{aligned}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{aligned()}{aligned()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{pwm_8h_ae54c0f7486052b301df5743a6657a414}{aligned}} (\begin{DoxyParamCaption}\item[{4}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{pwm_8h_a3186f666bf44374c402a3f9d6ba7b4b3}\label{pwm_8h_a3186f666bf44374c402a3f9d6ba7b4b3}} 
+\index{pwm.h@{pwm.h}!pwm\_pin\_alt@{pwm\_pin\_alt}}
+\index{pwm\_pin\_alt@{pwm\_pin\_alt}!pwm.h@{pwm.h}}
+\doxysubsubsection{\texorpdfstring{pwm\_pin\_alt()}{pwm\_pin\_alt()}}
+{\footnotesize\ttfamily int pwm\+\_\+pin\+\_\+alt (\begin{DoxyParamCaption}\item[{int}]{chan,  }\item[{int}]{pinnum }\end{DoxyParamCaption})}
+

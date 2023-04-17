@@ -1,0 +1,61 @@
+\hypertarget{FFTProcessor_8h}{}\doxysection{/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/audiocapture/src/\+FFTProcessor.h File Reference}
+\label{FFTProcessor_8h}\index{/home/ross/Documents/git/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/audiocapture/src/FFTProcessor.h@{/home/ross/Documents/git/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/audiocapture/src/FFTProcessor.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$condition\+\_\+variable$>$}\newline
+{\ttfamily \#include $<$fftw3.\+h$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+Include dependency graph for FFTProcessor.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{FFTProcessor_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{FFTProcessor_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classFFTProcessor}{FFTProcessor}}
+\begin{DoxyCompactList}\small\item\em A class for processing Fast Fourier Transform (FFT) on audio data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{FFTProcessor_8h_a5c55d2e6866e37f4657ead5b8321be26}{Reduction\+Method}} \{ \mbox{\hyperlink{FFTProcessor_8h_a5c55d2e6866e37f4657ead5b8321be26ab6f2220659ddcb84a0622d4aa4e0b112}{AVERAGE}}
+, \mbox{\hyperlink{FFTProcessor_8h_a5c55d2e6866e37f4657ead5b8321be26a24f18e25b7685d18e1b68d78faa2908c}{MAXIMUM}}
+ \}
+\begin{DoxyCompactList}\small\item\em An enumeration of available methods for reducing the resolution of FFT data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{FFTProcessor_8h_a5c55d2e6866e37f4657ead5b8321be26}\label{FFTProcessor_8h_a5c55d2e6866e37f4657ead5b8321be26}} 
+\index{FFTProcessor.h@{FFTProcessor.h}!ReductionMethod@{ReductionMethod}}
+\index{ReductionMethod@{ReductionMethod}!FFTProcessor.h@{FFTProcessor.h}}
+\doxysubsubsection{\texorpdfstring{ReductionMethod}{ReductionMethod}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{FFTProcessor_8h_a5c55d2e6866e37f4657ead5b8321be26}{Reduction\+Method}}}
+
+
+
+An enumeration of available methods for reducing the resolution of FFT data. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AVERAGE@{AVERAGE}!FFTProcessor.h@{FFTProcessor.h}}\index{FFTProcessor.h@{FFTProcessor.h}!AVERAGE@{AVERAGE}}}\mbox{\Hypertarget{FFTProcessor_8h_a5c55d2e6866e37f4657ead5b8321be26ab6f2220659ddcb84a0622d4aa4e0b112}\label{FFTProcessor_8h_a5c55d2e6866e37f4657ead5b8321be26ab6f2220659ddcb84a0622d4aa4e0b112}} 
+AVERAGE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAXIMUM@{MAXIMUM}!FFTProcessor.h@{FFTProcessor.h}}\index{FFTProcessor.h@{FFTProcessor.h}!MAXIMUM@{MAXIMUM}}}\mbox{\Hypertarget{FFTProcessor_8h_a5c55d2e6866e37f4657ead5b8321be26a24f18e25b7685d18e1b68d78faa2908c}\label{FFTProcessor_8h_a5c55d2e6866e37f4657ead5b8321be26a24f18e25b7685d18e1b68d78faa2908c}} 
+MAXIMUM&\\
+\hline
+
+\end{DoxyEnumFields}

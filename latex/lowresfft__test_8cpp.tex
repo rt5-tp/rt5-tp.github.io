@@ -1,0 +1,175 @@
+\hypertarget{lowresfft__test_8cpp}{}\doxysection{/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/audiocapture/src/lowresfft\+\_\+test.cpp File Reference}
+\label{lowresfft__test_8cpp}\index{/home/ross/Documents/git/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/audiocapture/src/lowresfft\_test.cpp@{/home/ross/Documents/git/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/audiocapture/src/lowresfft\_test.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$SDL2/\+SDL.\+h$>$}\newline
+{\ttfamily \#include $<$alsa/asoundlib.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$climits$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include $<$fftw3.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include \char`\"{}Audio\+Capture.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}FFTProcessor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Genre\+Classifier.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+Include dependency graph for lowresfft\+\_\+test.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lowresfft__test_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{lowresfft__test_8cpp_a1bfba04ce8a97d8371fbd992ef319d33}{data\+\_\+available\+\_\+callback}} (const std\+::vector$<$ short $>$ \&data)
+\item 
+void \mbox{\hyperlink{lowresfft__test_8cpp_ab7a400d1ffa6becd79140e7efdcaa086}{genre\+\_\+prediction\+\_\+callback}} (const std\+::vector$<$ std\+::pair$<$ std\+::string, float $>$$>$ \&predictions)
+\item 
+std\+::vector$<$ std\+::vector$<$ bool $>$ $>$ \mbox{\hyperlink{lowresfft__test_8cpp_afa361faff49f3fea3314304f544c58ee}{convert\+FFTTo\+LEDMatrix}} (const std\+::vector$<$ double $>$ \&fft\+Data, int rows, int cols, double min\+Frequency, double max\+Frequency)
+\item 
+void \mbox{\hyperlink{lowresfft__test_8cpp_a87114f51b19aa7fbfb5c0430ef475d9c}{print\+LEDMatrix}} (const std\+::vector$<$ std\+::vector$<$ bool $>$$>$ \&led\+Matrix)
+\item 
+void \mbox{\hyperlink{lowresfft__test_8cpp_a79c5441204fd2f6d4459115d4347cfe4}{on\+FFTData\+Available}} (const std\+::vector$<$ double $>$ \&data)
+\item 
+int \mbox{\hyperlink{lowresfft__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::vector$<$ bool $>$ $>$ \mbox{\hyperlink{lowresfft__test_8cpp_a0a96c6e8a8825953d5eed4d59b55ee9b}{shared\+Led\+Matrix}}
+\item 
+std\+::mutex \mbox{\hyperlink{lowresfft__test_8cpp_ad5e0dbd36f0d71fce9b00b7f991b2f38}{mtx}}
+\item 
+\mbox{\hyperlink{classFFTProcessor}{FFTProcessor}} \mbox{\hyperlink{lowresfft__test_8cpp_ac8474e8d7d40564cb64f915ba4f62a32}{fft\+Processor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{lowresfft__test_8cpp_afa361faff49f3fea3314304f544c58ee}\label{lowresfft__test_8cpp_afa361faff49f3fea3314304f544c58ee}} 
+\index{lowresfft\_test.cpp@{lowresfft\_test.cpp}!convertFFTToLEDMatrix@{convertFFTToLEDMatrix}}
+\index{convertFFTToLEDMatrix@{convertFFTToLEDMatrix}!lowresfft\_test.cpp@{lowresfft\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{convertFFTToLEDMatrix()}{convertFFTToLEDMatrix()}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$bool$>$ $>$ convert\+FFTTo\+LEDMatrix (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{fft\+Data,  }\item[{int}]{rows,  }\item[{int}]{cols,  }\item[{double}]{min\+Frequency,  }\item[{double}]{max\+Frequency }\end{DoxyParamCaption})}
+
+This function takes in FFT data, number of rows, number of columns, and a max frequency, and outputs a 2D matrix of bools. 
+\begin{DoxyParams}{Parameters}
+{\em fft\+Data} & a vector of double values representing the FFT data \\
+\hline
+{\em rows} & an integer representing the number of rows in the output LED matrix \\
+\hline
+{\em cols} & an integer representing the number of columns in the output LED matrix \\
+\hline
+{\em min\+Frequency} & a double representing the minimum frequency of the LED matrix display \\
+\hline
+{\em max\+Frequency} & a double representing the maximum frequency of the LED matrix display \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+a 2D vector of bool values representing the LED matrix display 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lowresfft__test_8cpp_afa361faff49f3fea3314304f544c58ee_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{lowresfft__test_8cpp_a1bfba04ce8a97d8371fbd992ef319d33}\label{lowresfft__test_8cpp_a1bfba04ce8a97d8371fbd992ef319d33}} 
+\index{lowresfft\_test.cpp@{lowresfft\_test.cpp}!data\_available\_callback@{data\_available\_callback}}
+\index{data\_available\_callback@{data\_available\_callback}!lowresfft\_test.cpp@{lowresfft\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{data\_available\_callback()}{data\_available\_callback()}}
+{\footnotesize\ttfamily void data\+\_\+available\+\_\+callback (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ short $>$ \&}]{data }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lowresfft__test_8cpp_a1bfba04ce8a97d8371fbd992ef319d33_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{lowresfft__test_8cpp_ab7a400d1ffa6becd79140e7efdcaa086}\label{lowresfft__test_8cpp_ab7a400d1ffa6becd79140e7efdcaa086}} 
+\index{lowresfft\_test.cpp@{lowresfft\_test.cpp}!genre\_prediction\_callback@{genre\_prediction\_callback}}
+\index{genre\_prediction\_callback@{genre\_prediction\_callback}!lowresfft\_test.cpp@{lowresfft\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{genre\_prediction\_callback()}{genre\_prediction\_callback()}}
+{\footnotesize\ttfamily void genre\+\_\+prediction\+\_\+callback (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ std\+::string, float $>$$>$ \&}]{predictions }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{lowresfft__test_8cpp_ab7a400d1ffa6becd79140e7efdcaa086_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{lowresfft__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{lowresfft__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{lowresfft\_test.cpp@{lowresfft\_test.cpp}!main@{main}}
+\index{main@{main}!lowresfft\_test.cpp@{lowresfft\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lowresfft__test_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{lowresfft__test_8cpp_a79c5441204fd2f6d4459115d4347cfe4}\label{lowresfft__test_8cpp_a79c5441204fd2f6d4459115d4347cfe4}} 
+\index{lowresfft\_test.cpp@{lowresfft\_test.cpp}!onFFTDataAvailable@{onFFTDataAvailable}}
+\index{onFFTDataAvailable@{onFFTDataAvailable}!lowresfft\_test.cpp@{lowresfft\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{onFFTDataAvailable()}{onFFTDataAvailable()}}
+{\footnotesize\ttfamily void on\+FFTData\+Available (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{data }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{lowresfft__test_8cpp_a79c5441204fd2f6d4459115d4347cfe4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{lowresfft__test_8cpp_a79c5441204fd2f6d4459115d4347cfe4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{lowresfft__test_8cpp_a87114f51b19aa7fbfb5c0430ef475d9c}\label{lowresfft__test_8cpp_a87114f51b19aa7fbfb5c0430ef475d9c}} 
+\index{lowresfft\_test.cpp@{lowresfft\_test.cpp}!printLEDMatrix@{printLEDMatrix}}
+\index{printLEDMatrix@{printLEDMatrix}!lowresfft\_test.cpp@{lowresfft\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{printLEDMatrix()}{printLEDMatrix()}}
+{\footnotesize\ttfamily void print\+LEDMatrix (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ bool $>$$>$ \&}]{led\+Matrix }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{lowresfft__test_8cpp_ac8474e8d7d40564cb64f915ba4f62a32}\label{lowresfft__test_8cpp_ac8474e8d7d40564cb64f915ba4f62a32}} 
+\index{lowresfft\_test.cpp@{lowresfft\_test.cpp}!fftProcessor@{fftProcessor}}
+\index{fftProcessor@{fftProcessor}!lowresfft\_test.cpp@{lowresfft\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{fftProcessor}{fftProcessor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFFTProcessor}{FFTProcessor}} fft\+Processor}
+
+\mbox{\Hypertarget{lowresfft__test_8cpp_ad5e0dbd36f0d71fce9b00b7f991b2f38}\label{lowresfft__test_8cpp_ad5e0dbd36f0d71fce9b00b7f991b2f38}} 
+\index{lowresfft\_test.cpp@{lowresfft\_test.cpp}!mtx@{mtx}}
+\index{mtx@{mtx}!lowresfft\_test.cpp@{lowresfft\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{mtx}{mtx}}
+{\footnotesize\ttfamily std\+::mutex mtx}
+
+\mbox{\Hypertarget{lowresfft__test_8cpp_a0a96c6e8a8825953d5eed4d59b55ee9b}\label{lowresfft__test_8cpp_a0a96c6e8a8825953d5eed4d59b55ee9b}} 
+\index{lowresfft\_test.cpp@{lowresfft\_test.cpp}!sharedLedMatrix@{sharedLedMatrix}}
+\index{sharedLedMatrix@{sharedLedMatrix}!lowresfft\_test.cpp@{lowresfft\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{sharedLedMatrix}{sharedLedMatrix}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$bool$>$ $>$ shared\+Led\+Matrix}
+

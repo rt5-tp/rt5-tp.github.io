@@ -69,7 +69,7 @@ $(function() {
 <div class="title">rpihw.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
+<a href="rpihw_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * rpihw.h</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> *</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Copyright (c) 2014 Jeremy Garff &lt;jer @ jers.net&gt;</span></div>
@@ -105,23 +105,29 @@ $(function() {
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structrpi__hw__t.html">   36</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    uint32_t type;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="preprocessor">#define RPI_HWVER_TYPE_UNKNOWN                   0</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#define RPI_HWVER_TYPE_PI1                       1</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#define RPI_HWVER_TYPE_PI2                       2</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#define RPI_HWVER_TYPE_PI4                       3</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    uint32_t hwver;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    uint32_t periph_base;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    uint32_t videocore_base;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">char</span> *desc;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="structrpi__hw__t.html#ac9f5fdd602210a966419fd4451ff9f22">   37</a></span>&#160;    uint32_t <a class="code" href="structrpi__hw__t.html#ac9f5fdd602210a966419fd4451ff9f22">type</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="rpihw_8h.html#a2d469cf04e4c1fb51732fafcf02660b5">   38</a></span>&#160;<span class="preprocessor">#define RPI_HWVER_TYPE_UNKNOWN                   0</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="rpihw_8h.html#a47b306f1f610de8493b224901289eed7">   39</a></span>&#160;<span class="preprocessor">#define RPI_HWVER_TYPE_PI1                       1</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="rpihw_8h.html#a7dabdf35bb436210f3a27993d38c51b0">   40</a></span>&#160;<span class="preprocessor">#define RPI_HWVER_TYPE_PI2                       2</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="rpihw_8h.html#a2b1745e2635b43802b5e900bb5d2f707">   41</a></span>&#160;<span class="preprocessor">#define RPI_HWVER_TYPE_PI4                       3</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structrpi__hw__t.html#ae8b7cd0b4b8cf2be985c3795bc8b9200">   42</a></span>&#160;    uint32_t <a class="code" href="structrpi__hw__t.html#ae8b7cd0b4b8cf2be985c3795bc8b9200">hwver</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="structrpi__hw__t.html#a1256d035d556695ddd7581e29033bc29">   43</a></span>&#160;    uint32_t <a class="code" href="structrpi__hw__t.html#a1256d035d556695ddd7581e29033bc29">periph_base</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="structrpi__hw__t.html#a926403eb8ae120efbc724914f9991f49">   44</a></span>&#160;    uint32_t <a class="code" href="structrpi__hw__t.html#a926403eb8ae120efbc724914f9991f49">videocore_base</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structrpi__hw__t.html#a160c1cc0346389d73425fdd83c905261">   45</a></span>&#160;    <span class="keywordtype">char</span> *<a class="code" href="structrpi__hw__t.html#a160c1cc0346389d73425fdd83c905261">desc</a>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;} <a class="code" href="structrpi__hw__t.html">rpi_hw_t</a>;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">const</span> <a class="code" href="structrpi__hw__t.html">rpi_hw_t</a> *rpi_hw_detect(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="rpihw_8h.html#a9ab96e09ae96dc3d1a0d220a046b0354">   49</a></span>&#160;<span class="keyword">const</span> <a class="code" href="structrpi__hw__t.html">rpi_hw_t</a> *<a class="code" href="rpihw_8h.html#a9ab96e09ae96dc3d1a0d220a046b0354">rpi_hw_detect</a>(<span class="keywordtype">void</span>);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* __RPIHW_H__ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="arpihw_8h_html_a9ab96e09ae96dc3d1a0d220a046b0354"><div class="ttname"><a href="rpihw_8h.html#a9ab96e09ae96dc3d1a0d220a046b0354">rpi_hw_detect</a></div><div class="ttdeci">const rpi_hw_t * rpi_hw_detect(void)</div></div>
 <div class="ttc" id="astructrpi__hw__t_html"><div class="ttname"><a href="structrpi__hw__t.html">rpi_hw_t</a></div><div class="ttdef"><b>Definition:</b> rpihw.h:36</div></div>
+<div class="ttc" id="astructrpi__hw__t_html_a1256d035d556695ddd7581e29033bc29"><div class="ttname"><a href="structrpi__hw__t.html#a1256d035d556695ddd7581e29033bc29">rpi_hw_t::periph_base</a></div><div class="ttdeci">uint32_t periph_base</div><div class="ttdef"><b>Definition:</b> rpihw.h:43</div></div>
+<div class="ttc" id="astructrpi__hw__t_html_a160c1cc0346389d73425fdd83c905261"><div class="ttname"><a href="structrpi__hw__t.html#a160c1cc0346389d73425fdd83c905261">rpi_hw_t::desc</a></div><div class="ttdeci">char * desc</div><div class="ttdef"><b>Definition:</b> rpihw.h:45</div></div>
+<div class="ttc" id="astructrpi__hw__t_html_a926403eb8ae120efbc724914f9991f49"><div class="ttname"><a href="structrpi__hw__t.html#a926403eb8ae120efbc724914f9991f49">rpi_hw_t::videocore_base</a></div><div class="ttdeci">uint32_t videocore_base</div><div class="ttdef"><b>Definition:</b> rpihw.h:44</div></div>
+<div class="ttc" id="astructrpi__hw__t_html_ac9f5fdd602210a966419fd4451ff9f22"><div class="ttname"><a href="structrpi__hw__t.html#ac9f5fdd602210a966419fd4451ff9f22">rpi_hw_t::type</a></div><div class="ttdeci">uint32_t type</div><div class="ttdef"><b>Definition:</b> rpihw.h:37</div></div>
+<div class="ttc" id="astructrpi__hw__t_html_ae8b7cd0b4b8cf2be985c3795bc8b9200"><div class="ttname"><a href="structrpi__hw__t.html#ae8b7cd0b4b8cf2be985c3795bc8b9200">rpi_hw_t::hwver</a></div><div class="ttdeci">uint32_t hwver</div><div class="ttdef"><b>Definition:</b> rpihw.h:42</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

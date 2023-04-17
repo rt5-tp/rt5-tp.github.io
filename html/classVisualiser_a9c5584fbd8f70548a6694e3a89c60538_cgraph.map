@@ -1,0 +1,18 @@
+<map id="Visualiser::Visualiser" name="Visualiser::Visualiser">
+<area shape="rect" id="node1" title=" " alt="" coords="5,347,164,374"/>
+<area shape="rect" id="node2" href="$classEnvelopeFollower.html#a4dc1594c17f508244f84cd873b9c8c96" title="Carries out the envelope follower process." alt="" coords="245,5,426,47"/>
+<area shape="rect" id="node3" href="$classFFTProcessor.html#ae110ed768d5ba0e42ac636ae3cd39185" title="Callback function to receive audio data." alt="" coords="259,71,411,112"/>
+<area shape="rect" id="node4" href="$classGenreClassifier.html#ab3d2f21baf7a05e81e36f3b6ed5ddd0c" title="Callback function for predicting genre of incoming audio." alt="" coords="253,136,418,177"/>
+<area shape="rect" id="node8" href="$classVisualiser.html#a34fca5ddfdc76444856308a63442ff1d" title=" " alt="" coords="258,201,413,243"/>
+<area shape="rect" id="node9" href="$classVisualiser.html#aaf83b937b1524b0e601c6309596c8686" title=" " alt="" coords="251,267,420,294"/>
+<area shape="rect" id="node10" href="$classVisualiser.html#a8dd45f6c2c484eac9f1e63b2153f1b75" title=" " alt="" coords="238,318,433,345"/>
+<area shape="rect" id="node11" href="$classVisualiser.html#a627a3665217381422f754fe0662e81aa" title=" " alt="" coords="234,369,437,411"/>
+<area shape="rect" id="node12" href="$classAudioCapture.html#adc7ce55a0c63f8723decf6fb06f68203" title="Registers callback for audio data." alt="" coords="251,435,419,476"/>
+<area shape="rect" id="node13" href="$classGenreClassifier.html#a0b4e3c5a60fe02044c25c821c6f3272c" title="Registers a callback for passing genre predictions to." alt="" coords="246,500,425,541"/>
+<area shape="rect" id="node14" href="$classFFTProcessor.html#a6213f0b5a470f393334fee8b7d81fa32" title="Registers a callback function for FFT data availability." alt="" coords="224,566,447,593"/>
+<area shape="rect" id="node15" href="$classEnvelopeFollower.html#af6781686d216fa0ba4072e04ba6eec24" title="Callback to send ouput data to next process." alt="" coords="238,617,433,659"/>
+<area shape="rect" id="node16" href="$classFFTProcessor.html#a51c619247da8fddd752632485d8bd10a" title="Registers a callback function for LED matrix data availability." alt="" coords="212,683,459,710"/>
+<area shape="rect" id="node5" href="$GenreClassifier_8cpp.html#aaba0f06aa71db95d2fc0419517fe65d0" title=" " alt="" coords="518,93,697,119"/>
+<area shape="rect" id="node6" href="$classGenrePredictor.html#ac5f136c1e1ef35cbcef0ad8289e369ef" title="Takes buffer of WAV audio and returns genre classifications certainties." alt="" coords="521,143,693,170"/>
+<area shape="rect" id="node7" href="$classRawAudioWriter.html#a5ecf9fb5f520e2aa9b23b9ffdfbc0066" title=" " alt="" coords="507,194,708,221"/>
+</map>

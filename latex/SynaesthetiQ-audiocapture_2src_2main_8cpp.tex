@@ -1,0 +1,93 @@
+\hypertarget{SynaesthetiQ-audiocapture_2src_2main_8cpp}{}\doxysection{/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/audiocapture/src/main.cpp File Reference}
+\label{SynaesthetiQ-audiocapture_2src_2main_8cpp}\index{/home/ross/Documents/git/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/audiocapture/src/main.cpp@{/home/ross/Documents/git/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/audiocapture/src/main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$alsa/asoundlib.\+h$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$climits$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include $<$fftw3.\+h$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include \char`\"{}Audio\+Capture.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}FFTProcessor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Genre\+Classifier.\+h\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SynaesthetiQ-audiocapture_2src_2main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{SynaesthetiQ-audiocapture_2src_2main_8cpp_ab7a400d1ffa6becd79140e7efdcaa086}{genre\+\_\+prediction\+\_\+callback}} (const std\+::vector$<$ std\+::pair$<$ std\+::string, float $>$$>$ \&predictions)
+\item 
+void \mbox{\hyperlink{SynaesthetiQ-audiocapture_2src_2main_8cpp_a79c5441204fd2f6d4459115d4347cfe4}{on\+FFTData\+Available}} (const std\+::vector$<$ double $>$ \&data)
+\item 
+int \mbox{\hyperlink{SynaesthetiQ-audiocapture_2src_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFFTProcessor}{FFTProcessor}} \mbox{\hyperlink{SynaesthetiQ-audiocapture_2src_2main_8cpp_ac8474e8d7d40564cb64f915ba4f62a32}{fft\+Processor}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{SynaesthetiQ-audiocapture_2src_2main_8cpp_ab7a400d1ffa6becd79140e7efdcaa086}\label{SynaesthetiQ-audiocapture_2src_2main_8cpp_ab7a400d1ffa6becd79140e7efdcaa086}} 
+\index{main.cpp@{main.cpp}!genre\_prediction\_callback@{genre\_prediction\_callback}}
+\index{genre\_prediction\_callback@{genre\_prediction\_callback}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{genre\_prediction\_callback()}{genre\_prediction\_callback()}}
+{\footnotesize\ttfamily void genre\+\_\+prediction\+\_\+callback (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ std\+::string, float $>$$>$ \&}]{predictions }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{SynaesthetiQ-audiocapture_2src_2main_8cpp_ab7a400d1ffa6becd79140e7efdcaa086_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{SynaesthetiQ-audiocapture_2src_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{SynaesthetiQ-audiocapture_2src_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SynaesthetiQ-audiocapture_2src_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{SynaesthetiQ-audiocapture_2src_2main_8cpp_a79c5441204fd2f6d4459115d4347cfe4}\label{SynaesthetiQ-audiocapture_2src_2main_8cpp_a79c5441204fd2f6d4459115d4347cfe4}} 
+\index{main.cpp@{main.cpp}!onFFTDataAvailable@{onFFTDataAvailable}}
+\index{onFFTDataAvailable@{onFFTDataAvailable}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{onFFTDataAvailable()}{onFFTDataAvailable()}}
+{\footnotesize\ttfamily void on\+FFTData\+Available (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{data }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{SynaesthetiQ-audiocapture_2src_2main_8cpp_a79c5441204fd2f6d4459115d4347cfe4_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{SynaesthetiQ-audiocapture_2src_2main_8cpp_ac8474e8d7d40564cb64f915ba4f62a32}\label{SynaesthetiQ-audiocapture_2src_2main_8cpp_ac8474e8d7d40564cb64f915ba4f62a32}} 
+\index{main.cpp@{main.cpp}!fftProcessor@{fftProcessor}}
+\index{fftProcessor@{fftProcessor}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{fftProcessor}{fftProcessor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFFTProcessor}{FFTProcessor}} fft\+Processor}
+

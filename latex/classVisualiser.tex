@@ -1,14 +1,219 @@
 \hypertarget{classVisualiser}{}\doxysection{Visualiser Class Reference}
 \label{classVisualiser}\index{Visualiser@{Visualiser}}
+
+
+{\ttfamily \#include $<$Visualiser.\+hpp$>$}
+
+
+
+Collaboration diagram for Visualiser\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classVisualiser__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classVisualiser_a9513a15ed3b817a0b94b5c71493ffafb}\label{classVisualiser_a9513a15ed3b817a0b94b5c71493ffafb}} 
-void {\bfseries visualise} ()
+\mbox{\hyperlink{classVisualiser_a9c5584fbd8f70548a6694e3a89c60538}{Visualiser}} ()
+\item 
+void \mbox{\hyperlink{classVisualiser_a9513a15ed3b817a0b94b5c71493ffafb}{visualise}} ()
 \end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classVisualiser_a627a3665217381422f754fe0662e81aa}{genre\+\_\+prediction\+\_\+callback}} (const std\+::vector$<$ std\+::pair$<$ std\+::string, float $>$$>$ \&\mbox{\hyperlink{classVisualiser_afa94737741fd09f1064ea65425f9d121}{predictions}})
+\item 
+static void \mbox{\hyperlink{classVisualiser_aaf83b937b1524b0e601c6309596c8686}{fft\+\_\+callback}} (const std\+::vector$<$ double $>$ \&\mbox{\hyperlink{classVisualiser_a1aa571b658072febf6a59bb750f39576}{fft\+\_\+data}})
+\item 
+static void \mbox{\hyperlink{classVisualiser_a8dd45f6c2c484eac9f1e63b2153f1b75}{fft\+\_\+\+LEDcallback}} (const std\+::vector$<$ std\+::vector$<$ bool $>$$>$ \&\mbox{\hyperlink{classVisualiser_a4fa525884191edacf6afdd8678692cab}{fft\+LED\+\_\+data}})
+\item 
+static void \mbox{\hyperlink{classVisualiser_a34fca5ddfdc76444856308a63442ff1d}{envelope\+\_\+callback}} (const std\+::vector$<$ short $>$ \&\mbox{\hyperlink{classVisualiser_ac9a5606f6a82c357e7c69521abab2273}{envelope\+\_\+data}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAudioCapture}{Audio\+Capture}} \mbox{\hyperlink{classVisualiser_a99ff52678f19ae72fc016268f1475b2b}{audio\+Capture}}
+\item 
+\mbox{\hyperlink{classFFTProcessor}{FFTProcessor}} \mbox{\hyperlink{classVisualiser_ad16fc5e2e96926de5f89df7c66a448e1}{fft\+Processor}}
+\item 
+\mbox{\hyperlink{classGenreClassifier}{Genre\+Classifier}} \mbox{\hyperlink{classVisualiser_a2b46f9755fda09252091ee734f32b381}{genre\+Classifier}}
+\item 
+\mbox{\hyperlink{classSynaesthetiQ}{SynaesthetiQ}} \mbox{\hyperlink{classVisualiser_a06a01d5649670743f079fc37fb92ee56}{synaesthetiQ}}
+\item 
+\mbox{\hyperlink{classEnvelopeFollower}{Envelope\+Follower}} \mbox{\hyperlink{classVisualiser_af54404231f256b8718115d59c35d03c7}{envelope\+Follower}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::vector$<$ std\+::pair$<$ std\+::string, float $>$ $>$ \mbox{\hyperlink{classVisualiser_afa94737741fd09f1064ea65425f9d121}{predictions}}
+\item 
+static std\+::vector$<$ double $>$ \mbox{\hyperlink{classVisualiser_a1aa571b658072febf6a59bb750f39576}{fft\+\_\+data}}
+\item 
+static std\+::vector$<$ std\+::vector$<$ bool $>$ $>$ \mbox{\hyperlink{classVisualiser_a4fa525884191edacf6afdd8678692cab}{fft\+LED\+\_\+data}}
+\item 
+static std\+::vector$<$ short $>$ \mbox{\hyperlink{classVisualiser_ac9a5606f6a82c357e7c69521abab2273}{envelope\+\_\+data}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classVisualiser_a9c5584fbd8f70548a6694e3a89c60538}\label{classVisualiser_a9c5584fbd8f70548a6694e3a89c60538}} 
+\index{Visualiser@{Visualiser}!Visualiser@{Visualiser}}
+\index{Visualiser@{Visualiser}!Visualiser@{Visualiser}}
+\doxysubsubsection{\texorpdfstring{Visualiser()}{Visualiser()}}
+{\footnotesize\ttfamily Visualiser\+::\+Visualiser (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classVisualiser_a9c5584fbd8f70548a6694e3a89c60538_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classVisualiser_a34fca5ddfdc76444856308a63442ff1d}\label{classVisualiser_a34fca5ddfdc76444856308a63442ff1d}} 
+\index{Visualiser@{Visualiser}!envelope\_callback@{envelope\_callback}}
+\index{envelope\_callback@{envelope\_callback}!Visualiser@{Visualiser}}
+\doxysubsubsection{\texorpdfstring{envelope\_callback()}{envelope\_callback()}}
+{\footnotesize\ttfamily static void Visualiser\+::envelope\+\_\+callback (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ short $>$ \&}]{envelope\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classVisualiser_a34fca5ddfdc76444856308a63442ff1d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classVisualiser_aaf83b937b1524b0e601c6309596c8686}\label{classVisualiser_aaf83b937b1524b0e601c6309596c8686}} 
+\index{Visualiser@{Visualiser}!fft\_callback@{fft\_callback}}
+\index{fft\_callback@{fft\_callback}!Visualiser@{Visualiser}}
+\doxysubsubsection{\texorpdfstring{fft\_callback()}{fft\_callback()}}
+{\footnotesize\ttfamily static void Visualiser\+::fft\+\_\+callback (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{fft\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classVisualiser_aaf83b937b1524b0e601c6309596c8686_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classVisualiser_a8dd45f6c2c484eac9f1e63b2153f1b75}\label{classVisualiser_a8dd45f6c2c484eac9f1e63b2153f1b75}} 
+\index{Visualiser@{Visualiser}!fft\_LEDcallback@{fft\_LEDcallback}}
+\index{fft\_LEDcallback@{fft\_LEDcallback}!Visualiser@{Visualiser}}
+\doxysubsubsection{\texorpdfstring{fft\_LEDcallback()}{fft\_LEDcallback()}}
+{\footnotesize\ttfamily static void Visualiser\+::fft\+\_\+\+LEDcallback (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ bool $>$$>$ \&}]{fft\+LED\+\_\+data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classVisualiser_a8dd45f6c2c484eac9f1e63b2153f1b75_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classVisualiser_a627a3665217381422f754fe0662e81aa}\label{classVisualiser_a627a3665217381422f754fe0662e81aa}} 
+\index{Visualiser@{Visualiser}!genre\_prediction\_callback@{genre\_prediction\_callback}}
+\index{genre\_prediction\_callback@{genre\_prediction\_callback}!Visualiser@{Visualiser}}
+\doxysubsubsection{\texorpdfstring{genre\_prediction\_callback()}{genre\_prediction\_callback()}}
+{\footnotesize\ttfamily static void Visualiser\+::genre\+\_\+prediction\+\_\+callback (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ std\+::string, float $>$$>$ \&}]{predictions }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classVisualiser_a627a3665217381422f754fe0662e81aa_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classVisualiser_a9513a15ed3b817a0b94b5c71493ffafb}\label{classVisualiser_a9513a15ed3b817a0b94b5c71493ffafb}} 
+\index{Visualiser@{Visualiser}!visualise@{visualise}}
+\index{visualise@{visualise}!Visualiser@{Visualiser}}
+\doxysubsubsection{\texorpdfstring{visualise()}{visualise()}}
+{\footnotesize\ttfamily void Visualiser\+::visualise (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classVisualiser_a9513a15ed3b817a0b94b5c71493ffafb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=271pt]{classVisualiser_a9513a15ed3b817a0b94b5c71493ffafb_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classVisualiser_a99ff52678f19ae72fc016268f1475b2b}\label{classVisualiser_a99ff52678f19ae72fc016268f1475b2b}} 
+\index{Visualiser@{Visualiser}!audioCapture@{audioCapture}}
+\index{audioCapture@{audioCapture}!Visualiser@{Visualiser}}
+\doxysubsubsection{\texorpdfstring{audioCapture}{audioCapture}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAudioCapture}{Audio\+Capture}} Visualiser\+::audio\+Capture\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classVisualiser_ac9a5606f6a82c357e7c69521abab2273}\label{classVisualiser_ac9a5606f6a82c357e7c69521abab2273}} 
+\index{Visualiser@{Visualiser}!envelope\_data@{envelope\_data}}
+\index{envelope\_data@{envelope\_data}!Visualiser@{Visualiser}}
+\doxysubsubsection{\texorpdfstring{envelope\_data}{envelope\_data}}
+{\footnotesize\ttfamily std\+::vector$<$ short $>$ Visualiser\+::envelope\+\_\+data\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classVisualiser_af54404231f256b8718115d59c35d03c7}\label{classVisualiser_af54404231f256b8718115d59c35d03c7}} 
+\index{Visualiser@{Visualiser}!envelopeFollower@{envelopeFollower}}
+\index{envelopeFollower@{envelopeFollower}!Visualiser@{Visualiser}}
+\doxysubsubsection{\texorpdfstring{envelopeFollower}{envelopeFollower}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEnvelopeFollower}{Envelope\+Follower}} Visualiser\+::envelope\+Follower\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classVisualiser_a1aa571b658072febf6a59bb750f39576}\label{classVisualiser_a1aa571b658072febf6a59bb750f39576}} 
+\index{Visualiser@{Visualiser}!fft\_data@{fft\_data}}
+\index{fft\_data@{fft\_data}!Visualiser@{Visualiser}}
+\doxysubsubsection{\texorpdfstring{fft\_data}{fft\_data}}
+{\footnotesize\ttfamily std\+::vector$<$ double $>$ Visualiser\+::fft\+\_\+data\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classVisualiser_a4fa525884191edacf6afdd8678692cab}\label{classVisualiser_a4fa525884191edacf6afdd8678692cab}} 
+\index{Visualiser@{Visualiser}!fftLED\_data@{fftLED\_data}}
+\index{fftLED\_data@{fftLED\_data}!Visualiser@{Visualiser}}
+\doxysubsubsection{\texorpdfstring{fftLED\_data}{fftLED\_data}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::vector$<$ bool $>$ $>$ Visualiser\+::fft\+LED\+\_\+data\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classVisualiser_ad16fc5e2e96926de5f89df7c66a448e1}\label{classVisualiser_ad16fc5e2e96926de5f89df7c66a448e1}} 
+\index{Visualiser@{Visualiser}!fftProcessor@{fftProcessor}}
+\index{fftProcessor@{fftProcessor}!Visualiser@{Visualiser}}
+\doxysubsubsection{\texorpdfstring{fftProcessor}{fftProcessor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFFTProcessor}{FFTProcessor}} Visualiser\+::fft\+Processor\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classVisualiser_a2b46f9755fda09252091ee734f32b381}\label{classVisualiser_a2b46f9755fda09252091ee734f32b381}} 
+\index{Visualiser@{Visualiser}!genreClassifier@{genreClassifier}}
+\index{genreClassifier@{genreClassifier}!Visualiser@{Visualiser}}
+\doxysubsubsection{\texorpdfstring{genreClassifier}{genreClassifier}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGenreClassifier}{Genre\+Classifier}} Visualiser\+::genre\+Classifier\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classVisualiser_afa94737741fd09f1064ea65425f9d121}\label{classVisualiser_afa94737741fd09f1064ea65425f9d121}} 
+\index{Visualiser@{Visualiser}!predictions@{predictions}}
+\index{predictions@{predictions}!Visualiser@{Visualiser}}
+\doxysubsubsection{\texorpdfstring{predictions}{predictions}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::pair$<$ std\+::string, float $>$ $>$ Visualiser\+::predictions\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classVisualiser_a06a01d5649670743f079fc37fb92ee56}\label{classVisualiser_a06a01d5649670743f079fc37fb92ee56}} 
+\index{Visualiser@{Visualiser}!synaesthetiQ@{synaesthetiQ}}
+\index{synaesthetiQ@{synaesthetiQ}!Visualiser@{Visualiser}}
+\doxysubsubsection{\texorpdfstring{synaesthetiQ}{synaesthetiQ}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classSynaesthetiQ}{SynaesthetiQ}} Visualiser\+::synaesthetiQ\hspace{0.3cm}{\ttfamily [private]}}
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Visualiser/Visualiser.\+hpp\item 
-/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Visualiser/Visualiser.\+cpp\end{DoxyCompactItemize}
+/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Visualiser/\mbox{\hyperlink{Visualiser_8hpp}{Visualiser.\+hpp}}\item 
+/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Visualiser/\mbox{\hyperlink{Visualiser_8cpp}{Visualiser.\+cpp}}\end{DoxyCompactItemize}

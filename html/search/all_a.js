@@ -1,24 +1,4 @@
 var searchData=
 [
-  ['samples_45',['samples',['../classAudioFile.html#af937119db095c5af870851050dcbeabb',1,'AudioFile']]],
-  ['save_46',['save',['../classAudioFile.html#a415239cad5b54b4fef4a210ab79911e3',1,'AudioFile']]],
-  ['set_5fon_5fbuffer_5ffull_5fcallback_47',['set_on_buffer_full_callback',['../classPingPongBuffer.html#a59da3ea9fc7be1c803f31245a718034f',1,'PingPongBuffer']]],
-  ['setaudiobuffer_48',['setAudioBuffer',['../classAudioFile.html#afa0a0f7d576b0597c938c5a89746636e',1,'AudioFile']]],
-  ['setaudiobuffersize_49',['setAudioBufferSize',['../classAudioFile.html#ac155ed12db0f3b02011a7d75b525e71a',1,'AudioFile']]],
-  ['setbigledcolour_50',['setBigLEDColour',['../classSynaesthetiQ.html#ae0d6be9c2706ce9b701a643b0793623a',1,'SynaesthetiQ']]],
-  ['setbitdepth_51',['setBitDepth',['../classAudioFile.html#a2adf2ea23e7daeb8401e717c1b3d874b',1,'AudioFile']]],
-  ['setblue_52',['setBlue',['../classColour.html#a40bad573ae839ccf43fad763cadc0868',1,'Colour']]],
-  ['setgreen_53',['setGreen',['../classColour.html#a66c9c624aabb2a2b8cca6c7b3662e63b',1,'Colour']]],
-  ['setmatrixcolour_54',['setMatrixColour',['../classSynaesthetiQ.html#a08634bd1971f17857dd4ee39bdc1a03f',1,'SynaesthetiQ']]],
-  ['setmatrixpixelcolour_55',['setMatrixPixelColour',['../classSynaesthetiQ.html#acc5f189832116b91312edafed3915c79',1,'SynaesthetiQ']]],
-  ['setnumchannels_56',['setNumChannels',['../classAudioFile.html#a354018a94ae15907d7308782f2adadbb',1,'AudioFile']]],
-  ['setnumsamplesperchannel_57',['setNumSamplesPerChannel',['../classAudioFile.html#a4cff9513d49e21d25de13513564784b7',1,'AudioFile']]],
-  ['setred_58',['setRed',['../classColour.html#abb9555707b355fc477144ca7fa271443',1,'Colour']]],
-  ['setsamplerate_59',['setSampleRate',['../classAudioFile.html#a2d8fa306e40535113c3eba111e16483b',1,'AudioFile']]],
-  ['setsystembrightness_60',['setSystemBrightness',['../classSynaesthetiQ.html#a758e8fce40fc98900f83ad7a9b9a2648',1,'SynaesthetiQ']]],
-  ['shouldlogerrorstoconsole_61',['shouldLogErrorsToConsole',['../classAudioFile.html#a1986c0297e4e4db99435702528e9c3c4',1,'AudioFile']]],
-  ['start_62',['start',['../classFFTProcessor.html#a8dc43650e52d022abf6638b13c829d93',1,'FFTProcessor']]],
-  ['stop_63',['stop',['../classFFTProcessor.html#affdb6b0b0f98fe05a656490fe3498dbe',1,'FFTProcessor']]],
-  ['synaesthetiq_64',['SynaesthetiQ',['../classSynaesthetiQ.html',1,'']]],
-  ['synaesthetiq_2dpuppetmaster_65',['SynaesthetiQ-PuppetMaster',['../index.html',1,'']]]
+  ['json_174',['json',['../GenrePredictor_8hpp.html#ab701e3ac61a85b337ec5c1abaad6742d',1,'GenrePredictor.hpp']]]
 ];

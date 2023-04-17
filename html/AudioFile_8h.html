@@ -67,7 +67,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#enum-members">Enumerations</a>  </div>
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">AudioFile.h File Reference</div>  </div>
 </div><!--header-->
@@ -82,6 +83,35 @@ $(function() {
 <code>#include &lt;iterator&gt;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;limits&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for AudioFile.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="AudioFile_8h__incl.png" border="0" usemap="#a_2home_2ross_2Documents_2git_2SynaesthetiQ-PuppetMaster_2src_2EnvelopeFollowing_2src_2AudioFile_8h" alt=""/></div>
+<map name="a_2home_2ross_2Documents_2git_2SynaesthetiQ-PuppetMaster_2src_2EnvelopeFollowing_2src_2AudioFile_8h" id="a_2home_2ross_2Documents_2git_2SynaesthetiQ-PuppetMaster_2src_2EnvelopeFollowing_2src_2AudioFile_8h">
+<area shape="rect" title=" " alt="" coords="338,5,569,76"/>
+<area shape="rect" title=" " alt="" coords="5,124,85,151"/>
+<area shape="rect" title=" " alt="" coords="110,124,173,151"/>
+<area shape="rect" title=" " alt="" coords="197,124,267,151"/>
+<area shape="rect" title=" " alt="" coords="291,124,349,151"/>
+<area shape="rect" title=" " alt="" coords="373,124,440,151"/>
+<area shape="rect" title=" " alt="" coords="465,124,538,151"/>
+<area shape="rect" title=" " alt="" coords="562,124,686,151"/>
+<area shape="rect" title=" " alt="" coords="710,124,781,151"/>
+<area shape="rect" title=" " alt="" coords="805,124,891,151"/>
+<area shape="rect" title=" " alt="" coords="915,124,973,151"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="AudioFile_8h__dep__incl.png" border="0" usemap="#a_2home_2ross_2Documents_2git_2SynaesthetiQ-PuppetMaster_2src_2EnvelopeFollowing_2src_2AudioFile_8hdep" alt=""/></div>
+<map name="a_2home_2ross_2Documents_2git_2SynaesthetiQ-PuppetMaster_2src_2EnvelopeFollowing_2src_2AudioFile_8hdep" id="a_2home_2ross_2Documents_2git_2SynaesthetiQ-PuppetMaster_2src_2EnvelopeFollowing_2src_2AudioFile_8hdep">
+<area shape="rect" title=" " alt="" coords="291,5,522,76"/>
+<area shape="rect" href="envelope__follower__test_8cpp.html" title=" " alt="" coords="5,124,267,195"/>
+<area shape="rect" href="src_2test_8cpp.html" title=" " alt="" coords="291,124,522,195"/>
+<area shape="rect" href="test_2test_8cpp.html" title=" " alt="" coords="546,124,777,195"/>
+</map>
+</div>
 </div>
 <p><a href="AudioFile_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -92,28 +122,33 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:ad18559d169602e85d0ad68da6ef8593f"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AudioFile_8h.html#ad18559d169602e85d0ad68da6ef8593f">AudioFileFormat</a> { <b>Error</b>
-, <b>NotLoaded</b>
-, <b>Wave</b>
-, <b>Aiff</b>
+<tr class="memitem:ad18559d169602e85d0ad68da6ef8593f"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AudioFile_8h.html#ad18559d169602e85d0ad68da6ef8593f">AudioFileFormat</a> { <a class="el" href="AudioFile_8h.html#a526ed66f20752002a63ee72e2e350d7da902b0d55fddef6f8d651fe1035b7d4bd">Error</a>
+, <a class="el" href="AudioFile_8h.html#ad18559d169602e85d0ad68da6ef8593fa5111e24c1ecc6266ce0de4b4dc42033b">NotLoaded</a>
+, <a class="el" href="AudioFile_8h.html#ad18559d169602e85d0ad68da6ef8593fad911b34823c7674c292556dc56148c27">Wave</a>
+, <a class="el" href="AudioFile_8h.html#ad18559d169602e85d0ad68da6ef8593fac2271ab764905d770a81d0920f8c6aaf">Aiff</a>
  }</td></tr>
 <tr class="separator:ad18559d169602e85d0ad68da6ef8593f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24ed57f869bfefdef1bed0a033886d8e"><td class="memItemLeft" align="right" valign="top"><a id="a24ed57f869bfefdef1bed0a033886d8e"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>WavAudioFormat</b> { <br />
-&#160;&#160;<b>PCM</b> = 0x0001
-, <b>IEEEFloat</b> = 0x0003
-, <b>ALaw</b> = 0x0006
-, <b>MULaw</b> = 0x0007
+<tr class="memitem:a24ed57f869bfefdef1bed0a033886d8e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AudioFile_8h.html#a24ed57f869bfefdef1bed0a033886d8e">WavAudioFormat</a> { <br />
+&#160;&#160;<a class="el" href="AudioFile_8h.html#a24ed57f869bfefdef1bed0a033886d8ea91062305c293c8f87879282035b9e982">PCM</a> = 0x0001
+, <a class="el" href="AudioFile_8h.html#a24ed57f869bfefdef1bed0a033886d8eaf48e2c55df672bab9d55c60af50a7181">IEEEFloat</a> = 0x0003
+, <a class="el" href="AudioFile_8h.html#a24ed57f869bfefdef1bed0a033886d8ea6a355409829949f68b750116a8583fe2">ALaw</a> = 0x0006
+, <a class="el" href="AudioFile_8h.html#a24ed57f869bfefdef1bed0a033886d8ea730c7411a2c9edcad21808aea0a225d8">MULaw</a> = 0x0007
 , <br />
-&#160;&#160;<b>Extensible</b> = 0xFFFE
+&#160;&#160;<a class="el" href="AudioFile_8h.html#a24ed57f869bfefdef1bed0a033886d8ea3399988804e27576467357a9fd8fbf92">Extensible</a> = 0xFFFE
 <br />
  }</td></tr>
 <tr class="separator:a24ed57f869bfefdef1bed0a033886d8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a526ed66f20752002a63ee72e2e350d7d"><td class="memItemLeft" align="right" valign="top"><a id="a526ed66f20752002a63ee72e2e350d7d"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>AIFFAudioFormat</b> { <b>Uncompressed</b>
-, <b>Compressed</b>
-, <b>Error</b>
-, <b>Error</b>
+<tr class="memitem:a526ed66f20752002a63ee72e2e350d7d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AudioFile_8h.html#a526ed66f20752002a63ee72e2e350d7d">AIFFAudioFormat</a> { <a class="el" href="AudioFile_8h.html#a526ed66f20752002a63ee72e2e350d7da8ff322ff580065823204d6a61d90f9b3">Uncompressed</a>
+, <a class="el" href="AudioFile_8h.html#a526ed66f20752002a63ee72e2e350d7da4e27fd9489beea00d95846abc48ab83e">Compressed</a>
+, <a class="el" href="AudioFile_8h.html#a526ed66f20752002a63ee72e2e350d7da4dfd42ec49d09d8c6555c218301cc30f">Error</a>
+, <a class="el" href="AudioFile_8h.html#a526ed66f20752002a63ee72e2e350d7da902b0d55fddef6f8d651fe1035b7d4bd">Error</a>
  }</td></tr>
 <tr class="separator:a526ed66f20752002a63ee72e2e350d7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:abf9b30998d0448afa3d74af3ac87eb67"><td class="memItemLeft" align="right" valign="top">static std::unordered_map&lt; uint32_t, std::vector&lt; uint8_t &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AudioFile_8h.html#abf9b30998d0448afa3d74af3ac87eb67">aiffSampleRateTable</a></td></tr>
+<tr class="separator:abf9b30998d0448afa3d74af3ac87eb67"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><dl class="section author"><dt>Author</dt><dd>Adam Stark </dd></dl>
@@ -125,6 +160,26 @@ Enumerations</h2></td></tr>
 <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
 <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. </p>
 </div><h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a526ed66f20752002a63ee72e2e350d7d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a526ed66f20752002a63ee72e2e350d7d">&#9670;&nbsp;</a></span>AIFFAudioFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="AudioFile_8h.html#a526ed66f20752002a63ee72e2e350d7d">AIFFAudioFormat</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a526ed66f20752002a63ee72e2e350d7da8ff322ff580065823204d6a61d90f9b3"></a>Uncompressed&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a526ed66f20752002a63ee72e2e350d7da4e27fd9489beea00d95846abc48ab83e"></a>Compressed&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a526ed66f20752002a63ee72e2e350d7da4dfd42ec49d09d8c6555c218301cc30f"></a>Error&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a526ed66f20752002a63ee72e2e350d7da902b0d55fddef6f8d651fe1035b7d4bd"></a>Error&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
 <a id="ad18559d169602e85d0ad68da6ef8593f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad18559d169602e85d0ad68da6ef8593f">&#9670;&nbsp;</a></span>AudioFileFormat</h2>
 
@@ -145,7 +200,78 @@ Enumerations</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>The different types of audio file, plus some other types to indicate a failure to load a file, or that one hasn't been loaded yet </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a526ed66f20752002a63ee72e2e350d7da902b0d55fddef6f8d651fe1035b7d4bd"></a>Error&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad18559d169602e85d0ad68da6ef8593fa5111e24c1ecc6266ce0de4b4dc42033b"></a>NotLoaded&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad18559d169602e85d0ad68da6ef8593fad911b34823c7674c292556dc56148c27"></a>Wave&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ad18559d169602e85d0ad68da6ef8593fac2271ab764905d770a81d0920f8c6aaf"></a>Aiff&#160;</td><td class="fielddoc"></td></tr>
+</table>
 
+</div>
+</div>
+<a id="a24ed57f869bfefdef1bed0a033886d8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a24ed57f869bfefdef1bed0a033886d8e">&#9670;&nbsp;</a></span>WavAudioFormat</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="AudioFile_8h.html#a24ed57f869bfefdef1bed0a033886d8e">WavAudioFormat</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a24ed57f869bfefdef1bed0a033886d8ea91062305c293c8f87879282035b9e982"></a>PCM&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a24ed57f869bfefdef1bed0a033886d8eaf48e2c55df672bab9d55c60af50a7181"></a>IEEEFloat&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a24ed57f869bfefdef1bed0a033886d8ea6a355409829949f68b750116a8583fe2"></a>ALaw&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a24ed57f869bfefdef1bed0a033886d8ea730c7411a2c9edcad21808aea0a225d8"></a>MULaw&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a24ed57f869bfefdef1bed0a033886d8ea3399988804e27576467357a9fd8fbf92"></a>Extensible&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="abf9b30998d0448afa3d74af3ac87eb67"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf9b30998d0448afa3d74af3ac87eb67">&#9670;&nbsp;</a></span>aiffSampleRateTable</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;uint32_t, std::vector&lt;uint8_t&gt; &gt; aiffSampleRateTable</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    {8000, {64, 11, 250, 0, 0, 0, 0, 0, 0, 0}},</div>
+<div class="line">    {11025, {64, 12, 172, 68, 0, 0, 0, 0, 0, 0}},</div>
+<div class="line">    {16000, {64, 12, 250, 0, 0, 0, 0, 0, 0, 0}},</div>
+<div class="line">    {22050, {64, 13, 172, 68, 0, 0, 0, 0, 0, 0}},</div>
+<div class="line">    {32000, {64, 13, 250, 0, 0, 0, 0, 0, 0, 0}},</div>
+<div class="line">    {37800, {64, 14, 147, 168, 0, 0, 0, 0, 0, 0}},</div>
+<div class="line">    {44056, {64, 14, 172, 24, 0, 0, 0, 0, 0, 0}},</div>
+<div class="line">    {44100, {64, 14, 172, 68, 0, 0, 0, 0, 0, 0}},</div>
+<div class="line">    {47250, {64, 14, 184, 146, 0, 0, 0, 0, 0, 0}},</div>
+<div class="line">    {48000, {64, 14, 187, 128, 0, 0, 0, 0, 0, 0}},</div>
+<div class="line">    {50000, {64, 14, 195, 80, 0, 0, 0, 0, 0, 0}},</div>
+<div class="line">    {50400, {64, 14, 196, 224, 0, 0, 0, 0, 0, 0}},</div>
+<div class="line">    {88200, {64, 15, 172, 68, 0, 0, 0, 0, 0, 0}},</div>
+<div class="line">    {96000, {64, 15, 187, 128, 0, 0, 0, 0, 0, 0}},</div>
+<div class="line">    {176400, {64, 16, 172, 68, 0, 0, 0, 0, 0, 0}},</div>
+<div class="line">    {192000, {64, 16, 187, 128, 0, 0, 0, 0, 0, 0}},</div>
+<div class="line">    {352800, {64, 17, 172, 68, 0, 0, 0, 0, 0, 0}},</div>
+<div class="line">    {2822400, {64, 20, 172, 68, 0, 0, 0, 0, 0, 0}},</div>
+<div class="line">    {5644800, {64, 21, 172, 68, 0, 0, 0, 0, 0, 0}}</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->

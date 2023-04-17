@@ -1,5 +1,15 @@
 var searchData=
 [
-  ['ws2811_5fchannel_5ft_68',['ws2811_channel_t',['../structws2811__channel__t.html',1,'']]],
-  ['ws2811_5ft_69',['ws2811_t',['../structws2811__t.html',1,'']]]
+  ['main_188',['main',['../TestColour_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;TestColour.cpp'],['../SynaesthetiQ-LED-Library_2src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp'],['../SynaesthetiQ-audiocapture_2src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp'],['../lowresfft__test_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;lowresfft_test.cpp'],['../testGenrePredictor_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;testGenrePredictor.cpp'],['../SynaesthetiQ-audiocapture_2src_2GenreClassification_2cpp__genre__classifier_2src_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../CMakeCXXCompilerId_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCXXCompilerId.cpp'],['../CMakeCCompilerId_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCCompilerId.c'],['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;main.cpp'],['../envelope__follower__test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;envelope_follower_test.cpp'],['../src_2test_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;test.cpp'],['../test_2test_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;test.cpp'],['../kilLED_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main():&#160;kilLED.cpp']]],
+  ['main_2ecpp_189',['main.cpp',['../SynaesthetiQ-audiocapture_2src_2GenreClassification_2cpp__genre__classifier_2src_2main_8cpp.html',1,'(Global Namespace)'],['../SynaesthetiQ-LED-Library_2src_2main_8cpp.html',1,'(Global Namespace)'],['../SynaesthetiQ-audiocapture_2src_2main_8cpp.html',1,'(Global Namespace)'],['../main_8cpp.html',1,'(Global Namespace)']]],
+  ['matrix_190',['matrix',['../SynaesthetiQ-LED-Library_2src_2main_8cpp.html#a4d8291339f6fcbafba4f00c86e1257a9',1,'main.cpp']]],
+  ['matrixpixelcurrentperchannel_191',['matrixPixelCurrentPerChannel',['../classSynaesthetiQ.html#a3caeaab07d890c18e3dafe17c28da7b5',1,'SynaesthetiQ']]],
+  ['matrixpixels_192',['matrixPixels',['../classSynaesthetiQ.html#acb56e98dd3d48604359be7f234d37d8c',1,'SynaesthetiQ']]],
+  ['maxbigledcurrent_193',['maxBigLEDCurrent',['../classSynaesthetiQ.html#a1688ccd8a4579affbab4df98710305f1',1,'SynaesthetiQ']]],
+  ['maximum_194',['MAXIMUM',['../FFTProcessor_8h.html#a5c55d2e6866e37f4657ead5b8321be26a24f18e25b7685d18e1b68d78faa2908c',1,'FFTProcessor.h']]],
+  ['maxmatrixcurrent_195',['maxMatrixCurrent',['../classSynaesthetiQ.html#a5696357e1e63bc55019293277c674261',1,'SynaesthetiQ']]],
+  ['milliamps_196',['MILLIAMPS',['../synaesthetiq_8hpp.html#a23f18d9df7e8feb0eefe787570ab3ae9',1,'synaesthetiq.hpp']]],
+  ['mtx_197',['mtx',['../classFFTProcessor.html#a9ed236893631683e27638dbf53c07055',1,'FFTProcessor::mtx()'],['../lowresfft__test_8cpp.html#ad5e0dbd36f0d71fce9b00b7f991b2f38',1,'mtx():&#160;lowresfft_test.cpp']]],
+  ['mulaw_198',['MULaw',['../AudioFile_8h.html#a24ed57f869bfefdef1bed0a033886d8ea730c7411a2c9edcad21808aea0a225d8',1,'AudioFile.h']]],
+  ['mycallback_199',['MyCallback',['../classAudioCapture.html#ab3896451a319def83bf57d0a8a3fde16',1,'AudioCapture']]]
 ];

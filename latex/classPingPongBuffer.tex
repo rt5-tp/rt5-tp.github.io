@@ -12,8 +12,7 @@ Special buffer calls callback when full.
 \doxysubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classPingPongBuffer_a8b1ea769eda2a47357b7a5aa1063f4d8}\label{classPingPongBuffer_a8b1ea769eda2a47357b7a5aa1063f4d8}} 
-typedef void($\ast$ {\bfseries Full\+Buffer\+Callback}) (const std\+::vector$<$ short $>$ \&, int)
+typedef void($\ast$ \mbox{\hyperlink{classPingPongBuffer_a8b1ea769eda2a47357b7a5aa1063f4d8}{Full\+Buffer\+Callback}}) (const std\+::vector$<$ short $>$ \&, int)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -24,20 +23,53 @@ void \mbox{\hyperlink{classPingPongBuffer_a3e83626083eaf81e934b21f9de0ff94d}{add
 \begin{DoxyCompactList}\small\item\em Function for adding data to the \mbox{\hyperlink{classPingPongBuffer}{Ping\+Pong\+Buffer}}. \end{DoxyCompactList}\item 
 std\+::vector$<$ short $>$ \mbox{\hyperlink{classPingPongBuffer_a5005d5f73c139e8bdaca53784d65bb0f}{get\+\_\+current\+\_\+buffer}} () const
 \begin{DoxyCompactList}\small\item\em Returns half the data of the current buffer. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classPingPongBuffer_a81d7a1aa9b91bf7a9fcafb46e7f5a28b}\label{classPingPongBuffer_a81d7a1aa9b91bf7a9fcafb46e7f5a28b}} 
 bool \mbox{\hyperlink{classPingPongBuffer_a81d7a1aa9b91bf7a9fcafb46e7f5a28b}{is\+\_\+full}} () const
 \begin{DoxyCompactList}\small\item\em Returns true if any of the buffers are full. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classPingPongBuffer_a4f7da502016c0f826220a418793baa85}{trigger\+\_\+callback}} ()
 \begin{DoxyCompactList}\small\item\em Calls the callback registered with the class with buffer data. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classPingPongBuffer_a59da3ea9fc7be1c803f31245a718034f}\label{classPingPongBuffer_a59da3ea9fc7be1c803f31245a718034f}} 
-void \mbox{\hyperlink{classPingPongBuffer_a59da3ea9fc7be1c803f31245a718034f}{set\+\_\+on\+\_\+buffer\+\_\+full\+\_\+callback}} (Full\+Buffer\+Callback callback)
+void \mbox{\hyperlink{classPingPongBuffer_a59da3ea9fc7be1c803f31245a718034f}{set\+\_\+on\+\_\+buffer\+\_\+full\+\_\+callback}} (\mbox{\hyperlink{classPingPongBuffer_a8b1ea769eda2a47357b7a5aa1063f4d8}{Full\+Buffer\+Callback}} callback)
 \begin{DoxyCompactList}\small\item\em Sets the registered callback to the one provided. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classPingPongBuffer_a91ed57ba227447c3501bdcf75c719f97}{switch\+\_\+buffer}} ()
+\begin{DoxyCompactList}\small\item\em Switches current buffer out with the other, and resets its values. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classPingPongBuffer_a1af8081dadea2b9b102f6c17cabeb1b4}{capacity\+\_\+}}
+\item 
+std\+::vector$<$ short $>$ \mbox{\hyperlink{classPingPongBuffer_a804eb453eb3b8ab6405531294ab5252c}{buffer\+\_\+a\+\_\+}}
+\item 
+std\+::vector$<$ short $>$ \mbox{\hyperlink{classPingPongBuffer_a16b48febe2a7de28c6b6c93cf0e3caa1}{buffer\+\_\+b\+\_\+}}
+\item 
+std\+::vector$<$ short $>$ $\ast$ \mbox{\hyperlink{classPingPongBuffer_a4cb2cbd715ae5b204e1957373056770f}{current\+\_\+buffer\+\_\+}}
+\item 
+int \mbox{\hyperlink{classPingPongBuffer_a8f1090b10186604d17c5d9b9dd184f55}{write\+\_\+offset\+\_\+}}
+\item 
+int \mbox{\hyperlink{classPingPongBuffer_ada84fc374a135cc15de3bb9ca88b7a3a}{read\+\_\+offset\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classPingPongBuffer_a8a0cb02c2031678b68adb378a3001f6c}{buffer\+\_\+a\+\_\+full\+\_\+}}
+\item 
+bool \mbox{\hyperlink{classPingPongBuffer_af985404753d1a2a5f2e628c9085e517d}{buffer\+\_\+b\+\_\+full\+\_\+}}
+\item 
+\mbox{\hyperlink{classPingPongBuffer_a8b1ea769eda2a47357b7a5aa1063f4d8}{Full\+Buffer\+Callback}} \mbox{\hyperlink{classPingPongBuffer_ae5714ed9b9e8d9efcae0c13e63d8700a}{on\+\_\+buffer\+\_\+full\+\_\+callback\+\_\+}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Special buffer calls callback when full. 
 
 Fills up one of two buffers over time through \textquotesingle{}add\+\_\+data\textquotesingle{} calls and makes call to callback with the full buffer. 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classPingPongBuffer_a8b1ea769eda2a47357b7a5aa1063f4d8}\label{classPingPongBuffer_a8b1ea769eda2a47357b7a5aa1063f4d8}} 
+\index{PingPongBuffer@{PingPongBuffer}!FullBufferCallback@{FullBufferCallback}}
+\index{FullBufferCallback@{FullBufferCallback}!PingPongBuffer@{PingPongBuffer}}
+\doxysubsubsection{\texorpdfstring{FullBufferCallback}{FullBufferCallback}}
+{\footnotesize\ttfamily typedef void($\ast$ Ping\+Pong\+Buffer\+::\+Full\+Buffer\+Callback) (const std\+::vector$<$ short $>$ \&, int)}
+
+
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{classPingPongBuffer_a29b4d090ed3f4d5455befa7bcaaa651a}\label{classPingPongBuffer_a29b4d090ed3f4d5455befa7bcaaa651a}} 
@@ -63,7 +95,23 @@ Initialises all members variables.
 
 Function for adding data to the \mbox{\hyperlink{classPingPongBuffer}{Ping\+Pong\+Buffer}}. 
 
-Fills the current buffer with the provided data. If buffer reaches capacity, all data contained in it is sent out via callbacks, then buffer is switched out and remaining data added to new buffer. \mbox{\Hypertarget{classPingPongBuffer_a5005d5f73c139e8bdaca53784d65bb0f}\label{classPingPongBuffer_a5005d5f73c139e8bdaca53784d65bb0f}} 
+Fills the current buffer with the provided data. If buffer reaches capacity, all data contained in it is sent out via callbacks, then buffer is switched out and remaining data added to new buffer. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPingPongBuffer_a3e83626083eaf81e934b21f9de0ff94d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPingPongBuffer_a3e83626083eaf81e934b21f9de0ff94d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPingPongBuffer_a5005d5f73c139e8bdaca53784d65bb0f}\label{classPingPongBuffer_a5005d5f73c139e8bdaca53784d65bb0f}} 
 \index{PingPongBuffer@{PingPongBuffer}!get\_current\_buffer@{get\_current\_buffer}}
 \index{get\_current\_buffer@{get\_current\_buffer}!PingPongBuffer@{PingPongBuffer}}
 \doxysubsubsection{\texorpdfstring{get\_current\_buffer()}{get\_current\_buffer()}}
@@ -73,7 +121,53 @@ Fills the current buffer with the provided data. If buffer reaches capacity, all
 
 Returns half the data of the current buffer. 
 
-Returns all data contained within the first half of the current buffer \mbox{\Hypertarget{classPingPongBuffer_a4f7da502016c0f826220a418793baa85}\label{classPingPongBuffer_a4f7da502016c0f826220a418793baa85}} 
+Returns all data contained within the first half of the current buffer \mbox{\Hypertarget{classPingPongBuffer_a81d7a1aa9b91bf7a9fcafb46e7f5a28b}\label{classPingPongBuffer_a81d7a1aa9b91bf7a9fcafb46e7f5a28b}} 
+\index{PingPongBuffer@{PingPongBuffer}!is\_full@{is\_full}}
+\index{is\_full@{is\_full}!PingPongBuffer@{PingPongBuffer}}
+\doxysubsubsection{\texorpdfstring{is\_full()}{is\_full()}}
+{\footnotesize\ttfamily bool Ping\+Pong\+Buffer\+::is\+\_\+full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns true if any of the buffers are full. 
+
+\mbox{\Hypertarget{classPingPongBuffer_a59da3ea9fc7be1c803f31245a718034f}\label{classPingPongBuffer_a59da3ea9fc7be1c803f31245a718034f}} 
+\index{PingPongBuffer@{PingPongBuffer}!set\_on\_buffer\_full\_callback@{set\_on\_buffer\_full\_callback}}
+\index{set\_on\_buffer\_full\_callback@{set\_on\_buffer\_full\_callback}!PingPongBuffer@{PingPongBuffer}}
+\doxysubsubsection{\texorpdfstring{set\_on\_buffer\_full\_callback()}{set\_on\_buffer\_full\_callback()}}
+{\footnotesize\ttfamily void Ping\+Pong\+Buffer\+::set\+\_\+on\+\_\+buffer\+\_\+full\+\_\+callback (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPingPongBuffer_a8b1ea769eda2a47357b7a5aa1063f4d8}{Full\+Buffer\+Callback}}}]{callback }\end{DoxyParamCaption})}
+
+
+
+Sets the registered callback to the one provided. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPingPongBuffer_a59da3ea9fc7be1c803f31245a718034f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPingPongBuffer_a91ed57ba227447c3501bdcf75c719f97}\label{classPingPongBuffer_a91ed57ba227447c3501bdcf75c719f97}} 
+\index{PingPongBuffer@{PingPongBuffer}!switch\_buffer@{switch\_buffer}}
+\index{switch\_buffer@{switch\_buffer}!PingPongBuffer@{PingPongBuffer}}
+\doxysubsubsection{\texorpdfstring{switch\_buffer()}{switch\_buffer()}}
+{\footnotesize\ttfamily void Ping\+Pong\+Buffer\+::switch\+\_\+buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Switches current buffer out with the other, and resets its values. 
+
+Resets all values to 0. Resets read and write offset to 0. Lastly, marks both buffers as empty. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPingPongBuffer_a91ed57ba227447c3501bdcf75c719f97_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPingPongBuffer_a4f7da502016c0f826220a418793baa85}\label{classPingPongBuffer_a4f7da502016c0f826220a418793baa85}} 
 \index{PingPongBuffer@{PingPongBuffer}!trigger\_callback@{trigger\_callback}}
 \index{trigger\_callback@{trigger\_callback}!PingPongBuffer@{PingPongBuffer}}
 \doxysubsubsection{\texorpdfstring{trigger\_callback()}{trigger\_callback()}}
@@ -83,9 +177,74 @@ Returns all data contained within the first half of the current buffer \mbox{\Hy
 
 Calls the callback registered with the class with buffer data. 
 
-Call the callback with the current buffer and a \textquotesingle{}0\textquotesingle{} if buffer A and a \textquotesingle{}1\textquotesingle{} if buffer B. Does nothing if no callback is registered. 
+Call the callback with the current buffer and a \textquotesingle{}0\textquotesingle{} if buffer A and a \textquotesingle{}1\textquotesingle{} if buffer B. Does nothing if no callback is registered. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPingPongBuffer_a4f7da502016c0f826220a418793baa85_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classPingPongBuffer_a804eb453eb3b8ab6405531294ab5252c}\label{classPingPongBuffer_a804eb453eb3b8ab6405531294ab5252c}} 
+\index{PingPongBuffer@{PingPongBuffer}!buffer\_a\_@{buffer\_a\_}}
+\index{buffer\_a\_@{buffer\_a\_}!PingPongBuffer@{PingPongBuffer}}
+\doxysubsubsection{\texorpdfstring{buffer\_a\_}{buffer\_a\_}}
+{\footnotesize\ttfamily std\+::vector$<$short$>$ Ping\+Pong\+Buffer\+::buffer\+\_\+a\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPingPongBuffer_a8a0cb02c2031678b68adb378a3001f6c}\label{classPingPongBuffer_a8a0cb02c2031678b68adb378a3001f6c}} 
+\index{PingPongBuffer@{PingPongBuffer}!buffer\_a\_full\_@{buffer\_a\_full\_}}
+\index{buffer\_a\_full\_@{buffer\_a\_full\_}!PingPongBuffer@{PingPongBuffer}}
+\doxysubsubsection{\texorpdfstring{buffer\_a\_full\_}{buffer\_a\_full\_}}
+{\footnotesize\ttfamily bool Ping\+Pong\+Buffer\+::buffer\+\_\+a\+\_\+full\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPingPongBuffer_a16b48febe2a7de28c6b6c93cf0e3caa1}\label{classPingPongBuffer_a16b48febe2a7de28c6b6c93cf0e3caa1}} 
+\index{PingPongBuffer@{PingPongBuffer}!buffer\_b\_@{buffer\_b\_}}
+\index{buffer\_b\_@{buffer\_b\_}!PingPongBuffer@{PingPongBuffer}}
+\doxysubsubsection{\texorpdfstring{buffer\_b\_}{buffer\_b\_}}
+{\footnotesize\ttfamily std\+::vector$<$short$>$ Ping\+Pong\+Buffer\+::buffer\+\_\+b\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPingPongBuffer_af985404753d1a2a5f2e628c9085e517d}\label{classPingPongBuffer_af985404753d1a2a5f2e628c9085e517d}} 
+\index{PingPongBuffer@{PingPongBuffer}!buffer\_b\_full\_@{buffer\_b\_full\_}}
+\index{buffer\_b\_full\_@{buffer\_b\_full\_}!PingPongBuffer@{PingPongBuffer}}
+\doxysubsubsection{\texorpdfstring{buffer\_b\_full\_}{buffer\_b\_full\_}}
+{\footnotesize\ttfamily bool Ping\+Pong\+Buffer\+::buffer\+\_\+b\+\_\+full\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPingPongBuffer_a1af8081dadea2b9b102f6c17cabeb1b4}\label{classPingPongBuffer_a1af8081dadea2b9b102f6c17cabeb1b4}} 
+\index{PingPongBuffer@{PingPongBuffer}!capacity\_@{capacity\_}}
+\index{capacity\_@{capacity\_}!PingPongBuffer@{PingPongBuffer}}
+\doxysubsubsection{\texorpdfstring{capacity\_}{capacity\_}}
+{\footnotesize\ttfamily int Ping\+Pong\+Buffer\+::capacity\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPingPongBuffer_a4cb2cbd715ae5b204e1957373056770f}\label{classPingPongBuffer_a4cb2cbd715ae5b204e1957373056770f}} 
+\index{PingPongBuffer@{PingPongBuffer}!current\_buffer\_@{current\_buffer\_}}
+\index{current\_buffer\_@{current\_buffer\_}!PingPongBuffer@{PingPongBuffer}}
+\doxysubsubsection{\texorpdfstring{current\_buffer\_}{current\_buffer\_}}
+{\footnotesize\ttfamily std\+::vector$<$short$>$$\ast$ Ping\+Pong\+Buffer\+::current\+\_\+buffer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPingPongBuffer_ae5714ed9b9e8d9efcae0c13e63d8700a}\label{classPingPongBuffer_ae5714ed9b9e8d9efcae0c13e63d8700a}} 
+\index{PingPongBuffer@{PingPongBuffer}!on\_buffer\_full\_callback\_@{on\_buffer\_full\_callback\_}}
+\index{on\_buffer\_full\_callback\_@{on\_buffer\_full\_callback\_}!PingPongBuffer@{PingPongBuffer}}
+\doxysubsubsection{\texorpdfstring{on\_buffer\_full\_callback\_}{on\_buffer\_full\_callback\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPingPongBuffer_a8b1ea769eda2a47357b7a5aa1063f4d8}{Full\+Buffer\+Callback}} Ping\+Pong\+Buffer\+::on\+\_\+buffer\+\_\+full\+\_\+callback\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPingPongBuffer_ada84fc374a135cc15de3bb9ca88b7a3a}\label{classPingPongBuffer_ada84fc374a135cc15de3bb9ca88b7a3a}} 
+\index{PingPongBuffer@{PingPongBuffer}!read\_offset\_@{read\_offset\_}}
+\index{read\_offset\_@{read\_offset\_}!PingPongBuffer@{PingPongBuffer}}
+\doxysubsubsection{\texorpdfstring{read\_offset\_}{read\_offset\_}}
+{\footnotesize\ttfamily int Ping\+Pong\+Buffer\+::read\+\_\+offset\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPingPongBuffer_a8f1090b10186604d17c5d9b9dd184f55}\label{classPingPongBuffer_a8f1090b10186604d17c5d9b9dd184f55}} 
+\index{PingPongBuffer@{PingPongBuffer}!write\_offset\_@{write\_offset\_}}
+\index{write\_offset\_@{write\_offset\_}!PingPongBuffer@{PingPongBuffer}}
+\doxysubsubsection{\texorpdfstring{write\_offset\_}{write\_offset\_}}
+{\footnotesize\ttfamily int Ping\+Pong\+Buffer\+::write\+\_\+offset\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/audiocapture/src/\+Audio\+Capture/Ping\+Pong\+Buffer.\+h\item 
-/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/audiocapture/src/\+Audio\+Capture/Ping\+Pong\+Buffer.\+cpp\end{DoxyCompactItemize}
+/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/audiocapture/src/\+Audio\+Capture/\mbox{\hyperlink{PingPongBuffer_8h}{Ping\+Pong\+Buffer.\+h}}\item 
+/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/audiocapture/src/\+Audio\+Capture/\mbox{\hyperlink{PingPongBuffer_8cpp}{Ping\+Pong\+Buffer.\+cpp}}\end{DoxyCompactItemize}

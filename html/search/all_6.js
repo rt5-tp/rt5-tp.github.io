@@ -1,7 +1,27 @@
 var searchData=
 [
-  ['is_5ffull_26',['is_full',['../classPingPongBuffer.html#a81d7a1aa9b91bf7a9fcafb46e7f5a28b',1,'PingPongBuffer']]],
-  ['ismono_27',['isMono',['../classAudioFile.html#a1057326fd2c2eca7cc7937f811868cf1',1,'AudioFile']]],
-  ['isstereo_28',['isStereo',['../classAudioFile.html#a380a188d95f8f23b7622dfe222a7e8f6',1,'AudioFile']]],
-  ['ixmlchunk_29',['iXMLChunk',['../classAudioFile.html#ab2bc14440b0a6ff1a297e28a0354d422',1,'AudioFile']]]
+  ['fc_104',['fc',['../classEnvelopeFollower.html#afbd1587f939acc1f89eaf449f9fbc3d9',1,'EnvelopeFollower']]],
+  ['fft_5fcallback_105',['fft_callback',['../classVisualiser.html#aaf83b937b1524b0e601c6309596c8686',1,'Visualiser']]],
+  ['fft_5fdata_106',['fft_data',['../classVisualiser.html#a1aa571b658072febf6a59bb750f39576',1,'Visualiser']]],
+  ['fft_5fledcallback_107',['fft_LEDcallback',['../classVisualiser.html#a8dd45f6c2c484eac9f1e63b2153f1b75',1,'Visualiser']]],
+  ['fftcallback_108',['fftCallback',['../classFFTProcessor.html#a98a46e4ee3e447bcce2dd0c6d242e702',1,'FFTProcessor']]],
+  ['fftinputdata_109',['fftInputData',['../classAudioCapture.html#a05a2e4888c557587b0df8748f217ae0e',1,'AudioCapture']]],
+  ['fftled_5fdata_110',['fftLED_data',['../classVisualiser.html#a4fa525884191edacf6afdd8678692cab',1,'Visualiser']]],
+  ['fftprocessor_111',['fftProcessor',['../classVisualiser.html#ad16fc5e2e96926de5f89df7c66a448e1',1,'Visualiser']]],
+  ['fftprocessor_112',['FFTProcessor',['../classFFTProcessor.html#a24d77d4ee34a0df2a72cc1ff698f241d',1,'FFTProcessor::FFTProcessor()'],['../classFFTProcessor.html',1,'FFTProcessor']]],
+  ['fftprocessor_113',['fftProcessor',['../SynaesthetiQ-audiocapture_2src_2main_8cpp.html#ac8474e8d7d40564cb64f915ba4f62a32',1,'fftProcessor():&#160;main.cpp'],['../lowresfft__test_8cpp.html#ac8474e8d7d40564cb64f915ba4f62a32',1,'fftProcessor():&#160;lowresfft_test.cpp']]],
+  ['fftprocessor_2ecpp_114',['FFTProcessor.cpp',['../FFTProcessor_8cpp.html',1,'']]],
+  ['fftprocessor_2eh_115',['FFTProcessor.h',['../FFTProcessor_8h.html',1,'']]],
+  ['fftthread_116',['fftThread',['../classFFTProcessor.html#aa2d314b6b01b2e35a98076b1d50c5ac1',1,'FFTProcessor']]],
+  ['fif1_117',['fif1',['../struct____attribute____.html#a7cf075f14a096d0c80f9a73207ee180b',1,'__attribute__']]],
+  ['file_5f_118',['file_',['../classRawAudioWriter.html#aa1afe33ed794976c9567db2411d1adbb',1,'RawAudioWriter']]],
+  ['filename_5f_119',['filename_',['../classRawAudioWriter.html#adfed53055d0465997a5726a2fa7662b7',1,'RawAudioWriter']]],
+  ['filter_120',['filter',['../classEnvelopeFollower.html#ab6e351fd4fb650e1c81bb84245294c1e',1,'EnvelopeFollower']]],
+  ['finput_121',['finput',['../src_2test_8cpp.html#a22a696c7905bda76845cbc55a9627945',1,'test.cpp']]],
+  ['floattoshort_122',['floatToShort',['../src_2test_8cpp.html#abed7129f05646f7979b0262b1d2d5ddb',1,'test.cpp']]],
+  ['fourbytestoint_123',['fourBytesToInt',['../classAudioFile.html#a5fcde4e965721804e6f60fc38936887f',1,'AudioFile']]],
+  ['foutput_124',['foutput',['../src_2test_8cpp.html#a12d1d096f170e955fab8b274e4d05368',1,'test.cpp']]],
+  ['freq_125',['freq',['../structws2811__t.html#a3f04ae7a53df7f48ed32354d5ead2471',1,'ws2811_t']]],
+  ['fs_126',['fs',['../classEnvelopeFollower.html#ab3edc0d6a7ed3f8688861358d9df12a1',1,'EnvelopeFollower']]],
+  ['fullbuffercallback_127',['FullBufferCallback',['../classPingPongBuffer.html#a8b1ea769eda2a47357b7a5aa1063f4d8',1,'PingPongBuffer']]]
 ];

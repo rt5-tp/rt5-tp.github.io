@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['clearoutput_98',['clearOutput',['../classSynaesthetiQ.html#ac4660ef2d240ccc88370e33d3ea68caf',1,'SynaesthetiQ']]],
-  ['colour_99',['Colour',['../classColour.html#a46612b9524fcd4cee818af6a86b7a4d2',1,'Colour::Colour()'],['../classColour.html#a22d30494084f20493107129257a95e3a',1,'Colour::Colour(uint8_t redIn, uint8_t greenIn, uint8_t blueIn)'],['../classColour.html#a0c49fb778473849a19ba79c73ae9f0f7',1,'Colour::Colour(uint32_t XRGBIn)']]]
+  ['basicmatrixlimit_461',['basicMatrixLimit',['../classSynaesthetiQ.html#ab87111b52b512ba15a56fc990a1e7ee2',1,'SynaesthetiQ']]],
+  ['bigledlimit_462',['bigLEDLimit',['../classSynaesthetiQ.html#a89a5378445657cc1a65b7b092d8e2172',1,'SynaesthetiQ']]]
 ];

@@ -10,6 +10,22 @@
 {\ttfamily \#include $<$iterator$>$}\newline
 {\ttfamily \#include $<$algorithm$>$}\newline
 {\ttfamily \#include $<$limits$>$}\newline
+Include dependency graph for Audio\+File.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AudioFile_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AudioFile_8h__dep__incl}
+\end{center}
+\end{figure}
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -18,28 +34,31 @@ class \mbox{\hyperlink{classAudioFile}{Audio\+File$<$ T $>$}}
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-enum class \mbox{\hyperlink{AudioFile_8h_ad18559d169602e85d0ad68da6ef8593f}{Audio\+File\+Format}} \{ {\bfseries Error}
-, {\bfseries Not\+Loaded}
-, {\bfseries Wave}
-, {\bfseries Aiff}
+enum class \mbox{\hyperlink{AudioFile_8h_ad18559d169602e85d0ad68da6ef8593f}{Audio\+File\+Format}} \{ \mbox{\hyperlink{AudioFile_8h_a526ed66f20752002a63ee72e2e350d7da902b0d55fddef6f8d651fe1035b7d4bd}{Error}}
+, \mbox{\hyperlink{AudioFile_8h_ad18559d169602e85d0ad68da6ef8593fa5111e24c1ecc6266ce0de4b4dc42033b}{Not\+Loaded}}
+, \mbox{\hyperlink{AudioFile_8h_ad18559d169602e85d0ad68da6ef8593fad911b34823c7674c292556dc56148c27}{Wave}}
+, \mbox{\hyperlink{AudioFile_8h_ad18559d169602e85d0ad68da6ef8593fac2271ab764905d770a81d0920f8c6aaf}{Aiff}}
  \}
 \item 
-\mbox{\Hypertarget{AudioFile_8h_a24ed57f869bfefdef1bed0a033886d8e}\label{AudioFile_8h_a24ed57f869bfefdef1bed0a033886d8e}} 
-enum {\bfseries Wav\+Audio\+Format} \{ \newline
-{\bfseries PCM} = 0x0001
-, {\bfseries IEEEFloat} = 0x0003
-, {\bfseries ALaw} = 0x0006
-, {\bfseries MULaw} = 0x0007
+enum \mbox{\hyperlink{AudioFile_8h_a24ed57f869bfefdef1bed0a033886d8e}{Wav\+Audio\+Format}} \{ \newline
+\mbox{\hyperlink{AudioFile_8h_a24ed57f869bfefdef1bed0a033886d8ea91062305c293c8f87879282035b9e982}{PCM}} = 0x0001
+, \mbox{\hyperlink{AudioFile_8h_a24ed57f869bfefdef1bed0a033886d8eaf48e2c55df672bab9d55c60af50a7181}{IEEEFloat}} = 0x0003
+, \mbox{\hyperlink{AudioFile_8h_a24ed57f869bfefdef1bed0a033886d8ea6a355409829949f68b750116a8583fe2}{ALaw}} = 0x0006
+, \mbox{\hyperlink{AudioFile_8h_a24ed57f869bfefdef1bed0a033886d8ea730c7411a2c9edcad21808aea0a225d8}{MULaw}} = 0x0007
 , \newline
-{\bfseries Extensible} = 0x\+FFFE
+\mbox{\hyperlink{AudioFile_8h_a24ed57f869bfefdef1bed0a033886d8ea3399988804e27576467357a9fd8fbf92}{Extensible}} = 0x\+FFFE
  \}
 \item 
-\mbox{\Hypertarget{AudioFile_8h_a526ed66f20752002a63ee72e2e350d7d}\label{AudioFile_8h_a526ed66f20752002a63ee72e2e350d7d}} 
-enum {\bfseries AIFFAudio\+Format} \{ {\bfseries Uncompressed}
-, {\bfseries Compressed}
-, {\bfseries Error}
-, {\bfseries Error}
+enum \mbox{\hyperlink{AudioFile_8h_a526ed66f20752002a63ee72e2e350d7d}{AIFFAudio\+Format}} \{ \mbox{\hyperlink{AudioFile_8h_a526ed66f20752002a63ee72e2e350d7da8ff322ff580065823204d6a61d90f9b3}{Uncompressed}}
+, \mbox{\hyperlink{AudioFile_8h_a526ed66f20752002a63ee72e2e350d7da4e27fd9489beea00d95846abc48ab83e}{Compressed}}
+, \mbox{\hyperlink{AudioFile_8h_a526ed66f20752002a63ee72e2e350d7da4dfd42ec49d09d8c6555c218301cc30f}{Error}}
+, \mbox{\hyperlink{AudioFile_8h_a526ed66f20752002a63ee72e2e350d7da902b0d55fddef6f8d651fe1035b7d4bd}{Error}}
  \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unordered\+\_\+map$<$ uint32\+\_\+t, std\+::vector$<$ uint8\+\_\+t $>$ $>$ \mbox{\hyperlink{AudioFile_8h_abf9b30998d0448afa3d74af3ac87eb67}{aiff\+Sample\+Rate\+Table}}
 \end{DoxyCompactItemize}
 
 
@@ -63,10 +82,113 @@ The above copyright notice and this permission notice shall be included in all c
 THE SOFTWARE IS PROVIDED \char`\"{}\+AS IS\char`\"{}, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. 
 
 \doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{AudioFile_8h_a526ed66f20752002a63ee72e2e350d7d}\label{AudioFile_8h_a526ed66f20752002a63ee72e2e350d7d}} 
+\index{AudioFile.h@{AudioFile.h}!AIFFAudioFormat@{AIFFAudioFormat}}
+\index{AIFFAudioFormat@{AIFFAudioFormat}!AudioFile.h@{AudioFile.h}}
+\doxysubsubsection{\texorpdfstring{AIFFAudioFormat}{AIFFAudioFormat}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{AudioFile_8h_a526ed66f20752002a63ee72e2e350d7d}{AIFFAudio\+Format}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Uncompressed@{Uncompressed}!AudioFile.h@{AudioFile.h}}\index{AudioFile.h@{AudioFile.h}!Uncompressed@{Uncompressed}}}\mbox{\Hypertarget{AudioFile_8h_a526ed66f20752002a63ee72e2e350d7da8ff322ff580065823204d6a61d90f9b3}\label{AudioFile_8h_a526ed66f20752002a63ee72e2e350d7da8ff322ff580065823204d6a61d90f9b3}} 
+Uncompressed&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Compressed@{Compressed}!AudioFile.h@{AudioFile.h}}\index{AudioFile.h@{AudioFile.h}!Compressed@{Compressed}}}\mbox{\Hypertarget{AudioFile_8h_a526ed66f20752002a63ee72e2e350d7da4e27fd9489beea00d95846abc48ab83e}\label{AudioFile_8h_a526ed66f20752002a63ee72e2e350d7da4e27fd9489beea00d95846abc48ab83e}} 
+Compressed&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Error@{Error}!AudioFile.h@{AudioFile.h}}\index{AudioFile.h@{AudioFile.h}!Error@{Error}}}\mbox{\Hypertarget{AudioFile_8h_a526ed66f20752002a63ee72e2e350d7da4dfd42ec49d09d8c6555c218301cc30f}\label{AudioFile_8h_a526ed66f20752002a63ee72e2e350d7da4dfd42ec49d09d8c6555c218301cc30f}} 
+Error&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Error@{Error}!AudioFile.h@{AudioFile.h}}\index{AudioFile.h@{AudioFile.h}!Error@{Error}}}\mbox{\Hypertarget{AudioFile_8h_a526ed66f20752002a63ee72e2e350d7da902b0d55fddef6f8d651fe1035b7d4bd}\label{AudioFile_8h_a526ed66f20752002a63ee72e2e350d7da902b0d55fddef6f8d651fe1035b7d4bd}} 
+Error&\\
+\hline
+
+\end{DoxyEnumFields}
 \mbox{\Hypertarget{AudioFile_8h_ad18559d169602e85d0ad68da6ef8593f}\label{AudioFile_8h_ad18559d169602e85d0ad68da6ef8593f}} 
 \index{AudioFile.h@{AudioFile.h}!AudioFileFormat@{AudioFileFormat}}
 \index{AudioFileFormat@{AudioFileFormat}!AudioFile.h@{AudioFile.h}}
 \doxysubsubsection{\texorpdfstring{AudioFileFormat}{AudioFileFormat}}
 {\footnotesize\ttfamily enum \mbox{\hyperlink{AudioFile_8h_ad18559d169602e85d0ad68da6ef8593f}{Audio\+File\+Format}}\hspace{0.3cm}{\ttfamily [strong]}}
 
-The different types of audio file, plus some other types to indicate a failure to load a file, or that one hasn\textquotesingle{}t been loaded yet 
+The different types of audio file, plus some other types to indicate a failure to load a file, or that one hasn\textquotesingle{}t been loaded yet \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Error@{Error}!AudioFile.h@{AudioFile.h}}\index{AudioFile.h@{AudioFile.h}!Error@{Error}}}\mbox{\Hypertarget{AudioFile_8h_a526ed66f20752002a63ee72e2e350d7da902b0d55fddef6f8d651fe1035b7d4bd}\label{AudioFile_8h_a526ed66f20752002a63ee72e2e350d7da902b0d55fddef6f8d651fe1035b7d4bd}} 
+Error&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NotLoaded@{NotLoaded}!AudioFile.h@{AudioFile.h}}\index{AudioFile.h@{AudioFile.h}!NotLoaded@{NotLoaded}}}\mbox{\Hypertarget{AudioFile_8h_ad18559d169602e85d0ad68da6ef8593fa5111e24c1ecc6266ce0de4b4dc42033b}\label{AudioFile_8h_ad18559d169602e85d0ad68da6ef8593fa5111e24c1ecc6266ce0de4b4dc42033b}} 
+Not\+Loaded&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Wave@{Wave}!AudioFile.h@{AudioFile.h}}\index{AudioFile.h@{AudioFile.h}!Wave@{Wave}}}\mbox{\Hypertarget{AudioFile_8h_ad18559d169602e85d0ad68da6ef8593fad911b34823c7674c292556dc56148c27}\label{AudioFile_8h_ad18559d169602e85d0ad68da6ef8593fad911b34823c7674c292556dc56148c27}} 
+Wave&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Aiff@{Aiff}!AudioFile.h@{AudioFile.h}}\index{AudioFile.h@{AudioFile.h}!Aiff@{Aiff}}}\mbox{\Hypertarget{AudioFile_8h_ad18559d169602e85d0ad68da6ef8593fac2271ab764905d770a81d0920f8c6aaf}\label{AudioFile_8h_ad18559d169602e85d0ad68da6ef8593fac2271ab764905d770a81d0920f8c6aaf}} 
+Aiff&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{AudioFile_8h_a24ed57f869bfefdef1bed0a033886d8e}\label{AudioFile_8h_a24ed57f869bfefdef1bed0a033886d8e}} 
+\index{AudioFile.h@{AudioFile.h}!WavAudioFormat@{WavAudioFormat}}
+\index{WavAudioFormat@{WavAudioFormat}!AudioFile.h@{AudioFile.h}}
+\doxysubsubsection{\texorpdfstring{WavAudioFormat}{WavAudioFormat}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{AudioFile_8h_a24ed57f869bfefdef1bed0a033886d8e}{Wav\+Audio\+Format}}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PCM@{PCM}!AudioFile.h@{AudioFile.h}}\index{AudioFile.h@{AudioFile.h}!PCM@{PCM}}}\mbox{\Hypertarget{AudioFile_8h_a24ed57f869bfefdef1bed0a033886d8ea91062305c293c8f87879282035b9e982}\label{AudioFile_8h_a24ed57f869bfefdef1bed0a033886d8ea91062305c293c8f87879282035b9e982}} 
+PCM&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IEEEFloat@{IEEEFloat}!AudioFile.h@{AudioFile.h}}\index{AudioFile.h@{AudioFile.h}!IEEEFloat@{IEEEFloat}}}\mbox{\Hypertarget{AudioFile_8h_a24ed57f869bfefdef1bed0a033886d8eaf48e2c55df672bab9d55c60af50a7181}\label{AudioFile_8h_a24ed57f869bfefdef1bed0a033886d8eaf48e2c55df672bab9d55c60af50a7181}} 
+IEEEFloat&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ALaw@{ALaw}!AudioFile.h@{AudioFile.h}}\index{AudioFile.h@{AudioFile.h}!ALaw@{ALaw}}}\mbox{\Hypertarget{AudioFile_8h_a24ed57f869bfefdef1bed0a033886d8ea6a355409829949f68b750116a8583fe2}\label{AudioFile_8h_a24ed57f869bfefdef1bed0a033886d8ea6a355409829949f68b750116a8583fe2}} 
+ALaw&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MULaw@{MULaw}!AudioFile.h@{AudioFile.h}}\index{AudioFile.h@{AudioFile.h}!MULaw@{MULaw}}}\mbox{\Hypertarget{AudioFile_8h_a24ed57f869bfefdef1bed0a033886d8ea730c7411a2c9edcad21808aea0a225d8}\label{AudioFile_8h_a24ed57f869bfefdef1bed0a033886d8ea730c7411a2c9edcad21808aea0a225d8}} 
+MULaw&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Extensible@{Extensible}!AudioFile.h@{AudioFile.h}}\index{AudioFile.h@{AudioFile.h}!Extensible@{Extensible}}}\mbox{\Hypertarget{AudioFile_8h_a24ed57f869bfefdef1bed0a033886d8ea3399988804e27576467357a9fd8fbf92}\label{AudioFile_8h_a24ed57f869bfefdef1bed0a033886d8ea3399988804e27576467357a9fd8fbf92}} 
+Extensible&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{AudioFile_8h_abf9b30998d0448afa3d74af3ac87eb67}\label{AudioFile_8h_abf9b30998d0448afa3d74af3ac87eb67}} 
+\index{AudioFile.h@{AudioFile.h}!aiffSampleRateTable@{aiffSampleRateTable}}
+\index{aiffSampleRateTable@{aiffSampleRateTable}!AudioFile.h@{AudioFile.h}}
+\doxysubsubsection{\texorpdfstring{aiffSampleRateTable}{aiffSampleRateTable}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$uint32\+\_\+t, std\+::vector$<$uint8\+\_\+t$>$ $>$ aiff\+Sample\+Rate\+Table\hspace{0.3cm}{\ttfamily [static]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{    \{8000, \{64, 11, 250, 0, 0, 0, 0, 0, 0, 0\}\},}
+\DoxyCodeLine{    \{11025, \{64, 12, 172, 68, 0, 0, 0, 0, 0, 0\}\},}
+\DoxyCodeLine{    \{16000, \{64, 12, 250, 0, 0, 0, 0, 0, 0, 0\}\},}
+\DoxyCodeLine{    \{22050, \{64, 13, 172, 68, 0, 0, 0, 0, 0, 0\}\},}
+\DoxyCodeLine{    \{32000, \{64, 13, 250, 0, 0, 0, 0, 0, 0, 0\}\},}
+\DoxyCodeLine{    \{37800, \{64, 14, 147, 168, 0, 0, 0, 0, 0, 0\}\},}
+\DoxyCodeLine{    \{44056, \{64, 14, 172, 24, 0, 0, 0, 0, 0, 0\}\},}
+\DoxyCodeLine{    \{44100, \{64, 14, 172, 68, 0, 0, 0, 0, 0, 0\}\},}
+\DoxyCodeLine{    \{47250, \{64, 14, 184, 146, 0, 0, 0, 0, 0, 0\}\},}
+\DoxyCodeLine{    \{48000, \{64, 14, 187, 128, 0, 0, 0, 0, 0, 0\}\},}
+\DoxyCodeLine{    \{50000, \{64, 14, 195, 80, 0, 0, 0, 0, 0, 0\}\},}
+\DoxyCodeLine{    \{50400, \{64, 14, 196, 224, 0, 0, 0, 0, 0, 0\}\},}
+\DoxyCodeLine{    \{88200, \{64, 15, 172, 68, 0, 0, 0, 0, 0, 0\}\},}
+\DoxyCodeLine{    \{96000, \{64, 15, 187, 128, 0, 0, 0, 0, 0, 0\}\},}
+\DoxyCodeLine{    \{176400, \{64, 16, 172, 68, 0, 0, 0, 0, 0, 0\}\},}
+\DoxyCodeLine{    \{192000, \{64, 16, 187, 128, 0, 0, 0, 0, 0, 0\}\},}
+\DoxyCodeLine{    \{352800, \{64, 17, 172, 68, 0, 0, 0, 0, 0, 0\}\},}
+\DoxyCodeLine{    \{2822400, \{64, 20, 172, 68, 0, 0, 0, 0, 0, 0\}\},}
+\DoxyCodeLine{    \{5644800, \{64, 21, 172, 68, 0, 0, 0, 0, 0, 0\}\}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}

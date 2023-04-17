@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['pingpongbuffer_122',['PingPongBuffer',['../classPingPongBuffer.html#a29b4d090ed3f4d5455befa7bcaaa651a',1,'PingPongBuffer']]],
-  ['predict_123',['predict',['../classGenrePredictor.html#ac5f136c1e1ef35cbcef0ad8289e369ef',1,'GenrePredictor']]],
-  ['printsummary_124',['printSummary',['../classAudioFile.html#a7b88c68133a9ac92149c58499e026360',1,'AudioFile']]],
-  ['prompt_5fdevice_5fselection_125',['prompt_device_selection',['../classAudioCapture.html#a7d2b75c5c63c68d607711fdad95300ec',1,'AudioCapture']]]
+  ['is_5ffull_504',['is_full',['../classPingPongBuffer.html#a81d7a1aa9b91bf7a9fcafb46e7f5a28b',1,'PingPongBuffer']]],
+  ['ismono_505',['isMono',['../classAudioFile.html#a1057326fd2c2eca7cc7937f811868cf1',1,'AudioFile']]],
+  ['isstereo_506',['isStereo',['../classAudioFile.html#a380a188d95f8f23b7622dfe222a7e8f6',1,'AudioFile']]]
 ];

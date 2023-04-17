@@ -65,6 +65,10 @@ $(function() {
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-methods">Private Member Functions</a> &#124;
+<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
+<a href="#pri-attribs">Private Attributes</a> &#124;
+<a href="#pri-static-attribs">Static Private Attributes</a> &#124;
 <a href="classAudioCapture-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">AudioCapture Class Reference</div>  </div>
@@ -75,11 +79,19 @@ $(function() {
  <a href="classAudioCapture.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="AudioCapture_8h_source.html">AudioCapture.h</a>&gt;</code></p>
+<div class="dynheader">
+Collaboration diagram for AudioCapture:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAudioCapture__coll__graph.png" border="0" usemap="#aAudioCapture_coll__map" alt="Collaboration graph"/></div>
+<map name="aAudioCapture_coll__map" id="aAudioCapture_coll__map">
+<area shape="rect" title="A wrapper around the asound library for capturing audio." alt="" coords="11,95,121,121"/>
+<area shape="rect" href="classPingPongBuffer.html" title="Special buffer calls callback when full." alt="" coords="5,5,127,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a367a8ff1960c7e886ced71a2191057e3"><td class="memItemLeft" align="right" valign="top"><a id="a367a8ff1960c7e886ced71a2191057e3"></a>
-typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><b>DataAvailableCallback</b>) (const std::vector&lt; short &gt; &amp;)</td></tr>
+<tr class="memitem:a367a8ff1960c7e886ced71a2191057e3"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioCapture.html#a367a8ff1960c7e886ced71a2191057e3">DataAvailableCallback</a>) (const std::vector&lt; short &gt; &amp;)</td></tr>
 <tr class="separator:a367a8ff1960c7e886ced71a2191057e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -87,35 +99,86 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a19c04e27f31f937ae0d062b2dc28f8d7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioCapture.html#a19c04e27f31f937ae0d062b2dc28f8d7">AudioCapture</a> (std::string device_name)</td></tr>
 <tr class="memdesc:a19c04e27f31f937ae0d062b2dc28f8d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for this class.  <a href="classAudioCapture.html#a19c04e27f31f937ae0d062b2dc28f8d7">More...</a><br /></td></tr>
 <tr class="separator:a19c04e27f31f937ae0d062b2dc28f8d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc7ce55a0c63f8723decf6fb06f68203"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioCapture.html#adc7ce55a0c63f8723decf6fb06f68203">register_callback</a> (DataAvailableCallback cb)</td></tr>
+<tr class="memitem:adc7ce55a0c63f8723decf6fb06f68203"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioCapture.html#adc7ce55a0c63f8723decf6fb06f68203">register_callback</a> (<a class="el" href="classAudioCapture.html#a367a8ff1960c7e886ced71a2191057e3">DataAvailableCallback</a> cb)</td></tr>
 <tr class="memdesc:adc7ce55a0c63f8723decf6fb06f68203"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers callback for audio data.  <a href="classAudioCapture.html#adc7ce55a0c63f8723decf6fb06f68203">More...</a><br /></td></tr>
 <tr class="separator:adc7ce55a0c63f8723decf6fb06f68203"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d2b75c5c63c68d607711fdad95300ec"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioCapture.html#a7d2b75c5c63c68d607711fdad95300ec">prompt_device_selection</a> ()</td></tr>
 <tr class="memdesc:a7d2b75c5c63c68d607711fdad95300ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prompts user to select audio device.  <a href="classAudioCapture.html#a7d2b75c5c63c68d607711fdad95300ec">More...</a><br /></td></tr>
 <tr class="separator:a7d2b75c5c63c68d607711fdad95300ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61dc26c4719aa7ef7cabfab8aed5e6a1"><td class="memItemLeft" align="right" valign="top"><a id="a61dc26c4719aa7ef7cabfab8aed5e6a1"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioCapture.html#a61dc26c4719aa7ef7cabfab8aed5e6a1">~AudioCapture</a> ()</td></tr>
-<tr class="memdesc:a61dc26c4719aa7ef7cabfab8aed5e6a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for this class. <br /></td></tr>
+<tr class="memitem:a61dc26c4719aa7ef7cabfab8aed5e6a1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioCapture.html#a61dc26c4719aa7ef7cabfab8aed5e6a1">~AudioCapture</a> ()</td></tr>
+<tr class="memdesc:a61dc26c4719aa7ef7cabfab8aed5e6a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor for this class.  <a href="classAudioCapture.html#a61dc26c4719aa7ef7cabfab8aed5e6a1">More...</a><br /></td></tr>
 <tr class="separator:a61dc26c4719aa7ef7cabfab8aed5e6a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:ae00c9795e6d5869ada0b4714fe8eff60"><td class="memItemLeft" align="right" valign="top"><a id="ae00c9795e6d5869ada0b4714fe8eff60"></a>
-std::thread&#160;</td><td class="memItemRight" valign="bottom"><b>captureThread</b></td></tr>
+<tr class="memitem:ae00c9795e6d5869ada0b4714fe8eff60"><td class="memItemLeft" align="right" valign="top">std::thread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioCapture.html#ae00c9795e6d5869ada0b4714fe8eff60">captureThread</a></td></tr>
 <tr class="separator:ae00c9795e6d5869ada0b4714fe8eff60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bdb57c2e08893f0078419f4f22ad9aa"><td class="memItemLeft" align="right" valign="top"><a id="a8bdb57c2e08893f0078419f4f22ad9aa"></a>
-std::mutex&#160;</td><td class="memItemRight" valign="bottom"><b>captureMutex</b></td></tr>
+<tr class="memitem:a8bdb57c2e08893f0078419f4f22ad9aa"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioCapture.html#a8bdb57c2e08893f0078419f4f22ad9aa">captureMutex</a></td></tr>
 <tr class="separator:a8bdb57c2e08893f0078419f4f22ad9aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bff04004db98d8416a95f1529ae1468"><td class="memItemLeft" align="right" valign="top"><a id="a9bff04004db98d8416a95f1529ae1468"></a>
-std::condition_variable&#160;</td><td class="memItemRight" valign="bottom"><b>captureCv</b></td></tr>
+<tr class="memitem:a9bff04004db98d8416a95f1529ae1468"><td class="memItemLeft" align="right" valign="top">std::condition_variable&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioCapture.html#a9bff04004db98d8416a95f1529ae1468">captureCv</a></td></tr>
 <tr class="separator:a9bff04004db98d8416a95f1529ae1468"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c39558d6f5aeb2687b02d5501305a34"><td class="memItemLeft" align="right" valign="top"><a id="a8c39558d6f5aeb2687b02d5501305a34"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>captureReady</b></td></tr>
+<tr class="memitem:a8c39558d6f5aeb2687b02d5501305a34"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioCapture.html#a8c39558d6f5aeb2687b02d5501305a34">captureReady</a></td></tr>
 <tr class="separator:a8c39558d6f5aeb2687b02d5501305a34"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:aa6e59de9708f239a1d6404b7e9502c8d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioCapture.html#aa6e59de9708f239a1d6404b7e9502c8d">CaptureThreadFunction</a> ()</td></tr>
+<tr class="memdesc:aa6e59de9708f239a1d6404b7e9502c8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to run the capturing loop in a separate thread.  <a href="classAudioCapture.html#aa6e59de9708f239a1d6404b7e9502c8d">More...</a><br /></td></tr>
+<tr class="separator:aa6e59de9708f239a1d6404b7e9502c8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
+Static Private Member Functions</h2></td></tr>
+<tr class="memitem:ab3896451a319def83bf57d0a8a3fde16"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioCapture.html#ab3896451a319def83bf57d0a8a3fde16">MyCallback</a> (snd_async_handler_t *<a class="el" href="classAudioCapture.html#a8f1d20333821692c4be4b1280e0d8dfe">pcm_callback</a>)</td></tr>
+<tr class="memdesc:ab3896451a319def83bf57d0a8a3fde16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function used to handle audio originating from hardware.  <a href="classAudioCapture.html#ab3896451a319def83bf57d0a8a3fde16">More...</a><br /></td></tr>
+<tr class="separator:ab3896451a319def83bf57d0a8a3fde16"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a036ebae91f17657e3c155db68a686817"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioCapture.html#a036ebae91f17657e3c155db68a686817">call_callbacks</a> (const std::vector&lt; short &gt; &amp;full_buffer, int size)</td></tr>
+<tr class="memdesc:a036ebae91f17657e3c155db68a686817"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calls all callback functions with audio data when <a class="el" href="classPingPongBuffer.html" title="Special buffer calls callback when full.">PingPongBuffer</a> is full.  <a href="classAudioCapture.html#a036ebae91f17657e3c155db68a686817">More...</a><br /></td></tr>
+<tr class="separator:a036ebae91f17657e3c155db68a686817"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a75533d9c293ba98636d7872581001180"><td class="memItemLeft" align="right" valign="top">std::ofstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioCapture.html#a75533d9c293ba98636d7872581001180">audioFile</a></td></tr>
+<tr class="separator:a75533d9c293ba98636d7872581001180"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95157f656d7fe951e00ead6609bbed3f"><td class="memItemLeft" align="right" valign="top">snd_pcm_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioCapture.html#a95157f656d7fe951e00ead6609bbed3f">handle</a></td></tr>
+<tr class="separator:a95157f656d7fe951e00ead6609bbed3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f1d20333821692c4be4b1280e0d8dfe"><td class="memItemLeft" align="right" valign="top">snd_async_handler_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioCapture.html#a8f1d20333821692c4be4b1280e0d8dfe">pcm_callback</a></td></tr>
+<tr class="separator:a8f1d20333821692c4be4b1280e0d8dfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41822a044a00e2a76bcefefb81aba0c5"><td class="memItemLeft" align="right" valign="top">std::vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioCapture.html#a41822a044a00e2a76bcefefb81aba0c5">waveform</a></td></tr>
+<tr class="separator:a41822a044a00e2a76bcefefb81aba0c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05a2e4888c557587b0df8748f217ae0e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; short &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioCapture.html#a05a2e4888c557587b0df8748f217ae0e">fftInputData</a></td></tr>
+<tr class="separator:a05a2e4888c557587b0df8748f217ae0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac871ba57a83a946011cbe43d87b4cc93"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioCapture.html#ac871ba57a83a946011cbe43d87b4cc93">tempbuffer</a></td></tr>
+<tr class="separator:ac871ba57a83a946011cbe43d87b4cc93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a85cde855dd3c9a4023a2dbf0a19e09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAudioCapture.html#a367a8ff1960c7e886ced71a2191057e3">DataAvailableCallback</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioCapture.html#a0a85cde855dd3c9a4023a2dbf0a19e09">callback</a></td></tr>
+<tr class="separator:a0a85cde855dd3c9a4023a2dbf0a19e09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3e11eb7753b594301cc5aa6f3d23398"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPingPongBuffer.html">PingPongBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioCapture.html#ac3e11eb7753b594301cc5aa6f3d23398">buffer_</a></td></tr>
+<tr class="separator:ac3e11eb7753b594301cc5aa6f3d23398"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Static Private Attributes</h2></td></tr>
+<tr class="memitem:a7e0d2439825075985358d61c7ac7d98f"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="classAudioCapture.html#a367a8ff1960c7e886ced71a2191057e3">DataAvailableCallback</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioCapture.html#a7e0d2439825075985358d61c7ac7d98f">callbacks</a></td></tr>
+<tr class="separator:a7e0d2439825075985358d61c7ac7d98f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6e56bdf9f60b338069101dfc60fe26e"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAudioCapture.html#af6e56bdf9f60b338069101dfc60fe26e">quit</a> = false</td></tr>
+<tr class="separator:af6e56bdf9f60b338069101dfc60fe26e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A wrapper around the asound library for capturing audio. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a367a8ff1960c7e886ced71a2191057e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a367a8ff1960c7e886ced71a2191057e3">&#9670;&nbsp;</a></span>DataAvailableCallback</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* AudioCapture::DataAvailableCallback) (const std::vector&lt; short &gt; &amp;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a19c04e27f31f937ae0d062b2dc28f8d7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a19c04e27f31f937ae0d062b2dc28f8d7">&#9670;&nbsp;</a></span>AudioCapture()</h2>
 
@@ -139,10 +202,189 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>captureReady</b></td>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAudioCapture_a19c04e27f31f937ae0d062b2dc28f8d7_cgraph.png" border="0" usemap="#aclassAudioCapture_a19c04e27f31f937ae0d062b2dc28f8d7_cgraph" alt=""/></div>
+<map name="aclassAudioCapture_a19c04e27f31f937ae0d062b2dc28f8d7_cgraph" id="aclassAudioCapture_a19c04e27f31f937ae0d062b2dc28f8d7_cgraph">
+<area shape="rect" title="Constructor for this class." alt="" coords="5,137,212,163"/>
+<area shape="rect" href="classAudioCapture.html#a036ebae91f17657e3c155db68a686817" title="Calls all callback functions with audio data when PingPongBuffer is full." alt="" coords="297,5,438,47"/>
+<area shape="rect" href="classAudioCapture.html#aa6e59de9708f239a1d6404b7e9502c8d" title="Function to run the capturing loop in a separate thread." alt="" coords="260,71,475,112"/>
+<area shape="rect" href="classAudioCapture.html#ab3896451a319def83bf57d0a8a3fde16" title="Callback function used to handle audio originating from hardware." alt="" coords="270,137,465,163"/>
+<area shape="rect" href="classAudioCapture.html#a7d2b75c5c63c68d607711fdad95300ec" title="Prompts user to select audio device." alt="" coords="285,188,450,229"/>
+<area shape="rect" href="classPingPongBuffer.html#a59da3ea9fc7be1c803f31245a718034f" title="Sets the registered callback to the one provided." alt="" coords="278,253,457,295"/>
+<area shape="rect" href="classPingPongBuffer.html#a3e83626083eaf81e934b21f9de0ff94d" title="Function for adding data to the PingPongBuffer." alt="" coords="523,78,712,105"/>
+<area shape="rect" href="classPingPongBuffer.html#a91ed57ba227447c3501bdcf75c719f97" title="Switches current buffer out with the other, and resets its values." alt="" coords="761,37,931,79"/>
+<area shape="rect" href="classPingPongBuffer.html#a4f7da502016c0f826220a418793baa85" title="Calls the callback registered with the class with buffer data." alt="" coords="760,103,932,144"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a61dc26c4719aa7ef7cabfab8aed5e6a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61dc26c4719aa7ef7cabfab8aed5e6a1">&#9670;&nbsp;</a></span>~AudioCapture()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">AudioCapture::~AudioCapture </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destructor for this class. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a036ebae91f17657e3c155db68a686817"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a036ebae91f17657e3c155db68a686817">&#9670;&nbsp;</a></span>call_callbacks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AudioCapture::call_callbacks </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; short &gt; &amp;&#160;</td>
+          <td class="paramname"><em>full_buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calls all callback functions with audio data when <a class="el" href="classPingPongBuffer.html" title="Special buffer calls callback when full.">PingPongBuffer</a> is full. </p>
+<p>This function reads iterates through all callbacks registered with 'register_callback'. Passes audio data from the <a class="el" href="classPingPongBuffer.html" title="Special buffer calls callback when full.">PingPongBuffer</a>, which is typically 4096 bytes. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">full_buffer</td><td>A vector containing the audio data. </td></tr>
+    <tr><td class="paramname">size</td><td>The number of elements in the audio data vector. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAudioCapture_a036ebae91f17657e3c155db68a686817_icgraph.png" border="0" usemap="#aclassAudioCapture_a036ebae91f17657e3c155db68a686817_icgraph" alt=""/></div>
+<map name="aclassAudioCapture_a036ebae91f17657e3c155db68a686817_icgraph" id="aclassAudioCapture_a036ebae91f17657e3c155db68a686817_icgraph">
+<area shape="rect" title="Calls all callback functions with audio data when PingPongBuffer is full." alt="" coords="260,5,401,47"/>
+<area shape="rect" href="classAudioCapture.html#a19c04e27f31f937ae0d062b2dc28f8d7" title="Constructor for this class." alt="" coords="5,13,212,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa6e59de9708f239a1d6404b7e9502c8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6e59de9708f239a1d6404b7e9502c8d">&#9670;&nbsp;</a></span>CaptureThreadFunction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AudioCapture::CaptureThreadFunction </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to run the capturing loop in a separate thread. </p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAudioCapture_aa6e59de9708f239a1d6404b7e9502c8d_cgraph.png" border="0" usemap="#aclassAudioCapture_aa6e59de9708f239a1d6404b7e9502c8d_cgraph" alt=""/></div>
+<map name="aclassAudioCapture_aa6e59de9708f239a1d6404b7e9502c8d_cgraph" id="aclassAudioCapture_aa6e59de9708f239a1d6404b7e9502c8d_cgraph">
+<area shape="rect" title="Function to run the capturing loop in a separate thread." alt="" coords="5,39,220,80"/>
+<area shape="rect" href="classPingPongBuffer.html#a3e83626083eaf81e934b21f9de0ff94d" title="Function for adding data to the PingPongBuffer." alt="" coords="268,46,457,73"/>
+<area shape="rect" href="classPingPongBuffer.html#a91ed57ba227447c3501bdcf75c719f97" title="Switches current buffer out with the other, and resets its values." alt="" coords="506,5,677,47"/>
+<area shape="rect" href="classPingPongBuffer.html#a4f7da502016c0f826220a418793baa85" title="Calls the callback registered with the class with buffer data." alt="" coords="505,71,677,112"/>
+</map>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAudioCapture_aa6e59de9708f239a1d6404b7e9502c8d_icgraph.png" border="0" usemap="#aclassAudioCapture_aa6e59de9708f239a1d6404b7e9502c8d_icgraph" alt=""/></div>
+<map name="aclassAudioCapture_aa6e59de9708f239a1d6404b7e9502c8d_icgraph" id="aclassAudioCapture_aa6e59de9708f239a1d6404b7e9502c8d_icgraph">
+<area shape="rect" title="Function to run the capturing loop in a separate thread." alt="" coords="260,5,475,47"/>
+<area shape="rect" href="classAudioCapture.html#a19c04e27f31f937ae0d062b2dc28f8d7" title="Constructor for this class." alt="" coords="5,13,212,39"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ab3896451a319def83bf57d0a8a3fde16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3896451a319def83bf57d0a8a3fde16">&#9670;&nbsp;</a></span>MyCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AudioCapture::MyCallback </td>
+          <td>(</td>
+          <td class="paramtype">snd_async_handler_t *&#160;</td>
+          <td class="paramname"><em>pcm_callback</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Callback function used to handle audio originating from hardware. </p>
+<p>This function reads the available audio data into a <a class="el" href="classPingPongBuffer.html" title="Special buffer calls callback when full.">PingPongBuffer</a>. Optionally, it renders a visualisation of the audio data. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pcm_callback</td><td>A pointer to the ALSA asynchronous callback handler. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAudioCapture_ab3896451a319def83bf57d0a8a3fde16_icgraph.png" border="0" usemap="#aclassAudioCapture_ab3896451a319def83bf57d0a8a3fde16_icgraph" alt=""/></div>
+<map name="aclassAudioCapture_ab3896451a319def83bf57d0a8a3fde16_icgraph" id="aclassAudioCapture_ab3896451a319def83bf57d0a8a3fde16_icgraph">
+<area shape="rect" title="Callback function used to handle audio originating from hardware." alt="" coords="260,5,455,32"/>
+<area shape="rect" href="classAudioCapture.html#a19c04e27f31f937ae0d062b2dc28f8d7" title="Constructor for this class." alt="" coords="5,5,212,32"/>
+</map>
+</div>
+
+</div>
+</div>
 <a id="a7d2b75c5c63c68d607711fdad95300ec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7d2b75c5c63c68d607711fdad95300ec">&#9670;&nbsp;</a></span>prompt_device_selection()</h2>
 
@@ -160,6 +402,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>captureReady</b></td>
 
 <p>Prompts user to select audio device. </p>
 <p>Lists all discoverable audio devices on system and prompts user to input a number selection. </p><dl class="section return"><dt>Returns</dt><dd>The name of the selected audio device. </dd></dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAudioCapture_a7d2b75c5c63c68d607711fdad95300ec_icgraph.png" border="0" usemap="#aclassAudioCapture_a7d2b75c5c63c68d607711fdad95300ec_icgraph" alt=""/></div>
+<map name="aclassAudioCapture_a7d2b75c5c63c68d607711fdad95300ec_icgraph" id="aclassAudioCapture_a7d2b75c5c63c68d607711fdad95300ec_icgraph">
+<area shape="rect" title="Prompts user to select audio device." alt="" coords="260,5,425,47"/>
+<area shape="rect" href="classAudioCapture.html#a19c04e27f31f937ae0d062b2dc28f8d7" title="Constructor for this class." alt="" coords="5,13,212,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -172,7 +423,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>captureReady</b></td>
         <tr>
           <td class="memname">void AudioCapture::register_callback </td>
           <td>(</td>
-          <td class="paramtype">DataAvailableCallback&#160;</td>
+          <td class="paramtype"><a class="el" href="classAudioCapture.html#a367a8ff1960c7e886ced71a2191057e3">DataAvailableCallback</a>&#160;</td>
           <td class="paramname"><em>cb</em></td><td>)</td>
           <td></td>
         </tr>
@@ -186,12 +437,299 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>captureReady</b></td>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classAudioCapture_adc7ce55a0c63f8723decf6fb06f68203_icgraph.png" border="0" usemap="#aclassAudioCapture_adc7ce55a0c63f8723decf6fb06f68203_icgraph" alt=""/></div>
+<map name="aclassAudioCapture_adc7ce55a0c63f8723decf6fb06f68203_icgraph" id="aclassAudioCapture_adc7ce55a0c63f8723decf6fb06f68203_icgraph">
+<area shape="rect" title="Registers callback for audio data." alt="" coords="212,23,380,65"/>
+<area shape="rect" href="SynaesthetiQ-audiocapture_2src_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title=" " alt="" coords="57,5,112,32"/>
+<area shape="rect" href="classVisualiser.html#a9c5584fbd8f70548a6694e3a89c60538" title=" " alt="" coords="5,56,164,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a75533d9c293ba98636d7872581001180"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75533d9c293ba98636d7872581001180">&#9670;&nbsp;</a></span>audioFile</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ofstream AudioCapture::audioFile</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac3e11eb7753b594301cc5aa6f3d23398"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3e11eb7753b594301cc5aa6f3d23398">&#9670;&nbsp;</a></span>buffer_</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPingPongBuffer.html">PingPongBuffer</a> AudioCapture::buffer_</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0a85cde855dd3c9a4023a2dbf0a19e09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a85cde855dd3c9a4023a2dbf0a19e09">&#9670;&nbsp;</a></span>callback</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classAudioCapture.html#a367a8ff1960c7e886ced71a2191057e3">DataAvailableCallback</a> AudioCapture::callback</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7e0d2439825075985358d61c7ac7d98f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e0d2439825075985358d61c7ac7d98f">&#9670;&nbsp;</a></span>callbacks</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="classAudioCapture.html#a367a8ff1960c7e886ced71a2191057e3">AudioCapture::DataAvailableCallback</a> &gt; AudioCapture::callbacks</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9bff04004db98d8416a95f1529ae1468"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bff04004db98d8416a95f1529ae1468">&#9670;&nbsp;</a></span>captureCv</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::condition_variable AudioCapture::captureCv</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8bdb57c2e08893f0078419f4f22ad9aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bdb57c2e08893f0078419f4f22ad9aa">&#9670;&nbsp;</a></span>captureMutex</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mutex AudioCapture::captureMutex</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8c39558d6f5aeb2687b02d5501305a34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8c39558d6f5aeb2687b02d5501305a34">&#9670;&nbsp;</a></span>captureReady</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AudioCapture::captureReady</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae00c9795e6d5869ada0b4714fe8eff60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae00c9795e6d5869ada0b4714fe8eff60">&#9670;&nbsp;</a></span>captureThread</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::thread AudioCapture::captureThread</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a05a2e4888c557587b0df8748f217ae0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05a2e4888c557587b0df8748f217ae0e">&#9670;&nbsp;</a></span>fftInputData</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;short&gt; AudioCapture::fftInputData</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a95157f656d7fe951e00ead6609bbed3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95157f656d7fe951e00ead6609bbed3f">&#9670;&nbsp;</a></span>handle</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">snd_pcm_t* AudioCapture::handle</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a8f1d20333821692c4be4b1280e0d8dfe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f1d20333821692c4be4b1280e0d8dfe">&#9670;&nbsp;</a></span>pcm_callback</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">snd_async_handler_t* AudioCapture::pcm_callback</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af6e56bdf9f60b338069101dfc60fe26e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6e56bdf9f60b338069101dfc60fe26e">&#9670;&nbsp;</a></span>quit</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool AudioCapture::quit = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac871ba57a83a946011cbe43d87b4cc93"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac871ba57a83a946011cbe43d87b4cc93">&#9670;&nbsp;</a></span>tempbuffer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; AudioCapture::tempbuffer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a41822a044a00e2a76bcefefb81aba0c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41822a044a00e2a76bcefefb81aba0c5">&#9670;&nbsp;</a></span>waveform</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;float&gt; AudioCapture::waveform</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/ross/Documents/git/SynaesthetiQ-PuppetMaster/src/SynaesthetiQ-audiocapture/src/AudioCapture/<a class="el" href="AudioCapture_8h_source.html">AudioCapture.h</a></li>
-<li>/home/ross/Documents/git/SynaesthetiQ-PuppetMaster/src/SynaesthetiQ-audiocapture/src/AudioCapture/AudioCapture.cpp</li>
+<li>/home/ross/Documents/git/SynaesthetiQ-PuppetMaster/src/SynaesthetiQ-audiocapture/src/AudioCapture/<a class="el" href="AudioCapture_8cpp.html">AudioCapture.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

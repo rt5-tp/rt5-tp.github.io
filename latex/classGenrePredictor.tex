@@ -12,14 +12,17 @@ Classifies music into one of 10 genres using a web API call.
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classGenrePredictor_aafb76c3ae2f5e1afea5b92666dda3c28}\label{classGenrePredictor_aafb76c3ae2f5e1afea5b92666dda3c28}} 
 \mbox{\hyperlink{classGenrePredictor_aafb76c3ae2f5e1afea5b92666dda3c28}{Genre\+Predictor}} ()
 \begin{DoxyCompactList}\small\item\em Constructor of class, which initialises curl for requests. \end{DoxyCompactList}\item 
 vector$<$ pair$<$ string, float $>$ $>$ \mbox{\hyperlink{classGenrePredictor_ac5f136c1e1ef35cbcef0ad8289e369ef}{predict}} (char $\ast$buffer, int buffer\+\_\+size)
 \begin{DoxyCompactList}\small\item\em Takes buffer of WAV audio and returns genre classifications certainties. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classGenrePredictor_ad82095e69af42cad175d4c20b82cfcbc}\label{classGenrePredictor_ad82095e69af42cad175d4c20b82cfcbc}} 
 \mbox{\hyperlink{classGenrePredictor_ad82095e69af42cad175d4c20b82cfcbc}{$\sim$\+Genre\+Predictor}} ()
 \begin{DoxyCompactList}\small\item\em Destructor of class. Cleans up resources used by curl. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static size\+\_\+t \mbox{\hyperlink{classGenrePredictor_a9f28e70bd64ad0f615ff805ed600fa6e}{write\+Function}} (void $\ast$ptr, size\+\_\+t size, size\+\_\+t nmemb, std\+::string $\ast$data)
+\begin{DoxyCompactList}\small\item\em Callback function for handling HTTP response data. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -28,6 +31,29 @@ Classifies music into one of 10 genres using a web API call.
 Makes
 
 This function reads the available audio data into a \mbox{\hyperlink{classPingPongBuffer}{Ping\+Pong\+Buffer}}. Optionally, it renders a visualisation of the audio data. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classGenrePredictor_aafb76c3ae2f5e1afea5b92666dda3c28}\label{classGenrePredictor_aafb76c3ae2f5e1afea5b92666dda3c28}} 
+\index{GenrePredictor@{GenrePredictor}!GenrePredictor@{GenrePredictor}}
+\index{GenrePredictor@{GenrePredictor}!GenrePredictor@{GenrePredictor}}
+\doxysubsubsection{\texorpdfstring{GenrePredictor()}{GenrePredictor()}}
+{\footnotesize\ttfamily Genre\+Predictor\+::\+Genre\+Predictor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor of class, which initialises curl for requests. 
+
+\mbox{\Hypertarget{classGenrePredictor_ad82095e69af42cad175d4c20b82cfcbc}\label{classGenrePredictor_ad82095e69af42cad175d4c20b82cfcbc}} 
+\index{GenrePredictor@{GenrePredictor}!````~GenrePredictor@{$\sim$GenrePredictor}}
+\index{````~GenrePredictor@{$\sim$GenrePredictor}!GenrePredictor@{GenrePredictor}}
+\doxysubsubsection{\texorpdfstring{$\sim$GenrePredictor()}{~GenrePredictor()}}
+{\footnotesize\ttfamily Genre\+Predictor\+::$\sim$\+Genre\+Predictor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor of class. Cleans up resources used by curl. 
+
+
 
 \doxysubsection{Member Function Documentation}
 \mbox{\Hypertarget{classGenrePredictor_ac5f136c1e1ef35cbcef0ad8289e369ef}\label{classGenrePredictor_ac5f136c1e1ef35cbcef0ad8289e369ef}} 
@@ -44,8 +70,26 @@ Returns vector of pairs of (genre, certainty), where genre is a string and certa
 
 Genres returned are\+: blues, classical, country, disco, hiphop, jazz, metal, pop, reggae, rock
 
-For decent predictions, audio should be $>$1 second in length. 
+For decent predictions, audio should be $>$1 second in length. Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGenrePredictor_ac5f136c1e1ef35cbcef0ad8289e369ef_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classGenrePredictor_a9f28e70bd64ad0f615ff805ed600fa6e}\label{classGenrePredictor_a9f28e70bd64ad0f615ff805ed600fa6e}} 
+\index{GenrePredictor@{GenrePredictor}!writeFunction@{writeFunction}}
+\index{writeFunction@{writeFunction}!GenrePredictor@{GenrePredictor}}
+\doxysubsubsection{\texorpdfstring{writeFunction()}{writeFunction()}}
+{\footnotesize\ttfamily static size\+\_\+t Genre\+Predictor\+::write\+Function (\begin{DoxyParamCaption}\item[{void $\ast$}]{ptr,  }\item[{size\+\_\+t}]{size,  }\item[{size\+\_\+t}]{nmemb,  }\item[{std\+::string $\ast$}]{data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+Callback function for handling HTTP response data. 
+
+Simply copies response data into output data location, without any middleware. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/audiocapture/src/\+Genre\+Classification/cpp\+\_\+genre\+\_\+classifier/src/Genre\+Predictor.\+hpp\end{DoxyCompactItemize}
+/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/audiocapture/src/\+Genre\+Classification/cpp\+\_\+genre\+\_\+classifier/src/\mbox{\hyperlink{GenrePredictor_8hpp}{Genre\+Predictor.\+hpp}}\end{DoxyCompactItemize}

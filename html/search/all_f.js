@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['_7eaudiocapture_71',['~AudioCapture',['../classAudioCapture.html#a61dc26c4719aa7ef7cabfab8aed5e6a1',1,'AudioCapture']]],
-  ['_7eenvelopefollower_72',['~EnvelopeFollower',['../classEnvelopeFollower.html#a9af86e476cf046847f8022c6949d328b',1,'EnvelopeFollower']]],
-  ['_7efftprocessor_73',['~FFTProcessor',['../classFFTProcessor.html#aa1dda95146f6ec9dedd923eaf80e7401',1,'FFTProcessor']]],
-  ['_7egenrepredictor_74',['~GenrePredictor',['../classGenrePredictor.html#ad82095e69af42cad175d4c20b82cfcbc',1,'GenrePredictor']]]
+  ['on_5fbuffer_5ffull_5fcallback_5f_202',['on_buffer_full_callback_',['../classPingPongBuffer.html#ae5714ed9b9e8d9efcae0c13e63d8700a',1,'PingPongBuffer']]],
+  ['onfftdataavailable_203',['onFFTDataAvailable',['../lowresfft__test_8cpp.html#a79c5441204fd2f6d4459115d4347cfe4',1,'onFFTDataAvailable(const std::vector&lt; double &gt; &amp;data):&#160;lowresfft_test.cpp'],['../SynaesthetiQ-audiocapture_2src_2main_8cpp.html#a79c5441204fd2f6d4459115d4347cfe4',1,'onFFTDataAvailable(const std::vector&lt; double &gt; &amp;data):&#160;main.cpp']]]
 ];

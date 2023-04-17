@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['trigger_5fcallback_149',['trigger_callback',['../classPingPongBuffer.html#a4f7da502016c0f826220a418793baa85',1,'PingPongBuffer']]]
+  ['onfftdataavailable_512',['onFFTDataAvailable',['../lowresfft__test_8cpp.html#a79c5441204fd2f6d4459115d4347cfe4',1,'onFFTDataAvailable(const std::vector&lt; double &gt; &amp;data):&#160;lowresfft_test.cpp'],['../SynaesthetiQ-audiocapture_2src_2main_8cpp.html#a79c5441204fd2f6d4459115d4347cfe4',1,'onFFTDataAvailable(const std::vector&lt; double &gt; &amp;data):&#160;main.cpp']]]
 ];

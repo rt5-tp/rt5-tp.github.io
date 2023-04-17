@@ -9,35 +9,378 @@ A class to manage the \mbox{\hyperlink{classSynaesthetiQ}{SynaesthetiQ}} and cre
 
 {\ttfamily \#include $<$synaesthetiq.\+hpp$>$}
 
+
+
+Collaboration diagram for SynaesthetiQ\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{classSynaesthetiQ__coll__graph}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classSynaesthetiQ_a758e8fce40fc98900f83ad7a9b9a2648}\label{classSynaesthetiQ_a758e8fce40fc98900f83ad7a9b9a2648}} 
 void \mbox{\hyperlink{classSynaesthetiQ_a758e8fce40fc98900f83ad7a9b9a2648}{set\+System\+Brightness}} (double Brightness)
 \begin{DoxyCompactList}\small\item\em Sets brightness of the \mbox{\hyperlink{classSynaesthetiQ}{SynaesthetiQ}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classSynaesthetiQ_ade75e0ea81944c5aa612b0427617837a}\label{classSynaesthetiQ_ade75e0ea81944c5aa612b0427617837a}} 
 double \mbox{\hyperlink{classSynaesthetiQ_ade75e0ea81944c5aa612b0427617837a}{get\+System\+Brightness}} ()
 \begin{DoxyCompactList}\small\item\em Gets brightness of the \mbox{\hyperlink{classSynaesthetiQ}{SynaesthetiQ}}. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classSynaesthetiQ_ae0d6be9c2706ce9b701a643b0793623a}\label{classSynaesthetiQ_ae0d6be9c2706ce9b701a643b0793623a}} 
+\mbox{\hyperlink{classSynaesthetiQ_a6f17567c52119a50d5587f8f2681fee9}{SynaesthetiQ}} ()
+\item 
+\mbox{\hyperlink{classSynaesthetiQ_a8e47acbbe5a56558ac96140c66b9bbe4}{$\sim$\+SynaesthetiQ}} ()
+\item 
 void \mbox{\hyperlink{classSynaesthetiQ_ae0d6be9c2706ce9b701a643b0793623a}{set\+Big\+LEDColour}} (\mbox{\hyperlink{classColour}{Colour}} colour)
 \begin{DoxyCompactList}\small\item\em Sets the colour of the top LED. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classSynaesthetiQ_a08634bd1971f17857dd4ee39bdc1a03f}\label{classSynaesthetiQ_a08634bd1971f17857dd4ee39bdc1a03f}} 
 void \mbox{\hyperlink{classSynaesthetiQ_a08634bd1971f17857dd4ee39bdc1a03f}{set\+Matrix\+Colour}} (\mbox{\hyperlink{classColour}{Colour}} colour)
 \begin{DoxyCompactList}\small\item\em Sets the colour of the matrix. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{classSynaesthetiQ_acc5f189832116b91312edafed3915c79}{set\+Matrix\+Pixel\+Colour}} (int x, int y, \mbox{\hyperlink{classColour}{Colour}} colour)
 \begin{DoxyCompactList}\small\item\em Sets the colour of an individual LED on the matrix using x, y coordinates. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classSynaesthetiQ_ac4660ef2d240ccc88370e33d3ea68caf}\label{classSynaesthetiQ_ac4660ef2d240ccc88370e33d3ea68caf}} 
 void \mbox{\hyperlink{classSynaesthetiQ_ac4660ef2d240ccc88370e33d3ea68caf}{clear\+Output}} ()
 \begin{DoxyCompactList}\small\item\em Turns off all the \mbox{\hyperlink{classSynaesthetiQ}{SynaesthetiQ}} LEDs. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classSynaesthetiQ_a8273c69b060be5345798ac2c458b3d23}\label{classSynaesthetiQ_a8273c69b060be5345798ac2c458b3d23}} 
 int \mbox{\hyperlink{classSynaesthetiQ_a8273c69b060be5345798ac2c458b3d23}{render}} ()
 \begin{DoxyCompactList}\small\item\em Updates the SynasthetiQ with the colours set, while limiting current. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classColour}{Colour}} \mbox{\hyperlink{classSynaesthetiQ_ab87111b52b512ba15a56fc990a1e7ee2}{basic\+Matrix\+Limit}} (\mbox{\hyperlink{classColour}{Colour}} Colour\+In)
+\item 
+\mbox{\hyperlink{classColour}{Colour}} \mbox{\hyperlink{classSynaesthetiQ_a89a5378445657cc1a65b7b092d8e2172}{big\+LEDLimit}} (\mbox{\hyperlink{classColour}{Colour}} colour\+In)
+\item 
+void \mbox{\hyperlink{classSynaesthetiQ_ab9e05d4bc66b1c9fba2ac6750569f91d}{limit\+Matrix\+Current}} ()
+\item 
+\mbox{\hyperlink{synaesthetiq_8hpp_a0f18357686ad5d4bb22e943de6bec4c0}{AMPS}} \mbox{\hyperlink{classSynaesthetiQ_ab65e704233dd6c0fbcacce1d19479bad}{calculate\+Matrix\+Current}} ()
+\item 
+\mbox{\hyperlink{synaesthetiq_8hpp_a23f18d9df7e8feb0eefe787570ab3ae9}{MILLIAMPS}} \mbox{\hyperlink{classSynaesthetiQ_ad737340d0ab2a4adb0f6a4880ce2feb6}{calculate\+LEDCurrent}} (\mbox{\hyperlink{synaesthetiq_8hpp_a23f18d9df7e8feb0eefe787570ab3ae9}{MILLIAMPS}} LEDMax\+Current\+Per\+Channel, \mbox{\hyperlink{classColour}{Colour}} colour)
+\item 
+void \mbox{\hyperlink{classSynaesthetiQ_a46066721d0b214e51b094658530735a7}{apply\+Factor\+To\+Matrix}} (double factor)
+\item 
+\mbox{\hyperlink{classColour}{Colour}} \mbox{\hyperlink{classSynaesthetiQ_ab70dbc1ff675a562a04640ff246131e0}{apply\+Factor\+To\+LED}} (double factor, \mbox{\hyperlink{classColour}{Colour}} colour)
+\item 
+int \mbox{\hyperlink{classSynaesthetiQ_a18850160085e2375b55c8134ade8cc07}{XYto\+Chain\+Pos}} (\mbox{\hyperlink{structXYPos}{XYPos}} XY)
+\item 
+\mbox{\hyperlink{structXYPos}{XYPos}} \mbox{\hyperlink{classSynaesthetiQ_a3a82072fec6d5743b18fcf3209235dd8}{Chain\+Posto\+XY}} (int Chain\+Pos)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{classSynaesthetiQ_a5696357e1e63bc55019293277c674261}{max\+Matrix\+Current}} = 10.\+0
+\item 
+const int \mbox{\hyperlink{classSynaesthetiQ_acb56e98dd3d48604359be7f234d37d8c}{matrix\+Pixels}} = 512
+\item 
+double \mbox{\hyperlink{classSynaesthetiQ_a3caeaab07d890c18e3dafe17c28da7b5}{matrix\+Pixel\+Current\+Per\+Channel}} = 19.\+53
+\item 
+double \mbox{\hyperlink{classSynaesthetiQ_a1688ccd8a4579affbab4df98710305f1}{max\+Big\+LEDCurrent}} = 3.\+0
+\item 
+const int \mbox{\hyperlink{classSynaesthetiQ_a8e4768531dc932e80b37cc4c3d787e54}{big\+LEDCount}} = 1
+\item 
+bool \mbox{\hyperlink{classSynaesthetiQ_a6b5533d5f09f0854a3b66fc845d4401d}{big\+LEDFirst}} = false
+\item 
+double \mbox{\hyperlink{classSynaesthetiQ_a437f5d51588a2cda823b5244af66e13f}{system\+Brightness}} = 50.\+0
+\item 
+\mbox{\hyperlink{structws2811__t}{ws2811\+\_\+t}} \mbox{\hyperlink{classSynaesthetiQ_a44d8e757cb749036e0cbfe14e2a0a02c}{ledstring}}
+\item 
+\mbox{\hyperlink{ws2811_8h_a62135fb061480c24af2b8bdd2b5f6620}{ws2811\+\_\+return\+\_\+t}} \mbox{\hyperlink{classSynaesthetiQ_a87c7e649c2671ffd2e4dbbbd9eb675aa}{ret}}
+\item 
+bool \mbox{\hyperlink{classSynaesthetiQ_abbc7575590d548fcb14d24bdbf7c11e3}{clear\+\_\+on\+\_\+exit}} = true
+\item 
+\mbox{\hyperlink{classColour}{Colour}} \mbox{\hyperlink{classSynaesthetiQ_ac4cf129e488a6347157b60a5ecb7da55}{big\+LEDColour}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 A class to manage the \mbox{\hyperlink{classSynaesthetiQ}{SynaesthetiQ}} and create visualisations. 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classSynaesthetiQ_a6f17567c52119a50d5587f8f2681fee9}\label{classSynaesthetiQ_a6f17567c52119a50d5587f8f2681fee9}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!SynaesthetiQ@{SynaesthetiQ}}
+\index{SynaesthetiQ@{SynaesthetiQ}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{SynaesthetiQ()}{SynaesthetiQ()}}
+{\footnotesize\ttfamily Synaestheti\+Q\+::\+SynaesthetiQ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_a6f17567c52119a50d5587f8f2681fee9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSynaesthetiQ_a8e47acbbe5a56558ac96140c66b9bbe4}\label{classSynaesthetiQ_a8e47acbbe5a56558ac96140c66b9bbe4}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!````~SynaesthetiQ@{$\sim$SynaesthetiQ}}
+\index{````~SynaesthetiQ@{$\sim$SynaesthetiQ}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{$\sim$SynaesthetiQ()}{~SynaesthetiQ()}}
+{\footnotesize\ttfamily Synaestheti\+Q\+::$\sim$\+SynaesthetiQ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_a8e47acbbe5a56558ac96140c66b9bbe4_cgraph}
+\end{center}
+\end{figure}
+
+
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSynaesthetiQ_ab70dbc1ff675a562a04640ff246131e0}\label{classSynaesthetiQ_ab70dbc1ff675a562a04640ff246131e0}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!applyFactorToLED@{applyFactorToLED}}
+\index{applyFactorToLED@{applyFactorToLED}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{applyFactorToLED()}{applyFactorToLED()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classColour}{Colour}} Synaestheti\+Q\+::apply\+Factor\+To\+LED (\begin{DoxyParamCaption}\item[{double}]{factor,  }\item[{\mbox{\hyperlink{classColour}{Colour}}}]{colour }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_ab70dbc1ff675a562a04640ff246131e0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_ab70dbc1ff675a562a04640ff246131e0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSynaesthetiQ_a46066721d0b214e51b094658530735a7}\label{classSynaesthetiQ_a46066721d0b214e51b094658530735a7}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!applyFactorToMatrix@{applyFactorToMatrix}}
+\index{applyFactorToMatrix@{applyFactorToMatrix}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{applyFactorToMatrix()}{applyFactorToMatrix()}}
+{\footnotesize\ttfamily void Synaestheti\+Q\+::apply\+Factor\+To\+Matrix (\begin{DoxyParamCaption}\item[{double}]{factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_a46066721d0b214e51b094658530735a7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_a46066721d0b214e51b094658530735a7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSynaesthetiQ_ab87111b52b512ba15a56fc990a1e7ee2}\label{classSynaesthetiQ_ab87111b52b512ba15a56fc990a1e7ee2}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!basicMatrixLimit@{basicMatrixLimit}}
+\index{basicMatrixLimit@{basicMatrixLimit}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{basicMatrixLimit()}{basicMatrixLimit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classColour}{Colour}} Synaestheti\+Q\+::basic\+Matrix\+Limit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classColour}{Colour}}}]{Colour\+In }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_ab87111b52b512ba15a56fc990a1e7ee2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSynaesthetiQ_a89a5378445657cc1a65b7b092d8e2172}\label{classSynaesthetiQ_a89a5378445657cc1a65b7b092d8e2172}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!bigLEDLimit@{bigLEDLimit}}
+\index{bigLEDLimit@{bigLEDLimit}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{bigLEDLimit()}{bigLEDLimit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classColour}{Colour}} Synaestheti\+Q\+::big\+LEDLimit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classColour}{Colour}}}]{colour\+In }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_a89a5378445657cc1a65b7b092d8e2172_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSynaesthetiQ_ad737340d0ab2a4adb0f6a4880ce2feb6}\label{classSynaesthetiQ_ad737340d0ab2a4adb0f6a4880ce2feb6}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!calculateLEDCurrent@{calculateLEDCurrent}}
+\index{calculateLEDCurrent@{calculateLEDCurrent}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{calculateLEDCurrent()}{calculateLEDCurrent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{synaesthetiq_8hpp_a23f18d9df7e8feb0eefe787570ab3ae9}{MILLIAMPS}} Synaestheti\+Q\+::calculate\+LEDCurrent (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{synaesthetiq_8hpp_a23f18d9df7e8feb0eefe787570ab3ae9}{MILLIAMPS}}}]{LEDMax\+Current\+Per\+Channel,  }\item[{\mbox{\hyperlink{classColour}{Colour}}}]{colour }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_ad737340d0ab2a4adb0f6a4880ce2feb6_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_ad737340d0ab2a4adb0f6a4880ce2feb6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSynaesthetiQ_ab65e704233dd6c0fbcacce1d19479bad}\label{classSynaesthetiQ_ab65e704233dd6c0fbcacce1d19479bad}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!calculateMatrixCurrent@{calculateMatrixCurrent}}
+\index{calculateMatrixCurrent@{calculateMatrixCurrent}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{calculateMatrixCurrent()}{calculateMatrixCurrent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{synaesthetiq_8hpp_a0f18357686ad5d4bb22e943de6bec4c0}{AMPS}} Synaestheti\+Q\+::calculate\+Matrix\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_ab65e704233dd6c0fbcacce1d19479bad_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_ab65e704233dd6c0fbcacce1d19479bad_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSynaesthetiQ_a3a82072fec6d5743b18fcf3209235dd8}\label{classSynaesthetiQ_a3a82072fec6d5743b18fcf3209235dd8}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!ChainPostoXY@{ChainPostoXY}}
+\index{ChainPostoXY@{ChainPostoXY}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{ChainPostoXY()}{ChainPostoXY()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structXYPos}{XYPos}} Synaestheti\+Q\+::\+Chain\+Posto\+XY (\begin{DoxyParamCaption}\item[{int}]{Chain\+Pos }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSynaesthetiQ_ac4660ef2d240ccc88370e33d3ea68caf}\label{classSynaesthetiQ_ac4660ef2d240ccc88370e33d3ea68caf}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!clearOutput@{clearOutput}}
+\index{clearOutput@{clearOutput}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{clearOutput()}{clearOutput()}}
+{\footnotesize\ttfamily void Synaestheti\+Q\+::clear\+Output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Turns off all the \mbox{\hyperlink{classSynaesthetiQ}{SynaesthetiQ}} LEDs. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_ac4660ef2d240ccc88370e33d3ea68caf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_ac4660ef2d240ccc88370e33d3ea68caf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSynaesthetiQ_ade75e0ea81944c5aa612b0427617837a}\label{classSynaesthetiQ_ade75e0ea81944c5aa612b0427617837a}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!getSystemBrightness@{getSystemBrightness}}
+\index{getSystemBrightness@{getSystemBrightness}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{getSystemBrightness()}{getSystemBrightness()}}
+{\footnotesize\ttfamily double Synaestheti\+Q\+::get\+System\+Brightness (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets brightness of the \mbox{\hyperlink{classSynaesthetiQ}{SynaesthetiQ}}. 
+
+\mbox{\Hypertarget{classSynaesthetiQ_ab9e05d4bc66b1c9fba2ac6750569f91d}\label{classSynaesthetiQ_ab9e05d4bc66b1c9fba2ac6750569f91d}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!limitMatrixCurrent@{limitMatrixCurrent}}
+\index{limitMatrixCurrent@{limitMatrixCurrent}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{limitMatrixCurrent()}{limitMatrixCurrent()}}
+{\footnotesize\ttfamily void Synaestheti\+Q\+::limit\+Matrix\+Current (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_ab9e05d4bc66b1c9fba2ac6750569f91d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_ab9e05d4bc66b1c9fba2ac6750569f91d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSynaesthetiQ_a8273c69b060be5345798ac2c458b3d23}\label{classSynaesthetiQ_a8273c69b060be5345798ac2c458b3d23}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!render@{render}}
+\index{render@{render}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{render()}{render()}}
+{\footnotesize\ttfamily int Synaestheti\+Q\+::render (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates the SynasthetiQ with the colours set, while limiting current. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_a8273c69b060be5345798ac2c458b3d23_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_a8273c69b060be5345798ac2c458b3d23_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSynaesthetiQ_ae0d6be9c2706ce9b701a643b0793623a}\label{classSynaesthetiQ_ae0d6be9c2706ce9b701a643b0793623a}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!setBigLEDColour@{setBigLEDColour}}
+\index{setBigLEDColour@{setBigLEDColour}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{setBigLEDColour()}{setBigLEDColour()}}
+{\footnotesize\ttfamily void Synaestheti\+Q\+::set\+Big\+LEDColour (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classColour}{Colour}}}]{colour }\end{DoxyParamCaption})}
+
+
+
+Sets the colour of the top LED. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_ae0d6be9c2706ce9b701a643b0793623a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_ae0d6be9c2706ce9b701a643b0793623a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSynaesthetiQ_a08634bd1971f17857dd4ee39bdc1a03f}\label{classSynaesthetiQ_a08634bd1971f17857dd4ee39bdc1a03f}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!setMatrixColour@{setMatrixColour}}
+\index{setMatrixColour@{setMatrixColour}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{setMatrixColour()}{setMatrixColour()}}
+{\footnotesize\ttfamily void Synaestheti\+Q\+::set\+Matrix\+Colour (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classColour}{Colour}}}]{colour }\end{DoxyParamCaption})}
+
+
+
+Sets the colour of the matrix. 
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_a08634bd1971f17857dd4ee39bdc1a03f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_a08634bd1971f17857dd4ee39bdc1a03f_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{classSynaesthetiQ_acc5f189832116b91312edafed3915c79}\label{classSynaesthetiQ_acc5f189832116b91312edafed3915c79}} 
 \index{SynaesthetiQ@{SynaesthetiQ}!setMatrixPixelColour@{setMatrixPixelColour}}
 \index{setMatrixPixelColour@{setMatrixPixelColour}!SynaesthetiQ@{SynaesthetiQ}}
@@ -48,9 +391,118 @@ A class to manage the \mbox{\hyperlink{classSynaesthetiQ}{SynaesthetiQ}} and cre
 
 Sets the colour of an individual LED on the matrix using x, y coordinates. 
 
-Coordinates range from 0$<$=x$<$32 and 0$<$=y$<$16 
+Coordinates range from 0$<$=x$<$32 and 0$<$=y$<$16 Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_acc5f189832116b91312edafed3915c79_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_acc5f189832116b91312edafed3915c79_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSynaesthetiQ_a758e8fce40fc98900f83ad7a9b9a2648}\label{classSynaesthetiQ_a758e8fce40fc98900f83ad7a9b9a2648}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!setSystemBrightness@{setSystemBrightness}}
+\index{setSystemBrightness@{setSystemBrightness}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{setSystemBrightness()}{setSystemBrightness()}}
+{\footnotesize\ttfamily void Synaestheti\+Q\+::set\+System\+Brightness (\begin{DoxyParamCaption}\item[{double}]{Brightness }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets brightness of the \mbox{\hyperlink{classSynaesthetiQ}{SynaesthetiQ}}. 
+
+\mbox{\Hypertarget{classSynaesthetiQ_a18850160085e2375b55c8134ade8cc07}\label{classSynaesthetiQ_a18850160085e2375b55c8134ade8cc07}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!XYtoChainPos@{XYtoChainPos}}
+\index{XYtoChainPos@{XYtoChainPos}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{XYtoChainPos()}{XYtoChainPos()}}
+{\footnotesize\ttfamily int Synaestheti\+Q\+::\+XYto\+Chain\+Pos (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structXYPos}{XYPos}}}]{XY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSynaesthetiQ_a18850160085e2375b55c8134ade8cc07_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classSynaesthetiQ_ac4cf129e488a6347157b60a5ecb7da55}\label{classSynaesthetiQ_ac4cf129e488a6347157b60a5ecb7da55}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!bigLEDColour@{bigLEDColour}}
+\index{bigLEDColour@{bigLEDColour}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{bigLEDColour}{bigLEDColour}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classColour}{Colour}} Synaestheti\+Q\+::big\+LEDColour\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSynaesthetiQ_a8e4768531dc932e80b37cc4c3d787e54}\label{classSynaesthetiQ_a8e4768531dc932e80b37cc4c3d787e54}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!bigLEDCount@{bigLEDCount}}
+\index{bigLEDCount@{bigLEDCount}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{bigLEDCount}{bigLEDCount}}
+{\footnotesize\ttfamily const int Synaestheti\+Q\+::big\+LEDCount = 1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSynaesthetiQ_a6b5533d5f09f0854a3b66fc845d4401d}\label{classSynaesthetiQ_a6b5533d5f09f0854a3b66fc845d4401d}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!bigLEDFirst@{bigLEDFirst}}
+\index{bigLEDFirst@{bigLEDFirst}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{bigLEDFirst}{bigLEDFirst}}
+{\footnotesize\ttfamily bool Synaestheti\+Q\+::big\+LEDFirst = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSynaesthetiQ_abbc7575590d548fcb14d24bdbf7c11e3}\label{classSynaesthetiQ_abbc7575590d548fcb14d24bdbf7c11e3}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!clear\_on\_exit@{clear\_on\_exit}}
+\index{clear\_on\_exit@{clear\_on\_exit}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{clear\_on\_exit}{clear\_on\_exit}}
+{\footnotesize\ttfamily bool Synaestheti\+Q\+::clear\+\_\+on\+\_\+exit = true\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSynaesthetiQ_a44d8e757cb749036e0cbfe14e2a0a02c}\label{classSynaesthetiQ_a44d8e757cb749036e0cbfe14e2a0a02c}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!ledstring@{ledstring}}
+\index{ledstring@{ledstring}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{ledstring}{ledstring}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structws2811__t}{ws2811\+\_\+t}} Synaestheti\+Q\+::ledstring\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSynaesthetiQ_a3caeaab07d890c18e3dafe17c28da7b5}\label{classSynaesthetiQ_a3caeaab07d890c18e3dafe17c28da7b5}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!matrixPixelCurrentPerChannel@{matrixPixelCurrentPerChannel}}
+\index{matrixPixelCurrentPerChannel@{matrixPixelCurrentPerChannel}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{matrixPixelCurrentPerChannel}{matrixPixelCurrentPerChannel}}
+{\footnotesize\ttfamily double Synaestheti\+Q\+::matrix\+Pixel\+Current\+Per\+Channel = 19.\+53\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSynaesthetiQ_acb56e98dd3d48604359be7f234d37d8c}\label{classSynaesthetiQ_acb56e98dd3d48604359be7f234d37d8c}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!matrixPixels@{matrixPixels}}
+\index{matrixPixels@{matrixPixels}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{matrixPixels}{matrixPixels}}
+{\footnotesize\ttfamily const int Synaestheti\+Q\+::matrix\+Pixels = 512\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSynaesthetiQ_a1688ccd8a4579affbab4df98710305f1}\label{classSynaesthetiQ_a1688ccd8a4579affbab4df98710305f1}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!maxBigLEDCurrent@{maxBigLEDCurrent}}
+\index{maxBigLEDCurrent@{maxBigLEDCurrent}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{maxBigLEDCurrent}{maxBigLEDCurrent}}
+{\footnotesize\ttfamily double Synaestheti\+Q\+::max\+Big\+LEDCurrent = 3.\+0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSynaesthetiQ_a5696357e1e63bc55019293277c674261}\label{classSynaesthetiQ_a5696357e1e63bc55019293277c674261}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!maxMatrixCurrent@{maxMatrixCurrent}}
+\index{maxMatrixCurrent@{maxMatrixCurrent}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{maxMatrixCurrent}{maxMatrixCurrent}}
+{\footnotesize\ttfamily double Synaestheti\+Q\+::max\+Matrix\+Current = 10.\+0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSynaesthetiQ_a87c7e649c2671ffd2e4dbbbd9eb675aa}\label{classSynaesthetiQ_a87c7e649c2671ffd2e4dbbbd9eb675aa}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!ret@{ret}}
+\index{ret@{ret}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{ret}{ret}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ws2811_8h_a62135fb061480c24af2b8bdd2b5f6620}{ws2811\+\_\+return\+\_\+t}} Synaestheti\+Q\+::ret\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSynaesthetiQ_a437f5d51588a2cda823b5244af66e13f}\label{classSynaesthetiQ_a437f5d51588a2cda823b5244af66e13f}} 
+\index{SynaesthetiQ@{SynaesthetiQ}!systemBrightness@{systemBrightness}}
+\index{systemBrightness@{systemBrightness}!SynaesthetiQ@{SynaesthetiQ}}
+\doxysubsubsection{\texorpdfstring{systemBrightness}{systemBrightness}}
+{\footnotesize\ttfamily double Synaestheti\+Q\+::system\+Brightness = 50.\+0\hspace{0.3cm}{\ttfamily [private]}}
+
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/\+LED-\/\+Library/src/\+Synaestheti\+Q/synaesthetiq.\+hpp\item 
-/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/\+LED-\/\+Library/src/\+Synaestheti\+Q/synaesthetiq.\+cpp\end{DoxyCompactItemize}
+/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/\+LED-\/\+Library/src/\+Synaestheti\+Q/\mbox{\hyperlink{synaesthetiq_8hpp}{synaesthetiq.\+hpp}}\item 
+/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/\+LED-\/\+Library/src/\+Synaestheti\+Q/\mbox{\hyperlink{synaesthetiq_8cpp}{synaesthetiq.\+cpp}}\end{DoxyCompactItemize}

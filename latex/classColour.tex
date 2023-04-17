@@ -12,39 +12,37 @@ A class to manage colours for the \mbox{\hyperlink{classSynaesthetiQ}{Synaesthet
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classColour_a46612b9524fcd4cee818af6a86b7a4d2}\label{classColour_a46612b9524fcd4cee818af6a86b7a4d2}} 
 \mbox{\hyperlink{classColour_a46612b9524fcd4cee818af6a86b7a4d2}{Colour}} ()
 \begin{DoxyCompactList}\small\item\em Default constructor, which set all values to 0. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classColour_a22d30494084f20493107129257a95e3a}\label{classColour_a22d30494084f20493107129257a95e3a}} 
 \mbox{\hyperlink{classColour_a22d30494084f20493107129257a95e3a}{Colour}} (uint8\+\_\+t red\+In, uint8\+\_\+t green\+In, uint8\+\_\+t blue\+In)
 \begin{DoxyCompactList}\small\item\em Constructor that takes in red, green, blue values separately. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classColour_a0c49fb778473849a19ba79c73ae9f0f7}\label{classColour_a0c49fb778473849a19ba79c73ae9f0f7}} 
 \mbox{\hyperlink{classColour_a0c49fb778473849a19ba79c73ae9f0f7}{Colour}} (uint32\+\_\+t XRGBIn)
 \begin{DoxyCompactList}\small\item\em Constructor that takes in a 32 bit number of form XRGB, where X is an empty byte. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classColour_a69d451388d92e33e6e997b4a49fbab86}\label{classColour_a69d451388d92e33e6e997b4a49fbab86}} 
 uint32\+\_\+t \mbox{\hyperlink{classColour_a69d451388d92e33e6e997b4a49fbab86}{get\+GRB}} ()
 \begin{DoxyCompactList}\small\item\em Returns 32 bit-\/format of order Green, Red, Blue. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classColour_a248a1d9cf4106dac4292ac6fa8636f16}\label{classColour_a248a1d9cf4106dac4292ac6fa8636f16}} 
 uint32\+\_\+t \mbox{\hyperlink{classColour_a248a1d9cf4106dac4292ac6fa8636f16}{get\+RGB}} ()
 \begin{DoxyCompactList}\small\item\em Returns 32 bit-\/format of order Red, Green, Blue. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classColour_a0bf66dd3c35d509290b5b79e1e3eb851}\label{classColour_a0bf66dd3c35d509290b5b79e1e3eb851}} 
 uint8\+\_\+t \mbox{\hyperlink{classColour_a0bf66dd3c35d509290b5b79e1e3eb851}{get\+Red}} ()
 \begin{DoxyCompactList}\small\item\em Returns red channel. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classColour_af2d77f94b1154325bd0c643fbd64b87c}\label{classColour_af2d77f94b1154325bd0c643fbd64b87c}} 
 uint8\+\_\+t \mbox{\hyperlink{classColour_af2d77f94b1154325bd0c643fbd64b87c}{get\+Green}} ()
 \begin{DoxyCompactList}\small\item\em Returns green channel. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classColour_ae206500d684bf5ce115e34ca83565eb6}\label{classColour_ae206500d684bf5ce115e34ca83565eb6}} 
 uint8\+\_\+t \mbox{\hyperlink{classColour_ae206500d684bf5ce115e34ca83565eb6}{get\+Blue}} ()
 \begin{DoxyCompactList}\small\item\em Returns blue channel. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classColour_abb9555707b355fc477144ca7fa271443}\label{classColour_abb9555707b355fc477144ca7fa271443}} 
 void \mbox{\hyperlink{classColour_abb9555707b355fc477144ca7fa271443}{set\+Red}} (uint8\+\_\+t red\+In)
 \begin{DoxyCompactList}\small\item\em Sets red channel. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classColour_a66c9c624aabb2a2b8cca6c7b3662e63b}\label{classColour_a66c9c624aabb2a2b8cca6c7b3662e63b}} 
 void \mbox{\hyperlink{classColour_a66c9c624aabb2a2b8cca6c7b3662e63b}{set\+Green}} (uint8\+\_\+t green\+In)
 \begin{DoxyCompactList}\small\item\em Sets green channel. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classColour_a40bad573ae839ccf43fad763cadc0868}\label{classColour_a40bad573ae839ccf43fad763cadc0868}} 
 void \mbox{\hyperlink{classColour_a40bad573ae839ccf43fad763cadc0868}{set\+Blue}} (uint8\+\_\+t blue\+In)
 \begin{DoxyCompactList}\small\item\em Sets blue channel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classColour_a2cf0a3f0323bb88371a5dc4c70932db6}{red}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classColour_ad938c2c334b2410d8396a9fb07d0c06a}{green}}
+\item 
+uint8\+\_\+t \mbox{\hyperlink{classColour_aa49a7d6ab992da299de44bb476b52e07}{blue}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -52,6 +50,183 @@ A class to manage colours for the \mbox{\hyperlink{classSynaesthetiQ}{Synaesthet
 
 Provides an abstraction on top of the ws2811 LED colour, that allows easy conversion between colour formats 
 
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classColour_a46612b9524fcd4cee818af6a86b7a4d2}\label{classColour_a46612b9524fcd4cee818af6a86b7a4d2}} 
+\index{Colour@{Colour}!Colour@{Colour}}
+\index{Colour@{Colour}!Colour@{Colour}}
+\doxysubsubsection{\texorpdfstring{Colour()}{Colour()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Colour\+::\+Colour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Default constructor, which set all values to 0. 
+
+\mbox{\Hypertarget{classColour_a22d30494084f20493107129257a95e3a}\label{classColour_a22d30494084f20493107129257a95e3a}} 
+\index{Colour@{Colour}!Colour@{Colour}}
+\index{Colour@{Colour}!Colour@{Colour}}
+\doxysubsubsection{\texorpdfstring{Colour()}{Colour()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Colour\+::\+Colour (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{red\+In,  }\item[{uint8\+\_\+t}]{green\+In,  }\item[{uint8\+\_\+t}]{blue\+In }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor that takes in red, green, blue values separately. 
+
+\mbox{\Hypertarget{classColour_a0c49fb778473849a19ba79c73ae9f0f7}\label{classColour_a0c49fb778473849a19ba79c73ae9f0f7}} 
+\index{Colour@{Colour}!Colour@{Colour}}
+\index{Colour@{Colour}!Colour@{Colour}}
+\doxysubsubsection{\texorpdfstring{Colour()}{Colour()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Colour\+::\+Colour (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{XRGBIn }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor that takes in a 32 bit number of form XRGB, where X is an empty byte. 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classColour_ae206500d684bf5ce115e34ca83565eb6}\label{classColour_ae206500d684bf5ce115e34ca83565eb6}} 
+\index{Colour@{Colour}!getBlue@{getBlue}}
+\index{getBlue@{getBlue}!Colour@{Colour}}
+\doxysubsubsection{\texorpdfstring{getBlue()}{getBlue()}}
+{\footnotesize\ttfamily uint8\+\_\+t Colour\+::get\+Blue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns blue channel. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classColour_ae206500d684bf5ce115e34ca83565eb6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classColour_a69d451388d92e33e6e997b4a49fbab86}\label{classColour_a69d451388d92e33e6e997b4a49fbab86}} 
+\index{Colour@{Colour}!getGRB@{getGRB}}
+\index{getGRB@{getGRB}!Colour@{Colour}}
+\doxysubsubsection{\texorpdfstring{getGRB()}{getGRB()}}
+{\footnotesize\ttfamily uint32\+\_\+t Colour\+::get\+GRB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns 32 bit-\/format of order Green, Red, Blue. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classColour_a69d451388d92e33e6e997b4a49fbab86_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classColour_af2d77f94b1154325bd0c643fbd64b87c}\label{classColour_af2d77f94b1154325bd0c643fbd64b87c}} 
+\index{Colour@{Colour}!getGreen@{getGreen}}
+\index{getGreen@{getGreen}!Colour@{Colour}}
+\doxysubsubsection{\texorpdfstring{getGreen()}{getGreen()}}
+{\footnotesize\ttfamily uint8\+\_\+t Colour\+::get\+Green (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns green channel. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classColour_af2d77f94b1154325bd0c643fbd64b87c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classColour_a0bf66dd3c35d509290b5b79e1e3eb851}\label{classColour_a0bf66dd3c35d509290b5b79e1e3eb851}} 
+\index{Colour@{Colour}!getRed@{getRed}}
+\index{getRed@{getRed}!Colour@{Colour}}
+\doxysubsubsection{\texorpdfstring{getRed()}{getRed()}}
+{\footnotesize\ttfamily uint8\+\_\+t Colour\+::get\+Red (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns red channel. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classColour_a0bf66dd3c35d509290b5b79e1e3eb851_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classColour_a248a1d9cf4106dac4292ac6fa8636f16}\label{classColour_a248a1d9cf4106dac4292ac6fa8636f16}} 
+\index{Colour@{Colour}!getRGB@{getRGB}}
+\index{getRGB@{getRGB}!Colour@{Colour}}
+\doxysubsubsection{\texorpdfstring{getRGB()}{getRGB()}}
+{\footnotesize\ttfamily uint32\+\_\+t Colour\+::get\+RGB (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Returns 32 bit-\/format of order Red, Green, Blue. 
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{classColour_a248a1d9cf4106dac4292ac6fa8636f16_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classColour_a40bad573ae839ccf43fad763cadc0868}\label{classColour_a40bad573ae839ccf43fad763cadc0868}} 
+\index{Colour@{Colour}!setBlue@{setBlue}}
+\index{setBlue@{setBlue}!Colour@{Colour}}
+\doxysubsubsection{\texorpdfstring{setBlue()}{setBlue()}}
+{\footnotesize\ttfamily void Colour\+::set\+Blue (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{blue\+In }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets blue channel. 
+
+\mbox{\Hypertarget{classColour_a66c9c624aabb2a2b8cca6c7b3662e63b}\label{classColour_a66c9c624aabb2a2b8cca6c7b3662e63b}} 
+\index{Colour@{Colour}!setGreen@{setGreen}}
+\index{setGreen@{setGreen}!Colour@{Colour}}
+\doxysubsubsection{\texorpdfstring{setGreen()}{setGreen()}}
+{\footnotesize\ttfamily void Colour\+::set\+Green (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{green\+In }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets green channel. 
+
+\mbox{\Hypertarget{classColour_abb9555707b355fc477144ca7fa271443}\label{classColour_abb9555707b355fc477144ca7fa271443}} 
+\index{Colour@{Colour}!setRed@{setRed}}
+\index{setRed@{setRed}!Colour@{Colour}}
+\doxysubsubsection{\texorpdfstring{setRed()}{setRed()}}
+{\footnotesize\ttfamily void Colour\+::set\+Red (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{red\+In }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets red channel. 
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classColour_aa49a7d6ab992da299de44bb476b52e07}\label{classColour_aa49a7d6ab992da299de44bb476b52e07}} 
+\index{Colour@{Colour}!blue@{blue}}
+\index{blue@{blue}!Colour@{Colour}}
+\doxysubsubsection{\texorpdfstring{blue}{blue}}
+{\footnotesize\ttfamily uint8\+\_\+t Colour\+::blue\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classColour_ad938c2c334b2410d8396a9fb07d0c06a}\label{classColour_ad938c2c334b2410d8396a9fb07d0c06a}} 
+\index{Colour@{Colour}!green@{green}}
+\index{green@{green}!Colour@{Colour}}
+\doxysubsubsection{\texorpdfstring{green}{green}}
+{\footnotesize\ttfamily uint8\+\_\+t Colour\+::green\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classColour_a2cf0a3f0323bb88371a5dc4c70932db6}\label{classColour_a2cf0a3f0323bb88371a5dc4c70932db6}} 
+\index{Colour@{Colour}!red@{red}}
+\index{red@{red}!Colour@{Colour}}
+\doxysubsubsection{\texorpdfstring{red}{red}}
+{\footnotesize\ttfamily uint8\+\_\+t Colour\+::red\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
-/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/\+LED-\/\+Library/src/\+Synaestheti\+Q/Colour.\+hpp\end{DoxyCompactItemize}
+/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/\+LED-\/\+Library/src/\+Synaestheti\+Q/\mbox{\hyperlink{Colour_8hpp}{Colour.\+hpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,113 @@
+\hypertarget{SynaesthetiQ-LED-Library_2src_2main_8cpp}{}\doxysection{/home/ross/\+Documents/git/\+Synaestheti\+Q-\/\+Puppet\+Master/src/\+Synaestheti\+Q-\/\+LED-\/\+Library/src/main.cpp File Reference}
+\label{SynaesthetiQ-LED-Library_2src_2main_8cpp}\index{/home/ross/Documents/git/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/LED-\/Library/src/main.cpp@{/home/ross/Documents/git/SynaesthetiQ-\/PuppetMaster/src/SynaesthetiQ-\/LED-\/Library/src/main.cpp}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/stat.\+h$>$}\newline
+{\ttfamily \#include $<$fcntl.\+h$>$}\newline
+{\ttfamily \#include $<$sys/mman.\+h$>$}\newline
+{\ttfamily \#include $<$signal.\+h$>$}\newline
+{\ttfamily \#include $<$stdarg.\+h$>$}\newline
+{\ttfamily \#include $<$getopt.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Synaestheti\+Q/synaesthetiq.\+hpp\char`\"{}}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SynaesthetiQ-LED-Library_2src_2main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{SynaesthetiQ-LED-Library_2src_2main_8cpp_a241aeeb764887ae5e3de58b98f04b16d}{WIDTH}}~513
+\item 
+\#define \mbox{\hyperlink{SynaesthetiQ-LED-Library_2src_2main_8cpp_aed89bd71aee8be823e8a20ec4e093c1e}{HEIGHT}}~1
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{SynaesthetiQ-LED-Library_2src_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{SynaesthetiQ-LED-Library_2src_2main_8cpp_a2474a5474cbff19523a51eb1de01cda4}{width}} = \mbox{\hyperlink{SynaesthetiQ-LED-Library_2src_2main_8cpp_a241aeeb764887ae5e3de58b98f04b16d}{WIDTH}}
+\item 
+int \mbox{\hyperlink{SynaesthetiQ-LED-Library_2src_2main_8cpp_ad12fc34ce789bce6c8a05d8a17138534}{height}} = \mbox{\hyperlink{SynaesthetiQ-LED-Library_2src_2main_8cpp_aed89bd71aee8be823e8a20ec4e093c1e}{HEIGHT}}
+\item 
+int \mbox{\hyperlink{SynaesthetiQ-LED-Library_2src_2main_8cpp_a52d577f6a4be2fdac8306299c8abf12b}{led\+\_\+count}} = \mbox{\hyperlink{synaesthetiq_8hpp_ad698e2cb680601529f08c3e5f2b0cebb}{LED\+\_\+\+COUNT}}
+\item 
+\mbox{\hyperlink{ws2811_8h_a3946bfbfcd781a07a6a1876e67720646}{ws2811\+\_\+led\+\_\+t}} $\ast$ \mbox{\hyperlink{SynaesthetiQ-LED-Library_2src_2main_8cpp_a4d8291339f6fcbafba4f00c86e1257a9}{matrix}}
+\item 
+static uint8\+\_\+t \mbox{\hyperlink{SynaesthetiQ-LED-Library_2src_2main_8cpp_af77f8244799e85284b8b438289f5f689}{running}} = 1
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{SynaesthetiQ-LED-Library_2src_2main_8cpp_aed89bd71aee8be823e8a20ec4e093c1e}\label{SynaesthetiQ-LED-Library_2src_2main_8cpp_aed89bd71aee8be823e8a20ec4e093c1e}} 
+\index{main.cpp@{main.cpp}!HEIGHT@{HEIGHT}}
+\index{HEIGHT@{HEIGHT}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{HEIGHT}{HEIGHT}}
+{\footnotesize\ttfamily \#define HEIGHT~1}
+
+\mbox{\Hypertarget{SynaesthetiQ-LED-Library_2src_2main_8cpp_a241aeeb764887ae5e3de58b98f04b16d}\label{SynaesthetiQ-LED-Library_2src_2main_8cpp_a241aeeb764887ae5e3de58b98f04b16d}} 
+\index{main.cpp@{main.cpp}!WIDTH@{WIDTH}}
+\index{WIDTH@{WIDTH}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{WIDTH}{WIDTH}}
+{\footnotesize\ttfamily \#define WIDTH~513}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{SynaesthetiQ-LED-Library_2src_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{SynaesthetiQ-LED-Library_2src_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{SynaesthetiQ-LED-Library_2src_2main_8cpp_a0ddf1224851353fc92bfbff6f499fa97_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{SynaesthetiQ-LED-Library_2src_2main_8cpp_ad12fc34ce789bce6c8a05d8a17138534}\label{SynaesthetiQ-LED-Library_2src_2main_8cpp_ad12fc34ce789bce6c8a05d8a17138534}} 
+\index{main.cpp@{main.cpp}!height@{height}}
+\index{height@{height}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{height}{height}}
+{\footnotesize\ttfamily int height = \mbox{\hyperlink{SynaesthetiQ-LED-Library_2src_2main_8cpp_aed89bd71aee8be823e8a20ec4e093c1e}{HEIGHT}}}
+
+\mbox{\Hypertarget{SynaesthetiQ-LED-Library_2src_2main_8cpp_a52d577f6a4be2fdac8306299c8abf12b}\label{SynaesthetiQ-LED-Library_2src_2main_8cpp_a52d577f6a4be2fdac8306299c8abf12b}} 
+\index{main.cpp@{main.cpp}!led\_count@{led\_count}}
+\index{led\_count@{led\_count}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{led\_count}{led\_count}}
+{\footnotesize\ttfamily int led\+\_\+count = \mbox{\hyperlink{synaesthetiq_8hpp_ad698e2cb680601529f08c3e5f2b0cebb}{LED\+\_\+\+COUNT}}}
+
+\mbox{\Hypertarget{SynaesthetiQ-LED-Library_2src_2main_8cpp_a4d8291339f6fcbafba4f00c86e1257a9}\label{SynaesthetiQ-LED-Library_2src_2main_8cpp_a4d8291339f6fcbafba4f00c86e1257a9}} 
+\index{main.cpp@{main.cpp}!matrix@{matrix}}
+\index{matrix@{matrix}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{matrix}{matrix}}
+{\footnotesize\ttfamily \mbox{\hyperlink{ws2811_8h_a3946bfbfcd781a07a6a1876e67720646}{ws2811\+\_\+led\+\_\+t}}$\ast$ matrix}
+
+\mbox{\Hypertarget{SynaesthetiQ-LED-Library_2src_2main_8cpp_af77f8244799e85284b8b438289f5f689}\label{SynaesthetiQ-LED-Library_2src_2main_8cpp_af77f8244799e85284b8b438289f5f689}} 
+\index{main.cpp@{main.cpp}!running@{running}}
+\index{running@{running}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{running}{running}}
+{\footnotesize\ttfamily uint8\+\_\+t running = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{SynaesthetiQ-LED-Library_2src_2main_8cpp_a2474a5474cbff19523a51eb1de01cda4}\label{SynaesthetiQ-LED-Library_2src_2main_8cpp_a2474a5474cbff19523a51eb1de01cda4}} 
+\index{main.cpp@{main.cpp}!width@{width}}
+\index{width@{width}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{width}{width}}
+{\footnotesize\ttfamily int width = \mbox{\hyperlink{SynaesthetiQ-LED-Library_2src_2main_8cpp_a241aeeb764887ae5e3de58b98f04b16d}{WIDTH}}}
+

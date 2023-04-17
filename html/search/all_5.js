@@ -1,18 +1,15 @@
 var searchData=
 [
-  ['genreclassifier_11',['GenreClassifier',['../classGenreClassifier.html#ac7bce32378dbadbe4537e5b85a42c981',1,'GenreClassifier::GenreClassifier()'],['../classGenreClassifier.html',1,'GenreClassifier']]],
-  ['genrepredictor_12',['GenrePredictor',['../classGenrePredictor.html',1,'GenrePredictor'],['../classGenrePredictor.html#aafb76c3ae2f5e1afea5b92666dda3c28',1,'GenrePredictor::GenrePredictor()']]],
-  ['get_5fcurrent_5fbuffer_13',['get_current_buffer',['../classPingPongBuffer.html#a5005d5f73c139e8bdaca53784d65bb0f',1,'PingPongBuffer']]],
-  ['getbitdepth_14',['getBitDepth',['../classAudioFile.html#a5495d5cb55911de54f0714e219130b48',1,'AudioFile']]],
-  ['getblue_15',['getBlue',['../classColour.html#ae206500d684bf5ce115e34ca83565eb6',1,'Colour']]],
-  ['getgrb_16',['getGRB',['../classColour.html#a69d451388d92e33e6e997b4a49fbab86',1,'Colour']]],
-  ['getgreen_17',['getGreen',['../classColour.html#af2d77f94b1154325bd0c643fbd64b87c',1,'Colour']]],
-  ['getlengthinseconds_18',['getLengthInSeconds',['../classAudioFile.html#a5a6b01404675361b1c21c9c5fb5753d4',1,'AudioFile']]],
-  ['getnumchannels_19',['getNumChannels',['../classAudioFile.html#a514f860a956b4494ee8d8c806391d6b3',1,'AudioFile']]],
-  ['getnumsamplesperchannel_20',['getNumSamplesPerChannel',['../classAudioFile.html#ae1b5b4b7351a79dbf810bb34ede496b9',1,'AudioFile']]],
-  ['getred_21',['getRed',['../classColour.html#a0bf66dd3c35d509290b5b79e1e3eb851',1,'Colour']]],
-  ['getreducedresolutionfft_22',['getReducedResolutionFFT',['../classFFTProcessor.html#a409ab6fbb7d4022bca9dd3431d040b57',1,'FFTProcessor']]],
-  ['getrgb_23',['getRGB',['../classColour.html#a248a1d9cf4106dac4292ac6fa8636f16',1,'Colour']]],
-  ['getsamplerate_24',['getSampleRate',['../classAudioFile.html#a8cd1b082af9db6bd180e4a63edcdefc9',1,'AudioFile']]],
-  ['getsystembrightness_25',['getSystemBrightness',['../classSynaesthetiQ.html#ade75e0ea81944c5aa612b0427617837a',1,'SynaesthetiQ']]]
+  ['endianness_92',['Endianness',['../classAudioFile.html#a4d5f3a950f0c059380d268abf39fd67e',1,'AudioFile']]],
+  ['envelope_5fbuffer_93',['envelope_buffer',['../test_2test_8cpp.html#af58c821cea9194f6ab7db589b28e9964',1,'test.cpp']]],
+  ['envelope_5fcallback_94',['envelope_callback',['../classVisualiser.html#a34fca5ddfdc76444856308a63442ff1d',1,'Visualiser']]],
+  ['envelope_5fdata_95',['envelope_data',['../classVisualiser.html#ac9a5606f6a82c357e7c69521abab2273',1,'Visualiser']]],
+  ['envelope_5ffollower_5ftest_2ecpp_96',['envelope_follower_test.cpp',['../envelope__follower__test_8cpp.html',1,'']]],
+  ['envelopefollower_97',['EnvelopeFollower',['../classEnvelopeFollower.html',1,'']]],
+  ['envelopefollower_98',['envelopeFollower',['../classVisualiser.html#af54404231f256b8718115d59c35d03c7',1,'Visualiser']]],
+  ['envelopefollower_99',['EnvelopeFollower',['../classEnvelopeFollower.html#a4ba7f4c09fca3f2c42c0ff3de46c59c2',1,'EnvelopeFollower']]],
+  ['envelopefollower_2ecpp_100',['EnvelopeFollower.cpp',['../EnvelopeFollower_8cpp.html',1,'']]],
+  ['envelopefollower_2ehpp_101',['EnvelopeFollower.hpp',['../EnvelopeFollower_8hpp.html',1,'']]],
+  ['error_102',['Error',['../AudioFile_8h.html#a526ed66f20752002a63ee72e2e350d7da4dfd42ec49d09d8c6555c218301cc30f',1,'Error():&#160;AudioFile.h'],['../AudioFile_8h.html#a526ed66f20752002a63ee72e2e350d7da902b0d55fddef6f8d651fe1035b7d4bd',1,'Error():&#160;AudioFile.h']]],
+  ['extensible_103',['Extensible',['../AudioFile_8h.html#a24ed57f869bfefdef1bed0a033886d8ea3399988804e27576467357a9fd8fbf92',1,'AudioFile.h']]]
 ];
