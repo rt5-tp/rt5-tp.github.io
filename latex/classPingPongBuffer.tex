@@ -95,16 +95,14 @@ Initialises all members variables.
 
 Function for adding data to the \mbox{\hyperlink{classPingPongBuffer}{Ping\+Pong\+Buffer}}. 
 
-Fills the current buffer with the provided data. If buffer reaches capacity, all data contained in it is sent out via callbacks, then buffer is switched out and remaining data added to new buffer. Here is the call graph for this function\+:
-\nopagebreak
+Fills the current buffer with the provided data. If buffer reaches capacity, all data contained in it is sent out via callbacks, then buffer is switched out and remaining data added to new buffer. Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classPingPongBuffer_a3e83626083eaf81e934b21f9de0ff94d_cgraph}
 \end{center}
 \end{figure}
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -141,8 +139,7 @@ Returns true if any of the buffers are full.
 
 Sets the registered callback to the one provided. 
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -159,8 +156,7 @@ Here is the caller graph for this function\+:
 
 Switches current buffer out with the other, and resets its values. 
 
-Resets all values to 0. Resets read and write offset to 0. Lastly, marks both buffers as empty. Here is the caller graph for this function\+:
-\nopagebreak
+Resets all values to 0. Resets read and write offset to 0. Lastly, marks both buffers as empty. Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -177,8 +173,7 @@ Resets all values to 0. Resets read and write offset to 0. Lastly, marks both bu
 
 Calls the callback registered with the class with buffer data. 
 
-Call the callback with the current buffer and a \textquotesingle{}0\textquotesingle{} if buffer A and a \textquotesingle{}1\textquotesingle{} if buffer B. Does nothing if no callback is registered. Here is the caller graph for this function\+:
-\nopagebreak
+Call the callback with the current buffer and a \textquotesingle{}0\textquotesingle{} if buffer A and a \textquotesingle{}1\textquotesingle{} if buffer B. Does nothing if no callback is registered. Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

@@ -71,35 +71,50 @@ $(function() {
 One Repo to Rule Them All</h1>
 <p>This repository is called the 'PuppetMaster' because it's main function is to link together other repositories, each containing different submodules of the full <a class="el" href="classSynaesthetiQ.html" title="A class to manage the SynaesthetiQ and create visualisations.">SynaesthetiQ</a> processing flow. These submodules are:</p>
 <ul>
-<li><a href="https://github.com/rt5-tp/SynaesthetiQ-audiocapture"><b>Audio Capture</b></a> - Handles data acquisition, frequency analysis and genre classification.</li>
+<li><a href="https://github.com/rt5-tp/SynaesthetiQ-audiocapture"><b>Audio Capture</b></a> - Handles data acquisition, frequency analysis and a real-time genre classification wrapper.</li>
 <li><a href="https://github.com/rt5-tp/envelope_following"><b>Envelope Following</b></a> - A simple envelope follower to visualise the pulse of music.</li>
 <li><a href="https://github.com/rt5-tp/SynaesthetiQ-LED-LIbrary"><b>LED Library</b></a> - Renders visualisations to an array of LEDs.</li>
+<li><a href="https://github.com/rt5-tp/cpp_genre_classifier"><b>Genre Classifier</b></a> - Integrates a convolutional neural network for non-real-time genre classification</li>
+<li><a href="https://github.com/rt5-tp/GenrePredictionServer"><b>Genre Prediction Server</b></a> - A remote server which uses a neural network to classify the genre of music.</li>
 </ul>
 <p>The relationships between these submodules are handled by the <a href="https://github.com/rt5-tp/SynaesthetiQ-PuppetMaster/tree/main/src/Visualiser">Visualiser</a>, which is defined within this repository.</p>
 <h1><a class="anchor" id="autotoc_md2"></a>
-Data Flow</h1>
+Go with the Flow</h1>
 <p>The overall flow of data through these submodules can be representatd by this diagram:</p>
-<div align="center"> <img src="https://github.com/rt5-tp/.github/blob/main/Full%20Data%20Flow%20Diagram.svg" alt="" style="pointer-events: none;" width="100%" class="inline"/> </div><p>More information on how these submodules work and interact with each other can be found in their respective repositories and the [documentation]() for this project.</p>
+<div align="center"> <img src="https://github.com/rt5-tp/.github/blob/main/Full%20Data%20Flow%20Diagram.svg" alt="" style="pointer-events: none;" width="100%" class="inline"/> </div><p>More information on how these submodules work and interact with each other can be found in their respective repositories and the <a href="https://rt5-tp.github.io/">documentation</a> for this project.</p>
 <h1><a class="anchor" id="autotoc_md3"></a>
-Hardware</h1>
-<p>A new <a href="https://github.com/rt5-tp/Synaesthetiq-Hardware-Design">hardware</a> prototype was designed and built to demonstrate the functionality of the <a class="el" href="classSynaesthetiQ.html" title="A class to manage the SynaesthetiQ and create visualisations.">SynaesthetiQ</a> software. It centre's around a pair of flexible LED Matrices which have been wrapped around a 3D printed core, placed on top of this core is another larger LED. The big LED is designed to provide a simple envelope following function, where the brightness is proportional to the intensity of sound at that moment, while the matrix should provide a more complex frequency-domain visualisation. This allows for a combination of unique musical visualisation and bright impactful lighting.</p>
+The Hardest Part</h1>
+<p>A <a href="https://github.com/rt5-tp/Synaesthetiq-Hardware-Design">hardware</a> prototype was designed and built to demonstrate the functionality of the <a class="el" href="classSynaesthetiQ.html" title="A class to manage the SynaesthetiQ and create visualisations.">SynaesthetiQ</a> software. It centre's around a pair of flexible LED Matrices which have been wrapped around a 3D printed core, placed on top of this core is another larger LED. The big LED is designed to provide a simple envelope following function, where the brightness is proportional to the intensity of sound at that moment, while the matrix should provide a more complex frequency-domain visualisation. This allows for a combination of unique musical visualisation and bright impactful lighting.</p>
 <h1><a class="anchor" id="autotoc_md4"></a>
+The Friends We Made Along the Way</h1>
+<p>As the project developed, a number of additional repositories were created to prototype elements of the overall code. They are:</p>
+<ul>
+<li><a href="https://github.com/rt5-tp/LED_Matrix_Tests"><b>LED Matrix Tests</b></a> - Code used to test the LED Matrix</li>
+<li><a href="https://github.com/rt5-tp/low-res_fft_proto"><b>Low-res FFT Prototypes</b></a> - Prototyping a visualisation</li>
+<li><a href="https://github.com/rt5-tp/SynaesthetiQ-SpectrogramClass"><b>Real-time Spectrogram</b></a> - A more complex real-time visualisation method (incomplete)</li>
+<li><a href="https://github.com/rt5-tp/SpectroscopeProto"><b>Spectrogram Non-real-time Prototype</b></a> - A prototype real-time spectrogram visualisation method</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md5"></a>
 Installation</h1>
-<h2><a class="anchor" id="autotoc_md5"></a>
+<h2><a class="anchor" id="autotoc_md6"></a>
 Install dependencies for Raspberry Pi</h2>
 <p>Run the "setup.sh" script contained within the root of this repository </p><blockquote class="doxtable">
 <p>sudo sh setup.sh </p>
 </blockquote>
-<h1><a class="anchor" id="autotoc_md6"></a>
-Info</h1>
 <h1><a class="anchor" id="autotoc_md7"></a>
-Team</h1>
+The Dream Team</h1>
 <ul>
-<li><a href="https://github.com/rossamck">Ross McKeown</a></li>
-<li><a href="https://github.com/nordwestt">Thomas Nordentoft</a></li>
-<li><a href="https://github.com/TBurnip">Thomas Burnip</a></li>
-<li><a href="https://github.com/Neil-A-C">Neil Crawshaw</a> </li>
+<li><a href="https://github.com/rossamck"><b>Ross McKeown</b></a></li>
+<li><a href="https://github.com/nordwestt"><b>Thomas Nordentoft</b></a></li>
+<li><a href="https://github.com/TBurnip"><b>Thomas Burnip</b></a></li>
+<li><a href="https://github.com/Neil-A-C"><b>Neil Crawshaw</b></a></li>
 </ul>
+<h1><a class="anchor" id="autotoc_md8"></a>
+Like and Subscribe</h1>
+<p><a href="https://www.youtube.com/@synaesthetiq"><b>Youtube</b></a></p>
+<p><a href="https://www.tiktok.com/@synaesthetiq"><b>TikTok</b></a></p>
+<p><a href="https://www.linkedin.com/company/synaesthetiq/"><b>LinkedIn</b></a></p>
+<p><a href="https://www.instagram.com/synaesthetiq/"><b>Instagram</b></a> </p>
 </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- start footer part -->
